@@ -15,7 +15,7 @@ class TatananOneController extends Controller
      */
     public function index()
     {
-        return view('user.tatananOne');
+        return view('dashboard.tatanan1.index');
     }
 
     /**
