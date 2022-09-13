@@ -15,7 +15,7 @@ class TatananFiveController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.tatanan5.index');
     }
 
     /**
