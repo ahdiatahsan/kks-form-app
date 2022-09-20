@@ -171,7 +171,7 @@ class UserSeeder extends Seeder
             'district_id' => null
         ]);
 
-        $userOffice = User::factory()->create([
+        $usersOffice = [
             [
                 'name' => 'Dinas Kelautan dan Perikanan (DKP)',
                 'phone' => '01234678911',
@@ -326,30 +326,38 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('password'),
                 'district_id' => null
             ],
-        ]);
+        ];
 
-        $userDistrict = User::factory()->create([
-            'name' => 'Kecamatan Alla',
-            'phone' => '01234678921',
-            'email' => 'alla@mail.com',
-            'password' => Hash::make('password'),
+        foreach($usersOffice as $userOffice){
+            User::create($userOffice);
+        }
 
-            'district_id' => null
-        ]);
+        // $userDistrict = User::factory()->create([
+        //     'name' => 'Kecamatan Alla',
+        //     'phone' => '01234678921',
+        //     'email' => 'alla@mail.com',
+        //     'password' => Hash::make('password'),
 
-        $userVillage = User::factory()->create([
-            'name' => 'Desa Alla',
-            'phone' => '01234678931',
-            'email' => 'pana@mail.com',
-            'password' => Hash::make('password'),
+        //     'district_id' => null
+        // ]);
 
-            'district_id' => 3
-        ]);
+        // $userVillage = User::factory()->create([
+        //     'name' => 'Desa Alla',
+        //     'phone' => '01234678931',
+        //     'email' => 'pana@mail.com',
+        //     'password' => Hash::make('password'),
+
+        //     'district_id' => 3
+        // ]);
 
         # Assign roles
         $userAdministrator->assignRole($roleAdministrator);
-        $userOffice->assignRole($roleOffice);
-        $userDistrict->assignRole($roleDistrict);
-        $userVillage->assignRole($roleVillage);
+        // $userDistrict->assignRole($roleDistrict);
+        // $userVillage->assignRole($roleVillage);
+
+        $userOffice = User::where('id', '>', 1)->orWhere('id', '<', 24)->get();
+        foreach($userOffice as $user){
+            $user->assignRole($roleOffice);
+        }
     }
 }
