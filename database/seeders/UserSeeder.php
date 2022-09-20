@@ -172,12 +172,160 @@ class UserSeeder extends Seeder
         ]);
 
         $userOffice = User::factory()->create([
-            'name' => 'Dinas Kelautan dan Perikanan',
-            'phone' => '01234678911',
-            'email' => 'dkp@mail.com',
-            'password' => Hash::make('password'),
-
-            'district_id' => null
+            [
+                'name' => 'Dinas Kelautan dan Perikanan (DKP)',
+                'phone' => '01234678911',
+                'email' => 'dkp@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Dinas Kesehatan (Dinkes)',
+                'phone' => '01234678912',
+                'email' => 'dinkes@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Kepolisian Resor (Polres)',
+                'phone' => '01234678912',
+                'email' => 'polres@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Perusahaan Daerah Air Minum (PDAM)',
+                'phone' => '01234678912',
+                'email' => 'pdam@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Kesatuan Pengelolaan Hutan (KPH)',
+                'phone' => '01234678912',
+                'email' => 'kph@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Aplikasi Manajemen Perjalanan Dinas dan Konsultan (AMAN)',
+                'phone' => '01234678912',
+                'email' => 'aman@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Dinas Peternakan dan Perikanan',
+                'phone' => '01234678912',
+                'email' => 'peternakan@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Badan Penanggulangan Bencana Daerah (BPBD)',
+                'phone' => '01234678912',
+                'email' => 'bpbd@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'PTSP Izin',
+                'phone' => '01234678912',
+                'email' => 'ptspizin@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Dinas Pendidikan dan Kebudayaan (Diknas)',
+                'phone' => '01234678912',
+                'email' => 'diknas@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'KESRA Sekretariat Daerah',
+                'phone' => '01234678912',
+                'email' => 'kesrasekda@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Koperasi UKM',
+                'phone' => '01234678912',
+                'email' => 'koperasiukm@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Dinas Perindustrian dan Perdagangan (Disperindag)',
+                'phone' => '01234678912',
+                'email' => 'disperindag@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Dinas Pemuda, Olahraga dan Pariwisata (Dispopar)',
+                'phone' => '01234678912',
+                'email' => 'dispopar@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak (DP3A)',
+                'phone' => '01234678912',
+                'email' => 'dp3a@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Badan Kesatuan Bangsa dan Politik (Kesbangpol)',
+                'phone' => '01234678912',
+                'email' => 'kesbangpol@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Dinas Sosial (Dinsos)',
+                'phone' => '01234678912',
+                'email' => 'dinsos@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Pemadam kebakaran (DAMKAR)',
+                'phone' => '01234678912',
+                'email' => 'damkar@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Dinas Perumahan, Kawasan Permukiman dan Pertanahan (Perkimtan)',
+                'phone' => '01234678912',
+                'email' => 'perkimtan@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Dinas Pekerjaan Umum (PU)',
+                'phone' => '01234678912',
+                'email' => 'dinaspu@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Dinas Perhubungan (Dishub)',
+                'phone' => '01234678912',
+                'email' => 'dishub@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
+            [
+                'name' => 'Dinas Lingkungan Hidup (DLH)',
+                'phone' => '01234678912',
+                'email' => 'dlh@mail.com',
+                'password' => Hash::make('password'),
+                'district_id' => null
+            ],
         ]);
 
         $userDistrict = User::factory()->create([
