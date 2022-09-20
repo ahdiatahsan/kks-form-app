@@ -32,6 +32,7 @@ class TatananThree extends Model
         'p15',
         'p16',
         'p17',
+        'p18',
         'user_id'
     ];
 }

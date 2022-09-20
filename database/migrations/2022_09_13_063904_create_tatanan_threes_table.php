@@ -32,6 +32,7 @@ return new class extends Migration
             $table->string('p15')->nullable();
             $table->string('p16')->nullable();
             $table->string('p17')->nullable();
+            $table->string('p18')->nullable();
             $table->foreignId('user_id')->nullable()->constrained('users')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
