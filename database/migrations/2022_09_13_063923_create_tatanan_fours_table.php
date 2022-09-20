@@ -15,22 +15,22 @@ return new class extends Migration
     {
         Schema::create('tatanan_fours', function (Blueprint $table) {
             $table->id();
-            $table->string('p1')->nullable();
-            $table->string('p2')->nullable();
-            $table->string('p3')->nullable();
-            $table->string('p4')->nullable();
-            $table->string('p5')->nullable();
-            $table->string('p6')->nullable();
-            $table->string('p7')->nullable();
-            $table->string('p8')->nullable();
-            $table->string('p9')->nullable();
-            $table->string('p10')->nullable();
-            $table->string('p11')->nullable();
-            $table->string('p12')->nullable();
-            $table->string('p13')->nullable();
-            $table->string('p14')->nullable();
-            $table->string('p15')->nullable();
-            $table->string('p16')->nullable();
+            $table->string('p1', 5)->nullable();
+            $table->string('p2', 5)->nullable();
+            $table->string('p3', 5)->nullable();
+            $table->string('p4', 5)->nullable();
+            $table->string('p5', 5)->nullable();
+            $table->string('p6', 5)->nullable();
+            $table->string('p7', 5)->nullable();
+            $table->string('p8', 5)->nullable();
+            $table->string('p9', 5)->nullable();
+            $table->string('p10', 5)->nullable();
+            $table->string('p11', 5)->nullable();
+            $table->string('p12', 5)->nullable();
+            $table->string('p13', 5)->nullable();
+            $table->string('p14', 5)->nullable();
+            $table->string('p15', 5)->nullable();
+            $table->string('p16', 5)->nullable();
             $table->foreignId('user_id')->nullable()->constrained('users')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
