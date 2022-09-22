@@ -60,6 +60,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">1.1 Regulasi</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -111,6 +116,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">1.2 Perencanaan Daerah</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -162,6 +172,20 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <!--begin::Heading-->
+                                <div class="separator separator-dashed my-4"></div>
+                                <div class="pb-5">
+                                    <!--begin::Title-->
+                                    <h4 class="fw-bolder d-flex align-items-center text-dark">II. Tim Pembina UKS/M
+                                    </h4>
+                                    <!--end::Title-->
+                                </div>
+                                <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">2.1 Tim Pembina</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -222,15 +246,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
-                                <!--begin::Heading-->
-                                <div class="separator separator-dashed my-4"></div>
-                                <div class="pb-5">
+                                <div class="pb-3">
                                     <!--begin::Title-->
-                                    <h4 class="fw-bolder d-flex align-items-center text-dark">II. Tim Pembina UKS/M
-                                    </h4>
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">2.2 Rapat Koordinasi</h5>
                                     <!--end::Title-->
                                 </div>
-                                <!--end::Heading-->
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -291,6 +311,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.1 Tim Pelaksana</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -357,6 +382,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.1 Sekolah UKS/M</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -505,6 +535,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">5.1 Satuan Pendidikan Ramah Anak</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -608,6 +643,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">6.1 Sekolah Adiwiyata</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -673,6 +713,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">7.1 Pondok Pesantren Sehat</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -732,6 +777,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">8.1 Pendidikan Usia Dini/Paud Yang Menyelenggarakan Promosi Kesehatan Dan Penjaringan</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -791,6 +841,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">9.1 Sekolah Sebagai Pusat Pembelajaran Sekolah Sehat (Aktif/Pasif)</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -841,6 +896,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">9.2 Sistem Informasi Terintegrasi</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -884,6 +944,12 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">9.3 Kemitraan</h5>
+                                    <!--end::Title-->
+                                </div>
+                                <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
                                     <div class="form-group">
