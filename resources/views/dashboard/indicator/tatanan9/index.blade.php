@@ -24,7 +24,7 @@
             <!--begin::Card body-->
             <div class="card-body">
                 <!--begin::Stepper-->
-                <div class="stepper stepper-links d-flex flex-column" id="kt_stepper_tatanan1">
+                <div class="stepper stepper-links d-flex flex-column" id="kt_stepper_tatanan9">
                     <!--begin::Nav-->
                     <div class="stepper-nav mb-5">
                         <!--begin::Step 1-->
@@ -47,7 +47,7 @@
                     <div class="separator mx-1 my-2"></div>
                     <!--begin::Form-->
                     <form class="mx-auto mw-1000px w-100 pt-10 pb-5" novalidate="novalidate"
-                        id="kt_stepper_tatanan1_form">
+                        id="kt_stepper_tatanan9_form">
                         <!--begin::Step 1-->
                         <div class="current" data-kt-stepper-element="content">
                             <!--begin::Wrapper-->
@@ -60,6 +60,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">1.1 Komitmen Pemerintah Daerah</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -504,6 +509,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.1 Komunikasi Dan Informasi Bencana Alam</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -636,6 +646,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.2 Peta Rawan Bencana Alam</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -717,6 +732,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.3 Implementasi Sistem Kewaspadaan Dini Dan Respon (SKDR) Bencana Non Alam</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -820,6 +840,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">4.1 Satuan Pendidikan Aman Bencana</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -909,6 +934,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">4.2 Pemberdayaan Masyarakat Tentang Penanggulangan Bencana (Masyarakat Tanggap Bencana)</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -962,6 +992,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">5.1 Kerjasama Daerah Yang Berbatasan Dalam Penanggulangan Bencana</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1162,7 +1197,7 @@
     <x-slot name="javascript">
         <script>
             // Stepper lement
-            var element = document.querySelector("#kt_stepper_tatanan1");
+            var element = document.querySelector("#kt_stepper_tatanan9");
 
             // Initialize Stepper
             var stepper = new KTStepper(element);
