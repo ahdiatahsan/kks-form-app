@@ -24,7 +24,7 @@
             <!--begin::Card body-->
             <div class="card-body">
                 <!--begin::Stepper-->
-                <div class="stepper stepper-links d-flex flex-column" id="kt_stepper_tatanan1">
+                <div class="stepper stepper-links d-flex flex-column" id="kt_stepper_tatanan8">
                     <!--begin::Nav-->
                     <div class="stepper-nav mb-5">
                         <!--begin::Step 1-->
@@ -47,7 +47,7 @@
                     <div class="separator mx-1 my-2"></div>
                     <!--begin::Form-->
                     <form class="mx-auto mw-1000px w-100 pt-10 pb-5" novalidate="novalidate"
-                        id="kt_stepper_tatanan1_form">
+                        id="kt_stepper_tatanan8_form">
                         <!--begin::Step 1-->
                         <div class="current" data-kt-stepper-element="content">
                             <!--begin::Wrapper-->
@@ -60,6 +60,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">1.1 Komitmen Pemerintah Daerah</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -222,6 +227,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">1.2 Penanganan Masalah Kesejahteraan Sosial</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -266,6 +276,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">1.3 Upaya Pemenuhan Kebutuhan Pokok Pemerlu Pelayanan Kesejahteraan Sosial (PPKS)</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -479,6 +494,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">1.4 Angka Kemiskinan</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -532,6 +552,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">2.1 Upaya Pemerintah Dan Swasta Untuk Komunitas Adat Terpencil Dan Daerah Perbatasan</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -711,6 +736,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">2.2 Penggiat Komunitas Adat Terpencil</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -770,6 +800,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.1 Komitmen Pemerintah Daerah</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -821,6 +856,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.2 Penanganan Kekerasan Anak, Perempuan Dan Lansia Dalam RPJMD</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -865,6 +905,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.3 Upaya Pemerintah, Swasta Dan Masyarakat Untuk Pencegahan Dan Penanganan</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1136,6 +1181,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.4 PEnggiat Penanganan Kekerasan Pada Anak, Perempuan Dan Lansia</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1180,6 +1230,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.5 Kasus Kekerasan Anak, Perempuan Dan Lansia</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1231,6 +1286,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">4.1 Kesetaraan Gender</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1282,6 +1342,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">5.1 Kegiatan Sosial Budaya Dalam RPJMD</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1378,7 +1443,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
-                                
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">6.1 Upaya Pencegahan Radikalisme</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1467,6 +1536,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">6.2 Regulasi Penanggulangan Radikalisme</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1562,6 +1636,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">6.3 Upaya Penanggulangan Radikalisme</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1688,7 +1767,7 @@
     <x-slot name="javascript">
         <script>
             // Stepper lement
-            var element = document.querySelector("#kt_stepper_tatanan1");
+            var element = document.querySelector("#kt_stepper_tatanan8");
 
             // Initialize Stepper
             var stepper = new KTStepper(element);
