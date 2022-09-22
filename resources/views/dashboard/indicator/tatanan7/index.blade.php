@@ -24,7 +24,7 @@
             <!--begin::Card body-->
             <div class="card-body">
                 <!--begin::Stepper-->
-                <div class="stepper stepper-links d-flex flex-column" id="kt_stepper_tatanan1">
+                <div class="stepper stepper-links d-flex flex-column" id="kt_stepper_tatanan7">
                     <!--begin::Nav-->
                     <div class="stepper-nav mb-5">
                         <!--begin::Step 1-->
@@ -47,7 +47,7 @@
                     <div class="separator mx-1 my-2"></div>
                     <!--begin::Form-->
                     <form class="mx-auto mw-1000px w-100 pt-10 pb-5" novalidate="novalidate"
-                        id="kt_stepper_tatanan1_form">
+                        id="kt_stepper_tatanan7_form">
                         <!--begin::Step 1-->
                         <div class="current" data-kt-stepper-element="content">
                             <!--begin::Wrapper-->
@@ -60,6 +60,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">1.1 Regulasi Daerah</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -97,6 +102,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">1.2 Perencanaan Dalam RPJMD</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -157,6 +167,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">2.1 Keselamatan Dan Kesehatan Kerja (K3)</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -472,6 +487,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.1 Industri Kecil Dan Menengah</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -523,6 +543,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.2 Kualitas Kesehatan Lingkungan Industri</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -567,6 +592,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.3 Industri Hijau</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -604,6 +634,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.4 Dokumen Pengelolaan Lingkungan</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -699,6 +734,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.5 Pelayanan Kesehatan Dan Pos Usaha Kesehatan Kerja (UKK) Pada IKM</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -765,6 +805,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.1 Izin Dan Pengembangan Usaha</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -867,6 +912,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">4.2 UMKM Sehat</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -955,6 +1005,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">4.3 Kualitas Kesehatan Lingkungan UMKM</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1057,6 +1112,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">4.4 Pelayanan Kesehatan Dan Pos Usaha Kesehatan Kerja (Pos UKK)</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1190,7 +1250,7 @@
     <x-slot name="javascript">
         <script>
             // Stepper lement
-            var element = document.querySelector("#kt_stepper_tatanan1");
+            var element = document.querySelector("#kt_stepper_tatanan7");
 
             // Initialize Stepper
             var stepper = new KTStepper(element);
