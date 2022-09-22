@@ -1333,7 +1333,7 @@
                                 <!--end::Input group-->
                                 <div class="pb-3">
                                     <!--begin::Title-->
-                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.2 Dokumen Rencana Induk Sistem Penyediaan Air Minum(RISPAM)</h5>
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.2 Dokumen Rencana Induk Sistem Penyediaan Air Minum (RISPAM)</h5>
                                     <!--end::Title-->
                                 </div>
                                 <!--begin::Input group-->
@@ -3760,7 +3760,7 @@
                                 <!--end::Input group-->
                                 <div class="pb-3">
                                     <!--begin::Title-->
-                                    <h5 class="fw-bold d-flex align-items-center text-dark">7.9 Komitmen Pemerintah Daerah Terhadap Daerah Yang Memiliki Penambang Emas Skala</h5>
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">7.9 Komitmen Pemerintah Daerah Terhadap Daerah Yang Memiliki Penambang Emas Skala Kecil (PESK)</h5>
                                     <!--end::Title-->
                                 </div>
                                 <!--begin::Input group-->

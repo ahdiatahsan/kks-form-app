@@ -2796,7 +2796,7 @@
                                 <!--end::Input group-->
                                 <div class="pb-3">
                                     <!--begin::Title-->
-                                    <h5 class="fw-bold d-flex align-items-center text-dark">13.3 Komitmen Pemerintah Daerah Dalam Pengelolaan Limbah Bahan Berbahaya Beracun(B3) </h5>
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">13.3 Komitmen Pemerintah Daerah Dalam Pengelolaan Limbah Bahan Berbahaya Beracun (B3)</h5>
                                     <!--end::Title-->
                                 </div>
                                 <!--begin::Input group-->

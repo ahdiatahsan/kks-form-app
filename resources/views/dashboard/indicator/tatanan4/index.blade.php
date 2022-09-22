@@ -779,7 +779,7 @@
                                 <!--end::Heading-->
                                 <div class="pb-3">
                                     <!--begin::Title-->
-                                    <h5 class="fw-bold d-flex align-items-center text-dark">8.1 Pendidikan Usia Dini/Paud Yang Menyelenggarakan Promosi Kesehatan Dan Penjaringan</h5>
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">8.1 Pendidikan Usia Dini/Paud Yang Menyelenggarakan Promosi Kesehatan Dan Penjaringan Kesehatan</h5>
                                     <!--end::Title-->
                                 </div>
                                 <!--begin::Input group-->
