@@ -69,6 +69,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">1.1 Kebijakan Pengelolaan Kualitas Udara Kabupaten/Kota</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -170,6 +175,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">1.2 Car Free Day (CFD)</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -251,6 +261,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">1.3 Penggunaan Energi Ramah Lingkungan</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -349,6 +364,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">1.4 Penanaman Pohon Di Wilayah Yang Potensi Mengalami Pencemaran Udara</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -445,6 +465,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">1.5 Monitoring Kualitas Udara</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -667,6 +692,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">1.6 Upaya Pemerintah Daerah Sesuai Lokal Spesifik</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -714,6 +744,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">2.1 Keberadaan Dewan Sumber Daya Air (SDA)</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -811,6 +846,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">2.2 Rencana Kerja Dan Aksi Dari Dewan SDA</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -849,6 +889,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">2.3 Keterlibatan Masyarakat Dalam Pengelolaan Sungai</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -946,6 +991,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">2.4 Kondisi Kebersihan Sungai</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1148,6 +1198,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.1 Upaya Pemenuhan Akses Air Minum Oleh Pemerintah Daerah Dan Masyarakat</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1276,6 +1331,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.2 Dokumen Rencana Induk Sistem Penyediaan Air Minum(RISPAM)</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1320,6 +1380,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.2 Pengawasan Eksternal Kualitas Air Minum</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1407,6 +1472,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.4 Pengawan Internal Kualitas Air Minum </h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1454,6 +1524,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">3.5 Rencana Pengamanan Air Minum</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1518,6 +1593,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">4.1 Komitmen</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1753,6 +1833,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">4.2. Capaian Target Sanitasi</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1864,6 +1949,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">4.3 Teknis Operasional : Sistem Pengelolaan Air Limbah Domestik Setempat (SPALD-S)</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -1997,6 +2087,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">4.4 Teknis Operasional : Sistem Pengelolaan Air Limbah Domestik Terpusat (SPALD-T)</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -2056,6 +2151,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">5.1 Perencanaan Pembangunan Drainase</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -2149,6 +2249,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">5.2 Persentase Penanganan Genangan</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -2198,6 +2303,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">5.3 Upaya Pemda Dalam Mendorong Peran Serta Masyarakat (PSM) Dalam Operasional Serta Pemeliharaan Sistem Drainase</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -2247,6 +2357,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">5.4 Kondisi Saluran Drainase</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -2300,6 +2415,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">6.1 Komitmen</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -2528,6 +2648,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">6.2 Capaian Target Pengelolaan Sampah</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -2638,6 +2763,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">6.3 Pemilahan Sampah Di Rumah Tangga</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -2729,6 +2859,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">6.4 Penanganan Sampah Di Tingkat Desa/Keluharan</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -2826,6 +2961,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">6.5 Penanganan Sampah Skala Kab/Kota</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3107,6 +3247,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">6.6 Kondisi Lingkungan</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3168,6 +3313,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">7.1 Kebijakan Tata Ruang Perumahan/Permukiman</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3205,6 +3355,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">7.2 Fasilitas Umum</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3311,6 +3466,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">7.3 Kawasan Kumuh</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3361,6 +3521,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">7.4 Pemanfaatan Lahan Pekarangan Rumah</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3399,6 +3564,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">7.5 Ketersediaan Aksesibilitas Dan Fasilitas Penanganan Proteksi Kebakaran</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3447,6 +3617,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">7.6 Gerakan PSN Dan Kebersihan Lingkungan</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3491,6 +3666,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">7.7 Rumah Sehat</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3535,6 +3715,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">7.8 Edukasi Daerah Yang Berpotensi Radiasi Secara Alami</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3573,12 +3758,17 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">7.9 Komitmen Pemerintah Daerah Terhadap Daerah Yang Memiliki Penambang Emas Skala</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
                                     <div class="form-group">
                                         <div class="col-lg-12">
-                                            75. Memiliki program pengawasaan dan edukasi penggunaan merkuri bagi
+                                            75. Memiliki program pengawasan dan edukasi penggunaan merkuri bagi
                                             penambang emas skala kecil di wilayah Kabupaten Kota (Peta di BPPT & KLHK)
                                             <div class="fluid-container pt-4">
                                                 <div
@@ -3611,6 +3801,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">7.10 Program Rumah Sehat/Bedah Rumah</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3648,6 +3843,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">7.11 Kondisi Perumahan/Permukiman</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3713,6 +3913,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">8.1 Ruang Terbuka Hijau (RTH) Perkotaan</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3844,6 +4049,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">8.2 Informasi, Petunjuk, Himbauan Dan Sarana Sanitasi Di Taman</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3889,6 +4099,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">8.3 Fasilitas Dan Sarana Kawasan Pertamanan</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3934,6 +4149,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">8.4 Aktivasi Taman</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -3972,6 +4192,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">8.5 Kondisi Kawasan Pertamanan</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -4048,6 +4273,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">8.6 Rumah Desa Sehat</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -4085,6 +4315,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">8.7 Kelompok Kerja Masyarakat Air Dan Sanitasi</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -4143,6 +4378,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">9.1 Rumah Ibadat Terdaftar</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -4195,6 +4435,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">9.2 Dukungan Pemerintah dan Pemerintah Daerah Bagi Rumah Ibadat</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -4304,6 +4549,11 @@
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">10.1 Syarat Kesehatan Rumah Ibadat</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -4409,6 +4659,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">10.2 Rumah Ibadat Ramah Lingkungan</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -4461,6 +4716,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">10.3 Rumah Ibadat Inklusif (Ramah Anak, Lansia, Disabilitas)</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -4513,6 +4773,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">10.4 Larangan Merokok</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -4563,6 +4828,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">10.5 Komunikasi Informasi Edukasi Perilaku Hidup Bersih Sehat (KIE PHBS)</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
@@ -4615,6 +4885,11 @@
                                     <!--end::Row-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="pb-3">
+                                    <!--begin::Title-->
+                                    <h5 class="fw-bold d-flex align-items-center text-dark">10.6 Aktivasi Rumah Ibadat</h5>
+                                    <!--end::Title-->
+                                </div>
                                 <!--begin::Input group-->
                                 <div class="fv-row">
                                     <!--begin::Row-->
