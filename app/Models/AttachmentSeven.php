@@ -38,4 +38,9 @@ class AttachmentSeven extends Model
         'p21',
         'user_id'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

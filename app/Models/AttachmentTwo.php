@@ -116,4 +116,9 @@ class AttachmentTwo extends Model
         'p99',
         'user_id'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

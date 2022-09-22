@@ -51,4 +51,9 @@ class AttachmentEightNd extends Model
         'p34',
         'user_id'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

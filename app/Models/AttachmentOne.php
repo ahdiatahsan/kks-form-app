@@ -85,4 +85,9 @@ class AttachmentOne extends Model
         'p68',
         'user_id'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
