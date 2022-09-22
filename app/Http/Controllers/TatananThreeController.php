@@ -15,7 +15,7 @@ class TatananThreeController extends Controller
      */
     public function index()
     {
-        return view('dashboard.tatanan3.index');
+        return view('dashboard.indicator.tatanan3.index');
     }
 
     /**
