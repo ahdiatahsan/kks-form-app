@@ -24,7 +24,7 @@
             <!--begin::Card body-->
             <div class="card-body">
                 <!--begin::Stepper-->
-                <div class="stepper stepper-links d-flex flex-column" id="kt_stepper_tatanan1">
+                <div class="stepper stepper-links d-flex flex-column" id="kt_stepper_tatanan3">
                     <!--begin::Nav-->
                     <div class="stepper-nav mb-5">
                         <!--begin::Step 1-->
@@ -52,7 +52,7 @@
                     <div class="separator mx-1 my-2"></div>
                     <!--begin::Form-->
                     <form class="mx-auto mw-1000px w-100 pt-10 pb-5" novalidate="novalidate"
-                        id="kt_stepper_tatanan1_form">
+                        id="kt_stepper_tatanan3_form">
                         <!--begin::Step 1-->
                         <div class="current" data-kt-stepper-element="content">
                             <!--begin::Wrapper-->
@@ -1027,7 +1027,7 @@
     <x-slot name="javascript">
         <script>
             // Stepper lement
-            var element = document.querySelector("#kt_stepper_tatanan1");
+            var element = document.querySelector("#kt_stepper_tatanan3");
 
             // Initialize Stepper
             var stepper = new KTStepper(element);
