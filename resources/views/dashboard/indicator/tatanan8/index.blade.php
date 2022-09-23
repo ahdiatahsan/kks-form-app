@@ -119,21 +119,21 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p2"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Update data setiap 3 bulan 
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p2"
-                                                        value="a,100">
+                                                        value="c,25">
                                                     <label class="form-check-label">c. Update data setiap 6 bulan 
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p2"
-                                                        value="b,0">
+                                                        value="d,0">
                                                     <label class="form-check-label">d. Tidak update data
                                                     </label>
                                                 </div>
@@ -249,14 +249,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p5"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada dalam perencanaan daerah tapi belum terealisasi
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p5"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada  dalam perencanaan daerah
                                                     </label>
                                                 </div>
@@ -335,14 +335,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p7"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Sebagian diberikan jaminan sosial
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p7"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada diberikan jaminan sosial
                                                     </label>
                                                 </div>
@@ -379,14 +379,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p8"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Sebagian yang mendapatkan pelatihan
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p8"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada 
                                                     </label>
                                                 </div>
@@ -460,21 +460,21 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p10"
-                                                        value="b,0">
+                                                        value="b,75">
                                                     <label class="form-check-label">b. Ada dan melibatkan lebih dari 3 kelompok masyarakat tetapi tidak ada MOU
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p10"
-                                                        value="b,0">
+                                                        value="c,50">
                                                     <label class="form-check-label">c. Ada dan melibatkan kurang dari 3 kelompok masyarakat 
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p10"
-                                                        value="b,0">
+                                                        value="d,0">
                                                     <label class="form-check-label">d. Tidak ada kerjasama 
                                                     </label>
                                                 </div>
@@ -516,14 +516,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p11"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Mencapai target dengan penurunan angka kemiskinan 4%-6%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p11"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak mencapai target dengan penurunan angka kemiskinan < 4%
                                                     </label>
                                                 </div>
@@ -574,21 +574,21 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p12"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada upaya yang dilakukan secara lengkap tapi belum dilakukan secara rutin
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p12"
-                                                        value="b,0">
+                                                        value="c,25">
                                                     <label class="form-check-label">c. Ada upaya yang dilakukan meski belum dilakukan secara lengkap dan rutin
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p12"
-                                                        value="b,0">
+                                                        value="d,0">
                                                     <label class="form-check-label">d. Tidak ada upaya peningkatan kemampuan ekonomi</label>
                                                 </div>
                                             </div>
@@ -624,14 +624,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p13"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada tapi tidak terdokumentasi dengan baik
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p13"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada</label>
                                                 </div>
                                             </div>
@@ -666,14 +666,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p14"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada tapi tidak terdokumentasi dengan baik
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p14"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada
                                                     </label>
                                                 </div>
@@ -710,14 +710,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p15"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada dan kegiatannya sama dari tahun sebelumnya
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p15"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada kegiatan penanganan PMKS</label>
                                                 </div>
                                             </div>
@@ -758,14 +758,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p16"
-                                                        value="b,0">
+                                                        value="b,5">
                                                     <label class="form-check-label">b. Ada penggiat komunitas tapi kegiatannya tidak aktif dan tidak rutin
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p16"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada penggiat komunitas 
                                                     </label>
                                                 </div>
@@ -822,21 +822,21 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p17"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Dituangkan dalam Peraturan Kepala Daerah
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p17"
-                                                        value="b,0">
+                                                        value="c,25">
                                                     <label class="form-check-label">c. Dituangkan dalam Instruksi/Keputusan Kepala Daerah/Surat Edaran
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p17"
-                                                        value="b,0">
+                                                        value="d,0">
                                                     <label class="form-check-label">d. Tidak ada regulasi
                                                     </label>
                                                 </div>
@@ -878,14 +878,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p18"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada dalam RPJMD tapi belum terealisasi
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p18"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada dalam RPJMD
                                                     </label>
                                                 </div>
@@ -927,14 +927,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p19"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada upaya dan capaian angka kekerasan terhadap anak stabil sama dibanding tahun sebelumnya
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p19"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada upaya penanganan dan pencegahan untuk menekan angka kekerasan terhadap anak
                                                     </label>
                                                 </div>
@@ -971,14 +971,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p20"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada upaya dan capaian angka perkawinan anak sama dengan tahun sebelumnya
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p20"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">d. Tidak ada upaya
                                                     </label>
                                                 </div>
@@ -1015,21 +1015,21 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p21"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada upaya dan capaian angka sunat pada perempuan  stabil sama dibanding tahun sebelumnya
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p21"
-                                                        value="b,0">
+                                                        value="c,25">
                                                     <label class="form-check-label">c. Ada upaya dan capaian angka sunat pada perempuan meningkat dibanding tahun sebelumnya
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p21"
-                                                        value="b,0">
+                                                        value="d,0">
                                                     <label class="form-check-label">d. Tidak ada upaya penanganan dan pencegahan untuk menekan angka sunat pada perempuan 
                                                     </label>
                                                 </div>
@@ -1066,14 +1066,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p22"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada upaya dan capaian angka kekerasan pada perempuan stabil sama dibanding tahun sebelumnya
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p22"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada upaya 
                                                     </label>
                                                 </div>
@@ -1110,14 +1110,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p23"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada dan sebagian korban yang tertangani 
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p23"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada lembaga 
                                                     </label>
                                                 </div>
@@ -1154,14 +1154,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p24"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada, sebagian kasus diproses secara hukum
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p24"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada yang diproses
                                                     </label>
                                                 </div>
@@ -1203,14 +1203,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p25"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada tetapi tidak terdaftar
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p25"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada 
                                                     </label>
                                                 </div>
@@ -1252,14 +1252,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p26"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Jumlahnya stabil dibandingkan tahun sebelumnya
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p26"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Jumlahnya meningkat dibandingkan tahun sebelumnya
                                                     </label>
                                                 </div>
@@ -1364,14 +1364,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p28"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada tapi tidak rutin disosialisasikan 
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p28"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada program RASS
                                                     </label>
                                                 </div>
@@ -1408,14 +1408,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p29"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada, dan memiliki sebagian sarana prasarana RASS
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p29"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada sarana prasarana RASS
                                                     </label>
                                                 </div>
@@ -1465,14 +1465,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p30"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada upaya dan perannya sama saja dibandingkan tahun sebelumnya
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p30"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada upaya
                                                     </label>
                                                 </div>
@@ -1509,14 +1509,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p31"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada pemberdayaan tapi kegiatannya tidak rutin dilakukan
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p31"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada kegiatan pemberdayaan
                                                     </label>
                                                 </div>
@@ -1558,21 +1558,21 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p32"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Tercantum dalam Peraturan Kepala Daerah
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p32"
-                                                        value="a,100">
+                                                        value="c,25">
                                                     <label class="form-check-label">c. Tercantum dalam Instruksi/Keputusan Kepala Daerah/Surat Edaran
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p32"
-                                                        value="b,0">
+                                                        value="d,0">
                                                     <label class="form-check-label">d. Tidak ada regulasi
                                                     </label>
                                                 </div>
@@ -1609,14 +1609,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p33"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada kerjasama tapi kegiatannya tidak rutin dilakukan
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p33"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada kerjasama dalam pencegahan dan penanggulangan radikalisme
                                                     </label>
                                                 </div>
@@ -1658,14 +1658,14 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p34"
-                                                        value="b,0">
+                                                        value="b,50">
                                                     <label class="form-check-label">b. Ada tapi tidak dilakukan secara rutin
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p34"
-                                                        value="b,0">
+                                                        value="c,0">
                                                     <label class="form-check-label">c. Tidak ada kegiatan penyebaran
                                                     </label>
                                                 </div>
