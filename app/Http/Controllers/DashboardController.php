@@ -15,4 +15,24 @@ class DashboardController extends Controller
     {
         return view('dashboard.home.index');
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function tatanan_menu()
+    {
+        return view('dashboard.indicator.index');
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function institutional_menu()
+    {
+        return view('dashboard.institutional.index');
+    }
 }
