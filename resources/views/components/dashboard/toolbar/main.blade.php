@@ -16,6 +16,11 @@
             <!--end::Breadcrumb-->
         </div>
         <!--end::Page title-->
+        <!--begin::Actions-->
+        <div class="d-flex align-items-center py-1">
+            {{ $backbutton }}
+        </div>
+        <!--end::Actions-->
     </div>
     <!--end::Container-->
 </div>
