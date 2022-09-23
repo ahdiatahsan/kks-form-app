@@ -10,6 +10,9 @@
 
             <x-slot name="breadcrumb">
             </x-slot>
+
+            <x-slot name="backbutton">
+            </x-slot>
         </x-dashboard.toolbar.main>
     </x-slot>
     {{-- End::Toolbar component --}}
