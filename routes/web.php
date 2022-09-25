@@ -35,9 +35,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('auth');
 
-Auth::routes();
+Auth::routes([
+    'register' => false,
+]);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('home');
 Route::get('/indikator-khusus', [DashboardController::class, 'tatanan_menu'])->name('tatanan-menu');
