@@ -55,7 +55,6 @@ Route::resource('form-desa', InstitutionalVillageController::class);
 Route::resource('indikator-pokok', TatananMainController::class);
 Route::resource('tatanan-catatan', TatananNoteController::class);
 Route::resource('tatanan-satu', TatananOneController::class);
-Route::resource('tatanan-satu', TatananOneController::class);
 Route::resource('tatanan-dua', TatananTwoController::class);
 Route::resource('tatanan-tiga', TatananThreeController::class);
 Route::resource('tatanan-empat', TatananFourController::class);
