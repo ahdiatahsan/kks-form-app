@@ -33,17 +33,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware('auth');
-
 Auth::routes([
     'register' => false, // Registration Routes...
     'reset' => false, // Password Reset Routes...
     'verify' => false, // Email Verification Routes...
 ]);
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('home');
+Route::get('/', [DashboardController::class, 'index'])->name('home');
 Route::get('/indikator-khusus', [DashboardController::class, 'tatanan_menu'])->name('tatanan-menu');
 Route::get('/kelembagaan', [DashboardController::class, 'institutional_menu'])->name('institutional-menu');
 
