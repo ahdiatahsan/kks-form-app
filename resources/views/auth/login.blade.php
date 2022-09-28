@@ -48,7 +48,7 @@
                             <!--end::Label-->
                             <!--begin::Input-->
                             <input class="form-control form-control-lg form-control-solid" type="email" name="email"
-                                autocomplete="off" tabindex="1" />
+                                autocomplete="off" value="{{ old('email') }}" tabindex="1" />
                             @error('email')
                             <small class="text-danger font-weight-bold"><strong>{{ $message }}</strong></small>
                             @enderror
