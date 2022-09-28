@@ -40,26 +40,26 @@ Auth::routes([
 ]);
 
 Route::get('/', [DashboardController::class, 'index'])->name('home');
-Route::get('/indikator-khusus', [DashboardController::class, 'tatanan_menu'])->name('tatanan-menu');
-Route::get('/kelembagaan', [DashboardController::class, 'institutional_menu'])->name('institutional-menu');
+Route::get('/specialIndicator', [DashboardController::class, 'tatanan_menu'])->name('tatanan-menu');
+Route::get('/institutionalMenu', [DashboardController::class, 'institutional_menu'])->name('institutional-menu');
 
-Route::resource('pendahuluan', IntroductionController::class);
-Route::resource('pendanaan', FundingController::class);
-Route::resource('penutup', ConclusionController::class);
+Route::resource('introduction', IntroductionController::class);
+Route::resource('funding', FundingController::class);
+Route::resource('conclusion', ConclusionController::class);
 
-Route::resource('tim-pembina', InstitutionalBuilderController::class);
-Route::resource('form-kks', InstitutionalKksController::class);
-Route::resource('form-kecamatan', InstitutionalDistrictController::class);
-Route::resource('form-desa', InstitutionalVillageController::class);
+Route::resource('institutionalBuilder', InstitutionalBuilderController::class);
+Route::resource('institutionalKks', InstitutionalKksController::class);
+Route::resource('institutionalDistrict', InstitutionalDistrictController::class);
+Route::resource('institutionalVillage', InstitutionalVillageController::class);
 
-Route::resource('indikator-pokok', TatananMainController::class);
-Route::resource('tatanan-catatan', TatananNoteController::class);
-Route::resource('tatanan-satu', TatananOneController::class);
-Route::resource('tatanan-dua', TatananTwoController::class);
-Route::resource('tatanan-tiga', TatananThreeController::class);
-Route::resource('tatanan-empat', TatananFourController::class);
-Route::resource('tatanan-lima', TatananFiveController::class);
-Route::resource('tatanan-enam', TatananSixController::class);
-Route::resource('tatanan-tujuh', TatananSevenController::class);
-Route::resource('tatanan-delapan', TatananEightController::class);
-Route::resource('tatanan-sembilan', TatananNineController::class);
+Route::resource('tatananMain', TatananMainController::class);
+Route::resource('tatananNote', TatananNoteController::class);
+Route::resource('tatananOne', TatananOneController::class);
+Route::resource('tatananTwo', TatananTwoController::class);
+Route::resource('tatananThree', TatananThreeController::class);
+Route::resource('tatananFour', TatananFourController::class);
+Route::resource('tatananFive', TatananFiveController::class);
+Route::resource('tatananSix', TatananSixController::class);
+Route::resource('tatananSeven', TatananSevenController::class);
+Route::resource('tatananEight', TatananEightController::class);
+Route::resource('tatananNine', TatananNineController::class);
