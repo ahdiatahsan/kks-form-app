@@ -3,8 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\TatananOne;
+use App\Models\AttachmentOne;
+use App\Models\AttachmentOneNd;
 use App\Http\Requests\StoreTatananOneRequest;
 use App\Http\Requests\UpdateTatananOneRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 
 class TatananOneController extends Controller
 {
@@ -12,7 +18,7 @@ class TatananOneController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -20,7 +26,8 @@ class TatananOneController extends Controller
      */
     public function index()
     {
-        return view('dashboard.indicator.tatanan1.index');
+        $tatananOne = TatananOne::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        return view('dashboard.indicator.tatanan1.index', compact('tatananOne'));
     }
 
     /**
@@ -73,9 +80,71 @@ class TatananOneController extends Controller
      * @param  \App\Models\TatananOne  $tatananOne
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateTatananOneRequest $request, TatananOne $tatananOne)
+    public function update(Request $request, TatananOne $tatananOne)
     {
-        //
+        $attachOne = AttachmentOne::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        $attachOneNd = AttachmentOneNd::with('user')->where('user_id', '=', Auth::user()->id)->first();
+
+        $num = 68;
+        for ($i = 1; $i <= $num; ++$i) {
+            $fieldNames1[] = 'p' . $i;
+            $fieldNames2[] = 'p' . $i . '_1';
+            $fieldNames3[] = 'p' . $i . '_2';
+        }
+
+        foreach ($fieldNames2 as $field2) {
+            if ($request->hasFile($field2)) {
+                $request->validate([
+                    $field2 => 'nullable|file|max:3048|mimes:pdf'
+                ]);
+
+                $converted = Str::remove('_1', $field2);
+
+                if (Storage::exists('public/attachmentOne/' . $attachOne->$converted)) {
+                    Storage::delete('public/attachmentOne/' . $attachOne->$converted);
+                }
+
+                $attachFile = $request->file($field2);
+                $extension = $attachFile->extension();
+                $attachName = 'Tatanan Satu - ' . $field2 . '.' . $extension;
+                Storage::putFileAs('public/attachmentOne', $attachFile, $attachName);
+
+                $attachOne->update([
+                    $converted => $attachName,
+                ]);
+            }
+        }
+
+        foreach ($fieldNames3 as $field3) {
+            if ($request->hasFile($field3)) {
+                $request->validate([
+                    $field3 => 'nullable|file|max:3048|mimes:pdf'
+                ]);
+
+                $converted = Str::remove('_2', $field3);
+
+                if (Storage::exists('public/attachmentOne/' . $attachOneNd->$converted)) {
+                    Storage::delete('public/attachmentOne/' . $attachOneNd->$converted);
+                }
+
+                $attachFile = $request->file($field3);
+                $extension = $attachFile->extension();
+                $attachName = 'Tatanan Satu - ' . $field3 . '.' . $extension;
+                Storage::putFileAs('public/attachmentOne', $attachFile, $attachName);
+
+                $attachOneNd->update([
+                    $converted => $attachName,
+                ]);
+            }
+        }
+
+        foreach ($fieldNames1 as $field1) {
+            $tatananOne->update([
+                $field1 => $request->input($field1),
+            ]);
+        }
+
+        return redirect()->route('tatananOne.index')->with('success', 'Jawaban Anda Di Tatanan 1 Berhasil Disimpan.');
     }
 
     /**
