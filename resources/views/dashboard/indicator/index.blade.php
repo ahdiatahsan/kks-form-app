@@ -22,7 +22,7 @@
         <div class="row gy-5 g-xl-8">
             <div class="col-xl-4">
                 <!--begin::Tatanan 1-->
-                <a href="{{ route('tatanan-satu.index') }}" class="card bg-success hoverable card-xl-stretch mb-xl-8">
+                <a href="{{ route('tatananOne.index') }}" class="card bg-success hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
@@ -42,7 +42,7 @@
             </div>
             <div class="col-xl-4">
                 <!--begin::Tatanan 2-->
-                <a href="{{ route('tatanan-dua.index') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
+                <a href="{{ route('tatananTwo.index') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm008.svg-->
@@ -61,7 +61,7 @@
             </div>
             <div class="col-xl-4">
                 <!--begin::Tatanan 3-->
-                <a href="{{ route('tatanan-tiga.index') }}" class="card bg-success hoverable card-xl-stretch mb-5 mb-xl-8">
+                <a href="{{ route('tatananThree.index') }}" class="card bg-success hoverable card-xl-stretch mb-5 mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/graphs/gra005.svg-->
@@ -89,7 +89,7 @@
         <div class="row gy-5 g-xl-8">
             <div class="col-xl-4">
                 <!--begin::Tatanan 4-->
-                <a href="{{ route('tatanan-empat.index') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
+                <a href="{{ route('tatananFour.index') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
@@ -109,7 +109,7 @@
             </div>
             <div class="col-xl-4">
                 <!--begin::Tatanan 5-->
-                <a href="{{ route('tatanan-lima.index') }}" class="card bg-success hoverable card-xl-stretch mb-xl-8">
+                <a href="{{ route('tatananFive.index') }}" class="card bg-success hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm008.svg-->
@@ -129,7 +129,7 @@
             </div>
             <div class="col-xl-4">
                 <!--begin::Tatanan 6-->
-                <a href="{{ route('tatanan-enam.index') }}" class="card bg-primary hoverable card-xl-stretch mb-5 mb-xl-8">
+                <a href="{{ route('tatananSix.index') }}" class="card bg-primary hoverable card-xl-stretch mb-5 mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/graphs/gra005.svg-->
@@ -151,7 +151,7 @@
         <div class="row gy-5 g-xl-8">
             <div class="col-xl-4">
                 <!--begin::Tatanan 7-->
-                <a href="{{ route('tatanan-tujuh.index') }}" class="card bg-success hoverable card-xl-stretch mb-xl-8">
+                <a href="{{ route('tatananSeven.index') }}" class="card bg-success hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
@@ -172,7 +172,7 @@
             </div>
             <div class="col-xl-4">
                 <!--begin::Tatanan 8-->
-                <a href="{{ route('tatanan-delapan.index') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
+                <a href="{{ route('tatananEight.index') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm008.svg-->
@@ -193,7 +193,7 @@
             </div>
             <div class="col-xl-4">
                 <!--begin::Tatanan 9-->
-                <a href="{{ route('tatanan-sembilan.index') }}" class="card bg-success hoverable card-xl-stretch mb-5 mb-xl-8">
+                <a href="{{ route('tatananNine.index') }}" class="card bg-success hoverable card-xl-stretch mb-5 mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/graphs/gra005.svg-->

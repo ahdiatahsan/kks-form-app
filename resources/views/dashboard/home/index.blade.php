@@ -21,8 +21,8 @@
     <x-slot name="post">
         <div class="row gy-5 g-xl-8">
             <div class="col-xl-4">
-                <!--begin::Pendahuluan-->
-                <a href="{{ route('pendahuluan.index') }}" class="card bg-success hoverable card-xl-stretch mb-xl-8">
+                <!--begin::introduction-->
+                <a href="{{ route('introduction.index') }}" class="card bg-success hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
@@ -38,7 +38,7 @@
                     </div>
                     <!--end::Body-->
                 </a>
-                <!--end::Pendahuluan-->
+                <!--end::introduction-->
             </div>
             <div class="col-xl-4">
                 <!--begin::Kelembagaan-->
@@ -61,8 +61,8 @@
                 <!--end::Kelembagaan-->
             </div>
             <div class="col-xl-4">
-                <!--begin::Pendanaan-->
-                <a href="{{ route('pendanaan.index') }}" class="card bg-success hoverable card-xl-stretch mb-5 mb-xl-8">
+                <!--begin::funding-->
+                <a href="{{ route('funding.index') }}" class="card bg-success hoverable card-xl-stretch mb-5 mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/graphs/gra005.svg-->
@@ -79,13 +79,13 @@
                     </div>
                     <!--end::Body-->
                 </a>
-                <!--end::Pendanaan-->
+                <!--end::funding-->
             </div>
         </div>
         <div class="row gy-5 g-xl-8">
             <div class="col-xl-4">
                 <!--begin::Pokok-->
-                <a href="{{ route('indikator-pokok.index') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
+                <a href="{{ route('tatananMain.index') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
@@ -125,7 +125,7 @@
             </div>
             <div class="col-xl-4">
                 <!--begin::Penutup-->
-                <a href="{{ route('penutup.index') }}" class="card bg-primary hoverable card-xl-stretch mb-5 mb-xl-8">
+                <a href="{{ route('conclusion.index') }}" class="card bg-primary hoverable card-xl-stretch mb-5 mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/graphs/gra005.svg-->
