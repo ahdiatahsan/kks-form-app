@@ -73,6 +73,12 @@
                     <!--begin::Toolbar-->
                     {{ $toolbar }}
                     <!--end::Toolbar-->
+                    
+                    <!--begin::Alert-->
+                    <x-dashboard.alert.success />
+                    <x-dashboard.alert.error />
+                    <!--end::Alert-->
+                    
                     <!--begin::Post-->
                     <div class="post d-flex flex-column-fluid" id="kt_post">
                         <!--begin::Container-->
