@@ -139,9 +139,11 @@ class TatananOneController extends Controller
         }
 
         foreach ($fieldNames1 as $field1) {
-            $tatananOne->update([
-                $field1 => $request->input($field1),
-            ]);
+            if ($request->has($field1)) {
+                $tatananOne->update([
+                    $field1 => $request->input($field1),
+                ]);
+            }
         }
 
         return redirect()->route('tatananOne.index')->with('success', 'Jawaban Anda Di Tatanan 1 Berhasil Disimpan.');

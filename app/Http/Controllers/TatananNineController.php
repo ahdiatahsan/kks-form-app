@@ -18,7 +18,7 @@ class TatananNineController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -139,9 +139,11 @@ class TatananNineController extends Controller
         }
 
         foreach ($fieldNames1 as $field1) {
-            $tatananNine->update([
-                $field1 => $request->input($field1),
-            ]);
+            if ($request->has($field1)) {
+                $tatananNine->update([
+                    $field1 => $request->input($field1),
+                ]);
+            }
         }
 
         return redirect()->route('tatananNine.index')->with('success', 'Jawaban Anda Di Tatanan 9 Berhasil Disimpan.');

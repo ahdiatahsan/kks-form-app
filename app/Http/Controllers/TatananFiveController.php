@@ -18,7 +18,7 @@ class TatananFiveController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -139,9 +139,11 @@ class TatananFiveController extends Controller
         }
 
         foreach ($fieldNames1 as $field1) {
-            $tatananFive->update([
-                $field1 => $request->input($field1),
-            ]);
+            if ($request->has($field1)) {
+                $tatananFive->update([
+                    $field1 => $request->input($field1),
+                ]);
+            }
         }
 
         return redirect()->route('tatananFive.index')->with('success', 'Jawaban Anda Di Tatanan 5 Berhasil Disimpan.');

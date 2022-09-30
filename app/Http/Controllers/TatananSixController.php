@@ -18,7 +18,7 @@ class TatananSixController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -139,9 +139,11 @@ class TatananSixController extends Controller
         }
 
         foreach ($fieldNames1 as $field1) {
-            $tatananSix->update([
-                $field1 => $request->input($field1),
-            ]);
+            if ($request->has($field1)) {
+                $tatananSix->update([
+                    $field1 => $request->input($field1),
+                ]);
+            }
         }
 
         return redirect()->route('tatananSix.index')->with('success', 'Jawaban Anda Di Tatanan 6 Berhasil Disimpan.');
