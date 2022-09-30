@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('fundings', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('attachment_pdf')->nullable();
+            $table->string('attachment_img')->nullable();
+            $table->string('description')->nullable();
+            $table->date('date_activity');
+            $table->foreignId('user_id')->nullable()->constrained('users')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }

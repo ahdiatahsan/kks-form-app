@@ -46,6 +46,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function fundings()
+    {
+        return $this->hasMany(Funding::class);
+    }
+
     public function tatanan_ones()
     {
         return $this->hasMany(TatananOne::class);
