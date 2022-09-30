@@ -95,7 +95,7 @@ class TatananSevenController extends Controller
         foreach ($fieldNames2 as $field2) {
             if ($request->hasFile($field2)) {
                 $request->validate([
-                    $field2 => 'nullable|file|max:3048|mimes:pdf'
+                    $field2 => 'required|file|max:3048|mimes:pdf'
                 ]);
 
                 $converted = Str::remove('_1', $field2);
@@ -118,7 +118,7 @@ class TatananSevenController extends Controller
         foreach ($fieldNames3 as $field3) {
             if ($request->hasFile($field3)) {
                 $request->validate([
-                    $field3 => 'nullable|file|max:3048|mimes:pdf'
+                    $field3 => 'required|file|max:3048|mimes:jpeg,jpg,png,webp'
                 ]);
 
                 $converted = Str::remove('_2', $field3);
