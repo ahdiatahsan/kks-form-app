@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('introductions', function (Blueprint $table) {
             $table->id();
+            $table->text('body')->nullable();
+            $table->string('attachment')->nullable();
             $table->timestamps();
         });
     }
