@@ -96,6 +96,8 @@ class TatananNineController extends Controller
             if ($request->hasFile($field2)) {
                 $request->validate([
                     $field2 => 'required|file|max:3048|mimes:pdf'
+                ], [
+                    $field2.'.mimes' => 'Lampiran harus berupa berkas berjenis: pdf.'
                 ]);
 
                 $converted = Str::remove('_1', $field2);
@@ -119,6 +121,8 @@ class TatananNineController extends Controller
             if ($request->hasFile($field3)) {
                 $request->validate([
                     $field3 => 'required|file|max:3048|mimes:jpeg,jpg,png,webp'
+                ], [
+                    $field3.'.mimes' => 'Dokumentasi harus berupa berkas berjenis: jpeg, jpg, png, webp.'
                 ]);
 
                 $converted = Str::remove('_2', $field3);
