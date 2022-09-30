@@ -46,6 +46,26 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function institutional_builders()
+    {
+        return $this->hasMany(InstitutionalBuilder::class);
+    }
+
+    public function institutional_kks()
+    {
+        return $this->hasMany(InstitutionalKks::class);
+    }
+
+    public function institutional_districts()
+    {
+        return $this->hasMany(InstitutionalDistrict::class);
+    }
+
+    public function institutional_villages()
+    {
+        return $this->hasMany(InstitutionalVillage::class);
+    }
+    
     public function fundings()
     {
         return $this->hasMany(Funding::class);
