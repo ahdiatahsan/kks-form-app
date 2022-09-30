@@ -171,7 +171,7 @@ class UserSeeder extends Seeder
 
         $usersOffice = [
             [
-                'name' => 'Dinas Kelautan dan Perikanan (DKP)',
+                'name' => 'Dinas Ketahanan Pangan (DKP)',
                 'phone' => '08',
                 'email' => 'dkp@mail.com',
                 'password' => Hash::make('password')
@@ -180,6 +180,12 @@ class UserSeeder extends Seeder
                 'name' => 'Dinas Kesehatan (Dinkes)',
                 'phone' => '08',
                 'email' => 'dinkes@mail.com',
+                'password' => Hash::make('password')
+            ],
+            [
+                'name' => 'Dinas Pertanian',
+                'phone' => '08',
+                'email' => 'pertanian@mail.com',
                 'password' => Hash::make('password')
             ],
             [
