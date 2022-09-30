@@ -17,7 +17,8 @@ class ConclusionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'body' => 'Data Kosong',
+            'attachment' => null,
         ];
     }
 }
