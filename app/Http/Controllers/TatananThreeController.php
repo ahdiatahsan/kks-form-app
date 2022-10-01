@@ -120,7 +120,7 @@ class TatananThreeController extends Controller
         foreach ($fieldNames3 as $field3) {
             if ($request->hasFile($field3)) {
                 $request->validate([
-                    $field3 => 'required|file|max:3048|mimes:jpeg,jpg,png,webp'
+                    $field3 => 'required|file|max:2048|mimes:jpeg,jpg,png,webp'
                 ], [
                     $field3.'.mimes' => 'Dokumentasi harus berupa berkas berjenis: jpeg, jpg, png, webp.'
                 ]);
