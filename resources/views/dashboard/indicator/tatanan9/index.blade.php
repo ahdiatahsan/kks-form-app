@@ -41,6 +41,19 @@
                 <div class="mx-auto mw-1000px w-100 pt-5 pb-5">
                     <!--begin::Wrapper-->
                     <div class="w-100">
+
+                        @if (Auth::user()->id != '3' ||
+                            Auth::user()->id != '10' ||
+                            Auth::user()->hasAnyRole('district|village'))
+                            <!--begin::noQuestion-->
+                            <div class="text-center">
+                                <!--begin::Title-->
+                                <h4 class="text-dark">Anda tidak memiliki pertanyaan pada tatanan ini.</h4>
+                                <!--end::Title-->
+                            </div>
+                            <!--end::noQuestion-->
+                        @endif
+
                         @if (Auth::user()->id == '10' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="pb-5">
