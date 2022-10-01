@@ -1453,12 +1453,12 @@ class UserSeeder extends Seeder
         # Assign roles
         $userAdministrator->assignRole($roleAdministrator);
 
-        $userOffice = User::where('id', '>', 1)->orWhere('id', '<', 26)->get();
+        $userOffice = User::whereBetween('id', [2, 25])->get();
         foreach($userOffice as $user){
             $user->assignRole($roleOffice);
         }
 
-        $userDistrict = User::where('id', '>', 25)->orWhere('id', '<', 38)->get();
+        $userDistrict = User::whereBetween('id', [26, 37])->get();
         foreach($userDistrict as $user){
             $user->assignRole($roleDistrict);
         }
