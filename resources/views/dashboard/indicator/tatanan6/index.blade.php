@@ -41,6 +41,7 @@
                 <div class="mx-auto mw-1000px w-100 pt-5 pb-5">
                     <!--begin::Wrapper-->
                     <div class="w-100">
+                        @if (Auth::user()->id == '23' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="pb-5">
                             <!--begin::Title-->
@@ -3489,6 +3490,7 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
                     </div>
                     <!--end::Wrapper-->
                 </div>

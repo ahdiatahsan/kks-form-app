@@ -41,6 +41,7 @@
                 <div class="mx-auto mw-1000px w-100 pt-5 pb-5">
                     <!--begin::Wrapper-->
                     <div class="w-100">
+                        @if (Auth::user()->id == '19' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="pb-5">
                             <!--begin::Title-->
@@ -1353,6 +1354,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '17' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -2289,6 +2292,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '23' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -2462,6 +2467,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '18' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -2899,6 +2906,7 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
                     </div>
                 </div>
                 <!--end::Form-->

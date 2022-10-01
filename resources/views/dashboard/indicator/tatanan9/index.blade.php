@@ -41,6 +41,7 @@
                 <div class="mx-auto mw-1000px w-100 pt-5 pb-5">
                     <!--begin::Wrapper-->
                     <div class="w-100">
+                        @if (Auth::user()->id == '10' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="pb-5">
                             <!--begin::Title-->
@@ -821,6 +822,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->id == '10' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -830,6 +833,8 @@
                             <!--end::Title-->
                         </div>
                         <!--end::Heading-->
+                        @endif
+                        @if (Auth::user()->id == '10' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">3.1 Komunikasi Dan Informasi
@@ -1237,6 +1242,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">3.3 Implementasi Sistem Kewaspadaan
@@ -1400,6 +1407,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '10' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -1897,6 +1906,7 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
                     </div>
                     <!--end::Wrapper-->
                 </div>

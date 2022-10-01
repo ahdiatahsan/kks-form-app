@@ -41,6 +41,7 @@
                 <div class="mx-auto mw-1000px w-100 pt-5 pb-5">
                     <!--begin::Wrapper-->
                     <div class="w-100">
+                        @if (Auth::user()->id == '23' || Auth::user()->id == '24' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="pb-5">
                             <!--begin::Title-->
@@ -48,6 +49,8 @@
                             <!--end::Title-->
                         </div>
                         <!--end::Heading-->
+                        @endif
+                        @if (Auth::user()->id == '24' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">1.1 Kebijakan Pengelolaan Kualitas
@@ -219,6 +222,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '23' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">1.2 Car Free Day (CFD)</h5>
@@ -369,6 +374,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '24' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">1.3 Penggunaan Energi Ramah
@@ -1166,6 +1173,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '22' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -1904,6 +1913,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->id == '22' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -1913,6 +1924,8 @@
                             <!--end::Title-->
                         </div>
                         <!--end::Heading-->
+                        @endif
+                        @if (Auth::user()->id == '22' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">3.1 Upaya Pemenuhan Akses Air
@@ -2226,9 +2239,11 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
-                            <h5 class="fw-bold d-flex align-items-center text-dark">3.2 Pengawasan Eksternal Kualitas
+                            <h5 class="fw-bold d-flex align-items-center text-dark">3.3 Pengawasan Eksternal Kualitas
                                 Air Minum</h5>
                             <!--end::Title-->
                         </div>
@@ -2561,6 +2576,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->id == '22' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -2575,6 +2592,8 @@
                             <h5 class="fw-bold d-flex align-items-center text-dark">4.1 Komitmen</h5>
                             <!--end::Title-->
                         </div>
+                        @endif
+                        @if (Auth::user()->id == '22' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Input group-->
                         <form action="{{ route('tatananTwo.update', $tatananTwo->id) }}" method="POST"
                             enctype="multipart/form-data">
@@ -2893,6 +2912,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Input group-->
                         <form action="{{ route('tatananTwo.update', $tatananTwo->id) }}" method="POST"
                             enctype="multipart/form-data">
@@ -2970,6 +2991,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '22' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">4.2. Capaian Target Sanitasi</h5>
@@ -3894,6 +3917,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '21' || Auth::user()->id == '24' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -3903,6 +3928,8 @@
                             <!--end::Title-->
                         </div>
                         <!--end::Heading-->
+                        @endif
+                        @if (Auth::user()->id == '24' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">6.1 Komitmen</h5>
@@ -5282,6 +5309,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '21' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">6.6 Kondisi Lingkungan</h5>
@@ -5366,6 +5395,9 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '2' || Auth::user()->id == '3' || Auth::user()->id == '10' || 
+                            Auth::user()->id == '21' || Auth::user()->id == '24' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -5375,6 +5407,8 @@
                             <!--end::Title-->
                         </div>
                         <!--end::Heading-->
+                        @endif
+                        @if (Auth::user()->id == '21' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">7.1 Kebijakan Tata Ruang
@@ -5712,6 +5746,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '2' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">7.4 Pemanfaatan Lahan Pekarangan
@@ -5788,6 +5824,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '10' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">7.5 Ketersediaan Aksesibilitas Dan
@@ -5874,6 +5912,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">7.6 Gerakan PSN Dan Kebersihan
@@ -6037,6 +6077,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '10' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">7.8 Edukasi Daerah Yang Berpotensi
@@ -6113,6 +6155,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '24' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">7.9 Komitmen Pemerintah Daerah
@@ -6189,6 +6233,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '21' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">7.10 Program Rumah Sehat/Bedah
@@ -6358,6 +6404,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->id == '22' || Auth::user()->id == '24' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -6367,6 +6415,8 @@
                             <!--end::Title-->
                         </div>
                         <!--end::Heading-->
+                        @endif
+                        @if (Auth::user()->id == '24' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">8.1 Ruang Terbuka Hijau (RTH)
@@ -6985,6 +7035,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">8.6 Rumah Desa Sehat</h5>
@@ -7059,6 +7111,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '22' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">8.7 Kelompok Kerja Masyarakat Air
@@ -7142,6 +7196,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '13' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -7409,6 +7465,9 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->id == '18' || Auth::user()->id == '19' || 
+                            Auth::user()->id == '24' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="pb-5">
                             <!--begin::Title-->
@@ -7418,6 +7477,8 @@
                             <!--end::Title-->
                         </div>
                         <!--end::Heading-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">10.1 Syarat Kesehatan Rumah Ibadat
@@ -7593,6 +7654,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '24' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">10.2 Rumah Ibadat Ramah Lingkungan
@@ -7683,6 +7746,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '19' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">10.3 Rumah Ibadat Inklusif (Ramah
@@ -7773,6 +7838,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">10.4 Larangan Merokok</h5>
@@ -7950,11 +8017,15 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->id == '18' || Auth::user()->id == '19' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">10.6 Aktivasi Rumah Ibadat</h5>
                             <!--end::Title-->
                         </div>
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Input group-->
                         <form action="{{ route('tatananTwo.update', $tatananTwo->id) }}" method="POST"
                             enctype="multipart/form-data">
@@ -8040,6 +8111,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '19' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Input group-->
                         <form action="{{ route('tatananTwo.update', $tatananTwo->id) }}" method="POST"
                             enctype="multipart/form-data">
@@ -8126,6 +8199,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '18' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Input group-->
                         <form action="{{ route('tatananTwo.update', $tatananTwo->id) }}" method="POST"
                             enctype="multipart/form-data">
@@ -8209,6 +8284,7 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
                     </div>
                     <!--end::Wrapper-->
                 </div>

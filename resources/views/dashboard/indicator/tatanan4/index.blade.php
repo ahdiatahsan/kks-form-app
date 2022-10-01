@@ -41,6 +41,7 @@
                 <div class="mx-auto mw-1000px w-100 pt-5 pb-5">
                     <!--begin::Wrapper-->
                     <div class="w-100">
+                        @if (Auth::user()->id == '13' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="pb-5">
                             <!--begin::Title-->
@@ -530,6 +531,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -775,6 +778,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '12' || Auth::user()->id == '17' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -790,6 +795,8 @@
                             </h5>
                             <!--end::Title-->
                         </div>
+                        @endif
+                        @if (Auth::user()->id == '17' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Input group-->
                         <form action="{{ route('tatananFour.update', $tatananFour->id) }}" method="POST"
                             enctype="multipart/form-data">
@@ -872,6 +879,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '12' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Input group-->
                         <form action="{{ route('tatananFour.update', $tatananFour->id) }}" method="POST"
                             enctype="multipart/form-data">
@@ -1045,6 +1054,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -1238,6 +1249,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '12' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -1508,6 +1521,7 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
                     </div>
                 </div>
                 <!--end::Form-->

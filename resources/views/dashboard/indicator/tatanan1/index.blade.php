@@ -41,6 +41,7 @@
                 <div class="mx-auto mw-1000px w-100 pt-5 pb-5">
                     <!--begin::Wrapper-->
                     <div class="w-100">
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="pb-5">
                             <!--begin::Title-->
@@ -1402,6 +1403,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->id == '14' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -1411,6 +1414,8 @@
                             <!--end::Title-->
                         </div>
                         <!--end::Heading-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
                             <h5 class="fw-bold d-flex align-items-center text-dark">6.1 Pelayanan Kesehatan
@@ -1582,6 +1587,15 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->id == '14' || Auth::user()->hasAnyRole('administrator'))
+                        <div class="pb-3">
+                            <!--begin::Title-->
+                            <h5 class="fw-bold d-flex align-items-center text-dark">6.2 Laik Higiene Sanitasi Tempat Pengelolaan Pangan (TPP)</h5>
+                            <!--end::Title-->
+                        </div>
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Input group-->
                         <form action="{{ route('tatananOne.update', $tatananOne->id) }}" method="POST"
                             enctype="multipart/form-data">
@@ -1816,6 +1830,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '14' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Input group-->
                         <form action="{{ route('tatananOne.update', $tatananOne->id) }}" method="POST"
                             enctype="multipart/form-data">
@@ -1899,9 +1915,11 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <div class="pb-3">
                             <!--begin::Title-->
-                            <h5 class="fw-bold d-flex align-items-center text-dark">6.2 Implementasi
+                            <h5 class="fw-bold d-flex align-items-center text-dark">6.3 Implementasi
                                 Desa/Kelurahan Sehat Iklim</h5>
                             <!--end::Title-->
                         </div>
@@ -2209,6 +2227,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->id == '17' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -2218,6 +2238,8 @@
                             <!--end::Title-->
                         </div>
                         <!--end::Heading-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Input group-->
                         <form action="{{ route('tatananOne.update', $tatananOne->id) }}" method="POST"
                             enctype="multipart/form-data">
@@ -2462,6 +2484,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '17' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Input group-->
                         <form action="{{ route('tatananOne.update', $tatananOne->id) }}" method="POST"
                             enctype="multipart/form-data">
@@ -2541,6 +2565,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '3' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -4693,6 +4719,8 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
+                        @if (Auth::user()->id == '2' || Auth::user()->hasAnyRole('administrator'))
                         <!--begin::Heading-->
                         <div class="separator separator-dashed my-4"></div>
                         <div class="pb-5">
@@ -5610,6 +5638,7 @@
                             </div>
                         </form>
                         <!--end::Input group-->
+                        @endif
                     </div>
                     <!--end::Wrapper-->
                 </div>
