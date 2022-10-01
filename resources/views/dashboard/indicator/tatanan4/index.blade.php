@@ -42,10 +42,10 @@
                     <!--begin::Wrapper-->
                     <div class="w-100">
 
-                        @if (Auth::user()->id != '3' ||
-                            Auth::user()->id != '12' ||
-                            Auth::user()->id != '13' ||
-                            Auth::user()->id != '17' ||
+                        @if (Auth::user()->id != '3' &&
+                            Auth::user()->id != '12' &&
+                            Auth::user()->id != '13' &&
+                            Auth::user()->id != '17' &&
                             Auth::user()->hasAnyRole('district|village'))
                             <!--begin::noQuestion-->
                             <div class="text-center">
@@ -84,28 +84,30 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p1"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p1 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada, diatur melalui Perda/Perkada
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p1"
-                                                        value="b,75">
+                                                        value="b,75"
+                                                        {{ $tatananFour->p1 == 'b,75' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada, diatur melalui Perkada
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p1"
-                                                        value="c,50">
+                                                        value="c,50" {{ $tatananFour->p1 == 'c,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Ada, diatur melalui SE/SK
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p1"
-                                                        value="d,0">
+                                                        value="d,0" {{ $tatananFour->p1 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada
                                                     </label>
                                                 </div>
@@ -168,14 +170,13 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             2. Keberadaan program UKS/M dalam perencanaan daerah (RPJMD, RKPD, Renstra
-                                            PD
-                                            dan
-                                            Renja PD)
+                                            PD dan Renja PD)
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p2"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p2 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada, tercantum di dokumen RPJMD,
                                                         RKPD,
                                                         Renstra PD dan Renja PD
@@ -184,7 +185,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p2"
-                                                        value="b,50">
+                                                        value="b,50"
+                                                        {{ $tatananFour->p2 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada, tercantum di dokumen RPJMD
                                                         dan
                                                         RKPD
@@ -193,7 +195,7 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p2"
-                                                        value="c,25">
+                                                        value="c,25" {{ $tatananFour->p2 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Ada tercantum di dokumen Renstra
                                                         PD
                                                     </label>
@@ -201,7 +203,7 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p2"
-                                                        value="d,0">
+                                                        value="d,0" {{ $tatananFour->p2 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak tercantum di semua dokumen
                                                         perencanaan pembangunan daerah dan perencanaan perangkat daerah
                                                     </label>
@@ -278,7 +280,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p3"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p3 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada dibuktikan dengan SK,
                                                         Anggaran,
                                                         Rencana Kerja terelisasi >80%
@@ -287,7 +290,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p3"
-                                                        value="b,75">
+                                                        value="b,75"
+                                                        {{ $tatananFour->p3 == 'b,75' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada dibuktikan dengan SK,
                                                         Anggaran,
                                                         Rencana Kerja terealisasi 71%-80%
@@ -297,7 +301,7 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p3"
-                                                        value="c,50">
+                                                        value="c,50" {{ $tatananFour->p3 == 'c,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Ada dibuktikan dengan SK,
                                                         Anggaran,
                                                         Rencana Kerja terealisasi 50%-70%
@@ -307,7 +311,7 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p3"
-                                                        value="d,25">
+                                                        value="d,25" {{ $tatananFour->p3 == 'd,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Ada dibuktikan dengan SK,
                                                         Anggaran,
                                                         Rencana Kerja terealisasi < 50% </label>
@@ -315,7 +319,7 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p3"
-                                                        value="e,0">
+                                                        value="e,0" {{ $tatananFour->p3 == 'e,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">e. Tidak ada Tim Pembina
                                                     </label>
                                                 </div>
@@ -384,7 +388,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p4"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p4 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada dan dilakukan > 4 kali dalam
                                                         setahun
                                                     </label>
@@ -392,7 +397,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p4"
-                                                        value="b,50">
+                                                        value="b,50"
+                                                        {{ $tatananFour->p4 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada dan dilakukan 2 - 3 kali
                                                         dalam
                                                         setahun
@@ -401,7 +407,7 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p4"
-                                                        value="c,25">
+                                                        value="c,25" {{ $tatananFour->p4 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Ada dan dilakukan 1 kali dalam
                                                         setahun
                                                     </label>
@@ -409,7 +415,7 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p4"
-                                                        value="d,0">
+                                                        value="d,0" {{ $tatananFour->p4 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada rapat koordinasi
                                                     </label>
                                                 </div>
@@ -487,28 +493,30 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p5"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p5 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p5"
-                                                        value="b,75">
+                                                        value="b,75"
+                                                        {{ $tatananFour->p5 == 'b,75' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 51% - 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p5"
-                                                        value="c,50">
+                                                        value="c,50" {{ $tatananFour->p5 == 'c,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 25% - 50%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p5"
-                                                        value="d,0">
+                                                        value="d,0" {{ $tatananFour->p5 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 25% </label>
                                                 </div>
                                             </div>
@@ -584,28 +592,30 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p6"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p6 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p6"
-                                                        value="b,75">
+                                                        value="b,75"
+                                                        {{ $tatananFour->p6 == 'b,75' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 51% - 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p6"
-                                                        value="c,50">
+                                                        value="c,50" {{ $tatananFour->p6 == 'c,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 25% - 50%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p6"
-                                                        value="d,0">
+                                                        value="d,0" {{ $tatananFour->p6 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 25% </label>
                                                 </div>
                                             </div>
@@ -666,21 +676,23 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p7"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p7 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p7"
-                                                        value="b,50">
+                                                        value="b,50"
+                                                        {{ $tatananFour->p7 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 51% - 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p7"
-                                                        value="c,0">
+                                                        value="c,0" {{ $tatananFour->p7 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                             </div>
@@ -741,21 +753,23 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p8"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p8 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p8"
-                                                        value="b,50">
+                                                        value="b,50"
+                                                        {{ $tatananFour->p8 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 51% - 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p8"
-                                                        value="c,0">
+                                                        value="c,0" {{ $tatananFour->p8 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                             </div>
@@ -837,27 +851,29 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p9"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p9 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Lebih dari 70%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p9"
-                                                        value="b,75">
+                                                        value="b,75"
+                                                        {{ $tatananFour->p9 == 'b,75' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50% - 70%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p9"
-                                                        value="c,50">
+                                                        value="c,50" {{ $tatananFour->p9 == 'c,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 25% - < 50% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p9"
-                                                        value="d,25">
+                                                        value="d,25" {{ $tatananFour->p9 == 'd,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Kurang dari 25%
                                                     </label>
                                                 </div>
@@ -921,7 +937,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p10"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p10 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Seluruh anak penyandang
                                                         disabilitas
                                                         terlayani
@@ -930,7 +947,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p10"
-                                                        value="b,50">
+                                                        value="b,50"
+                                                        {{ $tatananFour->p10 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Sebagian anak penyandang
                                                         disabilitas
                                                         terlayani
@@ -939,7 +957,7 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p10"
-                                                        value="c,0">
+                                                        value="c,0" {{ $tatananFour->p10 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Tidak ada
                                                     </label>
                                                 </div>
@@ -1014,27 +1032,29 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p11"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p11 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Lebih dari 70%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p11"
-                                                        value="b,75">
+                                                        value="b,75"
+                                                        {{ $tatananFour->p11 == 'b,75' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50% - 70%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p11"
-                                                        value="c,50">
+                                                        value="c,50" {{ $tatananFour->p11 == 'c,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 25% - < 50% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p11"
-                                                        value="d,25">
+                                                        value="d,25" {{ $tatananFour->p11 == 'd,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Kurang dari 25%
                                                     </label>
                                                 </div>
@@ -1112,27 +1132,29 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p12"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p12 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Lebih dari 70%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p12"
-                                                        value="b,75">
+                                                        value="b,75"
+                                                        {{ $tatananFour->p12 == 'b,75' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50% - 70%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p12"
-                                                        value="c,50">
+                                                        value="c,50" {{ $tatananFour->p12 == 'c,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 25% - < 50% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p12"
-                                                        value="d,25">
+                                                        value="d,25" {{ $tatananFour->p12 == 'd,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Kurang dari 25%
                                                     </label>
                                                 </div>
@@ -1212,27 +1234,29 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p13"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p13 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Lebih dari 70%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p13"
-                                                        value="b,75">
+                                                        value="b,75"
+                                                        {{ $tatananFour->p13 == 'b,75' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50% - 70%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p13"
-                                                        value="c,50">
+                                                        value="c,50" {{ $tatananFour->p13 == 'c,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 25% - < 50% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p13"
-                                                        value="d,25">
+                                                        value="d,25" {{ $tatananFour->p13 == 'd,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Kurang dari 25%
                                                     </label>
                                                 </div>
@@ -1312,28 +1336,30 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p14"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p14 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. 5% atau lebih jumlah
                                                         sekolah</label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p14"
-                                                        value="b,50">
+                                                        value="b,50"
+                                                        {{ $tatananFour->p14 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 3% - 4% jumlah sekolah
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p14"
-                                                        value="c,25">
+                                                        value="c,25" {{ $tatananFour->p14 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 1% - 2% jumlah sekolah
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p14"
-                                                        value="d,0">
+                                                        value="d,0" {{ $tatananFour->p14 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada
                                                     </label>
                                                 </div>
@@ -1407,21 +1433,23 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p15"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p15 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. 3 atau lebih data terintegrasi
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p15"
-                                                        value="b,50">
+                                                        value="b,50"
+                                                        {{ $tatananFour->p15 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 2 data terintegrasi
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p15"
-                                                        value="c,0">
+                                                        value="c,0" {{ $tatananFour->p15 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Tidak ada </label>
                                                 </div>
                                             </div>
@@ -1489,28 +1517,30 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p16"
-                                                        value="a,100">
+                                                        value="a,100"
+                                                        {{ $tatananFour->p16 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. 5% atau lebih jumlah sekolah
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p16"
-                                                        value="b,50">
+                                                        value="b,50"
+                                                        {{ $tatananFour->p16 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 3% - 4% jumlah sekolah
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p16"
-                                                        value="c,25">
+                                                        value="c,25" {{ $tatananFour->p16 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 1% - 2% jumlah sekolah
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p16"
-                                                        value="d,0">
+                                                        value="d,0" {{ $tatananFour->p16 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada
                                                     </label>
                                                 </div>
