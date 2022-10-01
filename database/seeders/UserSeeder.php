@@ -308,6 +308,12 @@ class UserSeeder extends Seeder
                 'email' => 'dlh@mail.com',
                 'password' => Hash::make('password')
             ],
+            [
+                'name' => 'Dinas Penanaman Modal Dan PTSP (DPMPTSP)',
+                'phone' => '08',
+                'email' => 'dpmptsp@mail.com',
+                'password' => Hash::make('password')
+            ],
         ];
 
         foreach($usersOffice as $userOffice){
@@ -412,7 +418,7 @@ class UserSeeder extends Seeder
                 'email' => 'kambiolangi@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Abd. Salam',
-                'district_id' => 24
+                'district_id' => 26
             ],
             [
                 'name' => 'Kelurahan Buntu Sigi',
@@ -420,7 +426,7 @@ class UserSeeder extends Seeder
                 'email' => 'buntusigi@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Mustakim',
-                'district_id' => 24
+                'district_id' => 26
             ],
             [
                 'name' => 'Kelurahan Kalosi',
@@ -428,7 +434,7 @@ class UserSeeder extends Seeder
                 'email' => 'kalosi@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Suhiba Baddu, SE',
-                'district_id' => 24
+                'district_id' => 26
             ],
             [
                 'name' => 'Desa Bolang',
@@ -436,7 +442,7 @@ class UserSeeder extends Seeder
                 'email' => 'bolang@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Nasaruddin, S.Pd.I',
-                'district_id' => 24
+                'district_id' => 26
             ],
             [
                 'name' => 'Desa Mata Allo',
@@ -444,7 +450,7 @@ class UserSeeder extends Seeder
                 'email' => 'mataallo@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Usman Rasi',
-                'district_id' => 24
+                'district_id' => 26
             ],
             [
                 'name' => 'Desa Pana',
@@ -452,7 +458,7 @@ class UserSeeder extends Seeder
                 'email' => 'pana@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Yusran Yunus',
-                'district_id' => 24
+                'district_id' => 26
             ],
             [
                 'name' => 'Desa Sumillan',
@@ -460,7 +466,7 @@ class UserSeeder extends Seeder
                 'email' => 'sumillan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Sudirman',
-                'district_id' => 24
+                'district_id' => 26
             ],
             [
                 'name' => 'Desa Taulo',
@@ -468,7 +474,7 @@ class UserSeeder extends Seeder
                 'email' => 'taulo@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Herman Emba, SE',
-                'district_id' => 24
+                'district_id' => 26
             ],
             [
                 'name' => 'Kelurahan Lakawan',
@@ -476,7 +482,7 @@ class UserSeeder extends Seeder
                 'email' => 'lakawan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'M.Seftian Budiatomo, S.STP, M.AP',
-                'district_id' => 25
+                'district_id' => 27
             ],
             [
                 'name' => 'Kelurahan Mataran',
@@ -484,7 +490,7 @@ class UserSeeder extends Seeder
                 'email' => 'mataran@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Supardi Pammu, S.E',
-                'district_id' => 25
+                'district_id' => 27
             ],
             [
                 'name' => 'Kelurahan Tanete	',
@@ -492,7 +498,7 @@ class UserSeeder extends Seeder
                 'email' => 'tanete@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Muhlis, S.E',
-                'district_id' => 25
+                'district_id' => 27
             ],
             [
                 'name' => 'Desa Singki',
@@ -500,7 +506,7 @@ class UserSeeder extends Seeder
                 'email' => 'singki@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Darji',
-                'district_id' => 25
+                'district_id' => 27
             ],
             [
                 'name' => 'Desa Siammbo',
@@ -508,7 +514,7 @@ class UserSeeder extends Seeder
                 'email' => 'siammbo@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Agung',
-                'district_id' => 25
+                'district_id' => 27
             ],
             [
                 'name' => 'Desa Tindalun',
@@ -516,7 +522,7 @@ class UserSeeder extends Seeder
                 'email' => 'tindalun@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Samsul, ST',
-                'district_id' => 25
+                'district_id' => 27
             ],
             [
                 'name' => 'Desa Bamba Puang',
@@ -524,7 +530,7 @@ class UserSeeder extends Seeder
                 'email' => 'bambapuang@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Abdul Muis',
-                'district_id' => 25
+                'district_id' => 27
             ],
             [
                 'name' => 'Desa Mendatte',
@@ -532,7 +538,7 @@ class UserSeeder extends Seeder
                 'email' => 'mendatte@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'alimin darisa',
-                'district_id' => 25
+                'district_id' => 27
             ],
             [
                 'name' => 'Desa Batu Noni',
@@ -540,7 +546,7 @@ class UserSeeder extends Seeder
                 'email' => 'batunoni@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Saharuddin',
-                'district_id' => 25
+                'district_id' => 27
             ],
             [
                 'name' => 'Desa Saruran',
@@ -548,7 +554,7 @@ class UserSeeder extends Seeder
                 'email' => 'saruran@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Rustan, K.S.H',
-                'district_id' => 25
+                'district_id' => 27
             ],
             [
                 'name' => 'Desa Tampo',
@@ -556,7 +562,7 @@ class UserSeeder extends Seeder
                 'email' => 'tampo@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Marzuki',
-                'district_id' => 25
+                'district_id' => 27
             ],
             [
                 'name' => 'Desa Pekalobean',
@@ -564,7 +570,7 @@ class UserSeeder extends Seeder
                 'email' => 'pekalobean@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Drs. Nasmin',
-                'district_id' => 25
+                'district_id' => 27
             ],
             [
                 'name' => 'Desa Bubun Lamba',
@@ -572,7 +578,7 @@ class UserSeeder extends Seeder
                 'email' => 'bubunlamba@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Wawan Darmawan',
-                'district_id' => 25
+                'district_id' => 27
             ],
             [
                 'name' => 'Desa Salu Dewata',
@@ -580,7 +586,7 @@ class UserSeeder extends Seeder
                 'email' => 'saludewata@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Jupri Juma',
-                'district_id' => 25
+                'district_id' => 27
             ],
             [
                 'name' => 'Desa Mampu',
@@ -588,7 +594,7 @@ class UserSeeder extends Seeder
                 'email' => 'mampu@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Mustafa',
-                'district_id' => 25
+                'district_id' => 27
             ],
             [
                 'name' => 'Kelurahan Balla',
@@ -596,7 +602,7 @@ class UserSeeder extends Seeder
                 'email' => 'balla@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Hasir',
-                'district_id' => 26
+                'district_id' => 28
             ],
             [
                 'name' => 'Kelurahan Tomenawa',
@@ -604,7 +610,7 @@ class UserSeeder extends Seeder
                 'email' => 'tomenawa@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Drs. Lunik',
-                'district_id' => 26
+                'district_id' => 28
             ],
             [
                 'name' => 'Kelurahan Baraka	',
@@ -612,7 +618,7 @@ class UserSeeder extends Seeder
                 'email' => 'kelbaraka@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Armansyah, S.Pd',
-                'district_id' => 26
+                'district_id' => 28
             ],
             [
                 'name' => 'Desa Banti',
@@ -620,7 +626,7 @@ class UserSeeder extends Seeder
                 'email' => 'banti@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Aco',
-                'district_id' => 26
+                'district_id' => 28
             ],
             [
                 'name' => 'Desa Bone Bone',
@@ -628,7 +634,7 @@ class UserSeeder extends Seeder
                 'email' => 'bonebone@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Drs. Idris',
-                'district_id' => 26
+                'district_id' => 28
             ],
             [
                 'name' => 'Desa Bontongan',
@@ -636,7 +642,7 @@ class UserSeeder extends Seeder
                 'email' => 'bontongan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Mardan, S.Sos',
-                'district_id' => 26
+                'district_id' => 28
             ],
             [
                 'name' => 'Desa Janggurara',
@@ -644,7 +650,7 @@ class UserSeeder extends Seeder
                 'email' => 'janggurara@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Sainal, SE',
-                'district_id' => 26
+                'district_id' => 28
             ],
             [
                 'name' => 'Desa Kadingeh',
@@ -652,7 +658,7 @@ class UserSeeder extends Seeder
                 'email' => 'Kadingeh@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Umar',
-                'district_id' => 26
+                'district_id' => 28
             ],
             [
                 'name' => 'Desa Kendenan',
@@ -660,7 +666,7 @@ class UserSeeder extends Seeder
                 'email' => 'kendenan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Bakri Puttung, S.Pd',
-                'district_id' => 26
+                'district_id' => 28
             ],
             [
                 'name' => 'Desa Parinding',
@@ -668,7 +674,7 @@ class UserSeeder extends Seeder
                 'email' => 'parinding@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Yusup Geno',
-                'district_id' => 26
+                'district_id' => 28
             ],
             [
                 'name' => 'Desa Pepandungan',
@@ -676,7 +682,7 @@ class UserSeeder extends Seeder
                 'email' => 'pepandungan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Tahir',
-                'district_id' => 26
+                'district_id' => 28
             ],
             [
                 'name' => 'Desa Perangian',
@@ -684,7 +690,7 @@ class UserSeeder extends Seeder
                 'email' => 'perangian@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Abd. Rajab',
-                'district_id' => 26
+                'district_id' => 28
             ],
             [
                 'name' => 'Desa Salukanan',
@@ -692,7 +698,7 @@ class UserSeeder extends Seeder
                 'email' => 'salukanan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Takdir, SP',
-                'district_id' => 26
+                'district_id' => 28
             ],
             [
                 'name' => 'Desa Tiro Wali',
@@ -700,7 +706,7 @@ class UserSeeder extends Seeder
                 'email' => 'tirowali@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Guntur',
-                'district_id' => 26
+                'district_id' => 28
             ],
             [
                 'name' => 'Desa Pandang Batu',
@@ -708,7 +714,7 @@ class UserSeeder extends Seeder
                 'email' => 'pandangbatu@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Muis',
-                'district_id' => 26
+                'district_id' => 28
             ],
             [
                 'name' => 'Desa Baroko',
@@ -716,7 +722,7 @@ class UserSeeder extends Seeder
                 'email' => 'desabaroko@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Abidin, SH',
-                'district_id' => 27
+                'district_id' => 29
             ],
             [
                 'name' => 'Desa Benteng Alla',
@@ -724,7 +730,7 @@ class UserSeeder extends Seeder
                 'email' => 'bentengalla@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Saleh, A. Md',
-                'district_id' => 27
+                'district_id' => 29
             ],
             [
                 'name' => 'Desa Benteng Alla Utara',
@@ -732,7 +738,7 @@ class UserSeeder extends Seeder
                 'email' => 'bentengallautara@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Waluddin Tandigau',
-                'district_id' => 27
+                'district_id' => 29
             ],
             [
                 'name' => 'Desa Patongloan',
@@ -740,7 +746,7 @@ class UserSeeder extends Seeder
                 'email' => 'patongloan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Atto Zainal',
-                'district_id' => 27
+                'district_id' => 29
             ],
             [
                 'name' => 'Desa Tongko',
@@ -748,7 +754,7 @@ class UserSeeder extends Seeder
                 'email' => 'tongko@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Tahir Coko',
-                'district_id' => 27
+                'district_id' => 29
             ],
             [
                 'name' => 'Desa Banua',
@@ -756,7 +762,7 @@ class UserSeeder extends Seeder
                 'email' => 'banua@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Rustam',
-                'district_id' => 28
+                'district_id' => 30
             ],
             [
                 'name' => 'Desa Baruka',
@@ -764,7 +770,7 @@ class UserSeeder extends Seeder
                 'email' => 'baruka@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Safri',
-                'district_id' => 28
+                'district_id' => 30
             ],
             [
                 'name' => 'Desa Bulo',
@@ -772,7 +778,7 @@ class UserSeeder extends Seeder
                 'email' => 'bulo@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Wahyu',
-                'district_id' => 28
+                'district_id' => 30
             ],
             [
                 'name' => 'Desa Bungin',
@@ -780,7 +786,7 @@ class UserSeeder extends Seeder
                 'email' => 'desabungin@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Dulyamin',
-                'district_id' => 28
+                'district_id' => 30
             ],
             [
                 'name' => 'Desa Sawito',
@@ -788,7 +794,7 @@ class UserSeeder extends Seeder
                 'email' => 'sawito@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Samsuddin',
-                'district_id' => 28
+                'district_id' => 30
             ],
             [
                 'name' => 'Desa Tallang Rilau',
@@ -796,7 +802,7 @@ class UserSeeder extends Seeder
                 'email' => 'tallangrilau@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Harminsah',
-                'district_id' => 28
+                'district_id' => 30
             ],
             [
                 'name' => 'Desa Buntu Mondong',
@@ -804,7 +810,7 @@ class UserSeeder extends Seeder
                 'email' => 'buntumondong@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Imran',
-                'district_id' => 29
+                'district_id' => 31
             ],
             [
                 'name' => 'Desa Eran Batu',
@@ -812,7 +818,7 @@ class UserSeeder extends Seeder
                 'email' => 'eranbatu@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Ismail Amir',
-                'district_id' => 29
+                'district_id' => 31
             ],
             [
                 'name' => 'Desa Langda',
@@ -820,7 +826,7 @@ class UserSeeder extends Seeder
                 'email' => 'langda@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Risal',
-                'district_id' => 29
+                'district_id' => 31
             ],
             [
                 'name' => 'Desa Latimojong',
@@ -828,7 +834,7 @@ class UserSeeder extends Seeder
                 'email' => 'latimojong@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Syahruddin',
-                'district_id' => 29
+                'district_id' => 31
             ],
             [
                 'name' => 'Desa Ledan',
@@ -836,7 +842,7 @@ class UserSeeder extends Seeder
                 'email' => 'ledan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Marwan',
-                'district_id' => 29
+                'district_id' => 31
             ],
             [
                 'name' => 'Desa Lunjen',
@@ -844,7 +850,7 @@ class UserSeeder extends Seeder
                 'email' => 'lunjen@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Wahyudy Bylhaq Syahrim',
-                'district_id' => 29
+                'district_id' => 31
             ],
             [
                 'name' => 'Desa Pasui',
@@ -852,7 +858,7 @@ class UserSeeder extends Seeder
                 'email' => 'pasui@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Abdul Jasim Ishak',
-                'district_id' => 29
+                'district_id' => 31
             ],
             [
                 'name' => 'Desa Potok Ullin',
@@ -860,7 +866,7 @@ class UserSeeder extends Seeder
                 'email' => 'potokullin@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Rusman Nafsir',
-                'district_id' => 29
+                'district_id' => 31
             ],
             [
                 'name' => 'Desa Cendana',
@@ -868,7 +874,7 @@ class UserSeeder extends Seeder
                 'email' => 'desacendana@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'M. Kahar K',
-                'district_id' => 30
+                'district_id' => 32
             ],
             [
                 'name' => 'Desa Karrang',
@@ -876,7 +882,7 @@ class UserSeeder extends Seeder
                 'email' => 'karrang@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Muhammad Supardi',
-                'district_id' => 30
+                'district_id' => 32
             ],
             [
                 'name' => 'Desa Lebang',
@@ -884,7 +890,7 @@ class UserSeeder extends Seeder
                 'email' => 'lebang@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Ir. Rusdi',
-                'district_id' => 30
+                'district_id' => 32
             ],
             [
                 'name' => 'Desa Malalin',
@@ -892,7 +898,7 @@ class UserSeeder extends Seeder
                 'email' => 'malalin@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Sareng Toto, SE',
-                'district_id' => 30
+                'district_id' => 32
             ],
             [
                 'name' => 'Desa Pinang',
@@ -900,7 +906,7 @@ class UserSeeder extends Seeder
                 'email' => 'pinang@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Rusli Sule',
-                'district_id' => 30
+                'district_id' => 32
             ],
             [
                 'name' => 'Desa Pundilemo',
@@ -908,7 +914,7 @@ class UserSeeder extends Seeder
                 'email' => 'pundilemo@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Aminuddin',
-                'district_id' => 30
+                'district_id' => 32
             ],
             [
                 'name' => 'Desa Taulan',
@@ -916,7 +922,7 @@ class UserSeeder extends Seeder
                 'email' => 'taulan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Muh. Arsum',
-                'district_id' => 30
+                'district_id' => 32
             ],
             [
                 'name' => 'Desa Buntu Barana',
@@ -924,7 +930,7 @@ class UserSeeder extends Seeder
                 'email' => 'buntubarana@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Malik',
-                'district_id' => 31
+                'district_id' => 33
             ],
             [
                 'name' => 'Desa Buntu Pema',
@@ -932,7 +938,7 @@ class UserSeeder extends Seeder
                 'email' => 'buntupema@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Rizal',
-                'district_id' => 31
+                'district_id' => 33
             ],
             [
                 'name' => 'Desa Curio',
@@ -940,7 +946,7 @@ class UserSeeder extends Seeder
                 'email' => 'desacurio@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Sainal Budi',
-                'district_id' => 31
+                'district_id' => 33
             ],
             [
                 'name' => 'Desa Mandalan',
@@ -948,7 +954,7 @@ class UserSeeder extends Seeder
                 'email' => 'mandalan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Ahmad',
-                'district_id' => 31
+                'district_id' => 33
             ],
             [
                 'name' => 'Desa Mekkala',
@@ -956,7 +962,7 @@ class UserSeeder extends Seeder
                 'email' => 'mekkala@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Addin',
-                'district_id' => 31
+                'district_id' => 33
             ],
             [
                 'name' => 'Desa Pabaloran',
@@ -964,7 +970,7 @@ class UserSeeder extends Seeder
                 'email' => 'pabaloran@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Ir. Sumarsono',
-                'district_id' => 31
+                'district_id' => 33
             ],
             [
                 'name' => 'Desa Parombean',
@@ -972,7 +978,7 @@ class UserSeeder extends Seeder
                 'email' => 'parombean@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Abdurrahman Zaid',
-                'district_id' => 31
+                'district_id' => 33
             ],
             [
                 'name' => 'Desa Salassa',
@@ -980,7 +986,7 @@ class UserSeeder extends Seeder
                 'email' => 'salassa@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Rusli',
-                'district_id' => 31
+                'district_id' => 33
             ],
             [
                 'name' => 'Desa Sanglepongan',
@@ -988,7 +994,7 @@ class UserSeeder extends Seeder
                 'email' => 'sanglepongan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Nurmiati',
-                'district_id' => 31
+                'district_id' => 33
             ],
             [
                 'name' => 'Desa Sumbang',
@@ -996,7 +1002,7 @@ class UserSeeder extends Seeder
                 'email' => 'sumbang@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Hasbullah',
-                'district_id' => 31
+                'district_id' => 33
             ],
             [
                 'name' => 'Desa Tallungura',
@@ -1004,7 +1010,7 @@ class UserSeeder extends Seeder
                 'email' => 'tallungura@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Amir Gani',
-                'district_id' => 31
+                'district_id' => 33
             ],
             [
                 'name' => 'Kelurahan Leoran',
@@ -1012,7 +1018,7 @@ class UserSeeder extends Seeder
                 'email' => 'leoran@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Winalda, S.STP',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Kelurahan Lewaja',
@@ -1020,7 +1026,7 @@ class UserSeeder extends Seeder
                 'email' => 'lewaja@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Deceng Rumbu, S.E, M.Ap',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Kelurahan Puserren',
@@ -1028,7 +1034,7 @@ class UserSeeder extends Seeder
                 'email' => 'puserren@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => '-',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Kelurahan Tuara',
@@ -1036,7 +1042,7 @@ class UserSeeder extends Seeder
                 'email' => 'tuara@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Muhammad Razak, S.STP',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Kelurahan Juppandang',
@@ -1044,7 +1050,7 @@ class UserSeeder extends Seeder
                 'email' => 'juppandang@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Ilham Akbar Eka Yudha, S.STP',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Kelurahan Galonta',
@@ -1052,7 +1058,7 @@ class UserSeeder extends Seeder
                 'email' => 'galonta@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Ilham Arfah, S.STP',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Desa Temban',
@@ -1060,7 +1066,7 @@ class UserSeeder extends Seeder
                 'email' => 'temban@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Hasan Basri',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Desa Buttu Batu',
@@ -1068,7 +1074,7 @@ class UserSeeder extends Seeder
                 'email' => 'buttubatu@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Taqdir, A.Md',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Desa Cemba',
@@ -1076,7 +1082,7 @@ class UserSeeder extends Seeder
                 'email' => 'cemba@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Jumadil, S.Fil',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Desa Tungka',
@@ -1084,7 +1090,7 @@ class UserSeeder extends Seeder
                 'email' => 'tungka@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Takbir, A.Md',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Desa Kaluppini',
@@ -1092,7 +1098,7 @@ class UserSeeder extends Seeder
                 'email' => 'kaluppini@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Muh. Salata',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Desa Karueng',
@@ -1100,7 +1106,7 @@ class UserSeeder extends Seeder
                 'email' => 'karueng@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Usmayadi Syarifuddin',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Desa Lembang',
@@ -1108,7 +1114,7 @@ class UserSeeder extends Seeder
                 'email' => 'lembang@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Muh. Irfan, S.Pd',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Desa Ranga',
@@ -1116,7 +1122,7 @@ class UserSeeder extends Seeder
                 'email' => 'ranga@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Saim',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Desa Rossoan',
@@ -1124,7 +1130,7 @@ class UserSeeder extends Seeder
                 'email' => 'rossoan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'H. Marsuki',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Desa Tallu Bamba',
@@ -1132,7 +1138,7 @@ class UserSeeder extends Seeder
                 'email' => 'tallubamba@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Abd. Mumin',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Desa Tobalu',
@@ -1140,7 +1146,7 @@ class UserSeeder extends Seeder
                 'email' => 'tobalu@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Muh. Khadafi, S.Pd',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Desa Tokkonan',
@@ -1148,7 +1154,7 @@ class UserSeeder extends Seeder
                 'email' => 'tokkonan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Syamsuddin',
-                'district_id' => 32
+                'district_id' => 34
             ],
             [
                 'name' => 'Kelurahan Bangkala',
@@ -1156,7 +1162,7 @@ class UserSeeder extends Seeder
                 'email' => 'bangkala@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Andi Ridwan. S. E',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Baringin',
@@ -1164,7 +1170,7 @@ class UserSeeder extends Seeder
                 'email' => 'baringin@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Tadam, S.Pd., M.M',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Batu Mila',
@@ -1172,7 +1178,7 @@ class UserSeeder extends Seeder
                 'email' => 'batumila@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Rahmawati, S.Pd',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Boiya',
@@ -1180,7 +1186,7 @@ class UserSeeder extends Seeder
                 'email' => 'boiya@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Samir',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Boto Malangga',
@@ -1188,7 +1194,7 @@ class UserSeeder extends Seeder
                 'email' => 'botomalangga@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Abdul Haris',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Kaluppang',
@@ -1196,7 +1202,7 @@ class UserSeeder extends Seeder
                 'email' => 'kaluppang@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Abdul Rauf',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Labuku',
@@ -1204,7 +1210,7 @@ class UserSeeder extends Seeder
                 'email' => 'labuku@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Abdul Wahab',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Lebani',
@@ -1212,7 +1218,7 @@ class UserSeeder extends Seeder
                 'email' => 'lebani@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Abdul Majid',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Limbuang',
@@ -1220,7 +1226,7 @@ class UserSeeder extends Seeder
                 'email' => 'limbuang@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Rahman',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Mangkawani',
@@ -1228,7 +1234,7 @@ class UserSeeder extends Seeder
                 'email' => 'mangkawani@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Bakri Said',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Matajang',
@@ -1236,7 +1242,7 @@ class UserSeeder extends Seeder
                 'email' => 'matajang@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'P. Karman',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Ongko',
@@ -1244,7 +1250,7 @@ class UserSeeder extends Seeder
                 'email' => 'ongko@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Mustakim',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Paladang',
@@ -1252,7 +1258,7 @@ class UserSeeder extends Seeder
                 'email' => 'paladang@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Anwar',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Palakka',
@@ -1260,7 +1266,7 @@ class UserSeeder extends Seeder
                 'email' => 'palakka@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Mustafa',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Pariwang',
@@ -1268,7 +1274,7 @@ class UserSeeder extends Seeder
                 'email' => 'pariwang@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Yusuf Usman',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Pasang',
@@ -1276,7 +1282,7 @@ class UserSeeder extends Seeder
                 'email' => 'pasang@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Rustan Arsyad',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Patondon Salu',
@@ -1284,7 +1290,7 @@ class UserSeeder extends Seeder
                 'email' => 'patondonsalu@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Mukhlis, S.E',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Puncak Harapan',
@@ -1292,7 +1298,7 @@ class UserSeeder extends Seeder
                 'email' => 'puncakharapan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Muhammad Ali',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Salo Dua',
@@ -1300,7 +1306,7 @@ class UserSeeder extends Seeder
                 'email' => 'salodua@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Amiruddin',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Tanete',
@@ -1308,7 +1314,7 @@ class UserSeeder extends Seeder
                 'email' => 'tanetemaiwa@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Jasman',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Tapong',
@@ -1316,7 +1322,7 @@ class UserSeeder extends Seeder
                 'email' => 'tapong@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Saharuna',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Desa Tuncung',
@@ -1324,7 +1330,7 @@ class UserSeeder extends Seeder
                 'email' => 'tuncung@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Abd. Rahman',
-                'district_id' => 33
+                'district_id' => 35
             ],
             [
                 'name' => 'Kelurahan Malua',
@@ -1332,7 +1338,7 @@ class UserSeeder extends Seeder
                 'email' => 'kelmalua@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Samsumarlin Abdullah, S.KM',
-                'district_id' => 34
+                'district_id' => 36
             ],
             [
                 'name' => 'Desa Bonto',
@@ -1340,7 +1346,7 @@ class UserSeeder extends Seeder
                 'email' => 'bonto@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Mahaning',
-                'district_id' => 34
+                'district_id' => 36
             ],
             [
                 'name' => 'Desa Buntu Batuan',
@@ -1348,7 +1354,7 @@ class UserSeeder extends Seeder
                 'email' => 'buntubatuan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Basri',
-                'district_id' => 34
+                'district_id' => 36
             ],
             [
                 'name' => 'Desa Dulang',
@@ -1356,7 +1362,7 @@ class UserSeeder extends Seeder
                 'email' => 'dulang@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Yahya, S.Pd',
-                'district_id' => 34
+                'district_id' => 36
             ],
             [
                 'name' => 'Desa Kolai',
@@ -1364,7 +1370,7 @@ class UserSeeder extends Seeder
                 'email' => 'kolai@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Syukur, S.IP',
-                'district_id' => 34
+                'district_id' => 36
             ],
             [
                 'name' => 'Desa Rante Mario',
@@ -1372,7 +1378,7 @@ class UserSeeder extends Seeder
                 'email' => 'rantemario@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'H. Herman, S.Sos',
-                'district_id' => 34
+                'district_id' => 36
             ],
             [
                 'name' => 'Desa Tallung Tondok',
@@ -1380,7 +1386,7 @@ class UserSeeder extends Seeder
                 'email' => 'tallungtondok@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Nasri Sapa, S.Sos',
-                'district_id' => 34
+                'district_id' => 36
             ],
             [
                 'name' => 'Desa Tangru',
@@ -1388,7 +1394,7 @@ class UserSeeder extends Seeder
                 'email' => 'tangru@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Faisal',
-                'district_id' => 34
+                'district_id' => 36
             ],
             [
                 'name' => 'Desa Batu Kede',
@@ -1396,7 +1402,7 @@ class UserSeeder extends Seeder
                 'email' => 'batukede@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Supardi Pida',
-                'district_id' => 35
+                'district_id' => 37
             ],
             [
                 'name' => 'Desa Buntu Sarong',
@@ -1404,7 +1410,7 @@ class UserSeeder extends Seeder
                 'email' => 'buntusarong@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Sudarman',
-                'district_id' => 35
+                'district_id' => 37
             ],
             [
                 'name' => 'Desa Masalle',
@@ -1412,7 +1418,7 @@ class UserSeeder extends Seeder
                 'email' => 'desamasalle@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Risal',
-                'district_id' => 35
+                'district_id' => 37
             ],
             [
                 'name' => 'Desa Mundan',
@@ -1420,7 +1426,7 @@ class UserSeeder extends Seeder
                 'email' => 'mundan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Samsir',
-                'district_id' => 35
+                'district_id' => 37
             ],
             [
                 'name' => 'Desa Rampunan',
@@ -1428,7 +1434,7 @@ class UserSeeder extends Seeder
                 'email' => 'rampunan@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Syamsir',
-                'district_id' => 35
+                'district_id' => 37
             ],
             [
                 'name' => 'Desa Tongkonan Bass',
@@ -1436,7 +1442,7 @@ class UserSeeder extends Seeder
                 'email' => 'tongkonanbass@mail.com',
                 'password' => Hash::make('password'),
                 'contact_person' => 'Irfan, ST',
-                'district_id' => 35
+                'district_id' => 37
             ],
         ];
 
@@ -1447,17 +1453,17 @@ class UserSeeder extends Seeder
         # Assign roles
         $userAdministrator->assignRole($roleAdministrator);
 
-        $userOffice = User::where('id', '>', 1)->orWhere('id', '<', 24)->get();
+        $userOffice = User::where('id', '>', 1)->orWhere('id', '<', 26)->get();
         foreach($userOffice as $user){
             $user->assignRole($roleOffice);
         }
 
-        $userDistrict = User::where('id', '>', 23)->orWhere('id', '<', 36)->get();
+        $userDistrict = User::where('id', '>', 25)->orWhere('id', '<', 38)->get();
         foreach($userDistrict as $user){
             $user->assignRole($roleDistrict);
         }
 
-        $userVillage = User::where('id', '>', 35)->get();
+        $userVillage = User::where('id', '>', 37)->get();
         foreach($userVillage as $user){
             $user->assignRole($roleVillage);
         }
