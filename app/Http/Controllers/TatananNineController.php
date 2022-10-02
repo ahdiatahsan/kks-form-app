@@ -27,7 +27,9 @@ class TatananNineController extends Controller
     public function index()
     {
         $tatananNine = TatananNine::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        return view('dashboard.indicator.tatanan9.index', compact('tatananNine'));
+        $attachNine = AttachmentNine::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        $attachNineNd = AttachmentNineNd::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        return view('dashboard.indicator.tatanan9.index', compact('tatananNine','attachNine','attachNineNd'));
     }
 
     /**

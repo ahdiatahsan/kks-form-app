@@ -27,7 +27,9 @@ class TatananTwoController extends Controller
     public function index()
     {
         $tatananTwo = TatananTwo::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        return view('dashboard.indicator.tatanan2.index', compact('tatananTwo'));
+        $attachTwo = AttachmentTwo::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        $attachTwoNd = AttachmentTwoNd::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        return view('dashboard.indicator.tatanan2.index', compact('tatananTwo','attachTwo','attachTwoNd'));
     }
 
     /**

@@ -27,7 +27,9 @@ class TatananThreeController extends Controller
     public function index()
     {
         $tatananThree = TatananThree::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        return view('dashboard.indicator.tatanan3.index', compact('tatananThree'));
+        $attachThree = AttachmentThree::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        $attachThreeNd = AttachmentThreeNd::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        return view('dashboard.indicator.tatanan3.index', compact('tatananThree','attachThree','attachThreeNd'));
     }
 
     /**

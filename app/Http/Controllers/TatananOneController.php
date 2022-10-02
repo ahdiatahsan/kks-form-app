@@ -27,7 +27,9 @@ class TatananOneController extends Controller
     public function index()
     {
         $tatananOne = TatananOne::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        return view('dashboard.indicator.tatanan1.index', compact('tatananOne'));
+        $attachOne = AttachmentOne::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        $attachOneNd = AttachmentOneNd::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        return view('dashboard.indicator.tatanan1.index', compact('tatananOne','attachOne','attachOneNd'));
     }
 
     /**

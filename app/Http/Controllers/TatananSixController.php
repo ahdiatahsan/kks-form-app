@@ -27,7 +27,9 @@ class TatananSixController extends Controller
     public function index()
     {
         $tatananSix = TatananSix::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        return view('dashboard.indicator.tatanan6.index', compact('tatananSix'));
+        $attachSix = AttachmentSix::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        $attachSixNd = AttachmentSixNd::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        return view('dashboard.indicator.tatanan6.index', compact('tatananSix','attachSix','attachSixNd'));
     }
 
     /**

@@ -27,7 +27,9 @@ class TatananEightController extends Controller
     public function index()
     {
         $tatananEight = TatananEight::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        return view('dashboard.indicator.tatanan8.index', compact('tatananEight'));
+        $attachEight = AttachmentEight::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        $attachEightNd = AttachmentEightNd::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        return view('dashboard.indicator.tatanan8.index', compact('tatananEight','attachEight','attachEightNd'));
     }
 
     /**

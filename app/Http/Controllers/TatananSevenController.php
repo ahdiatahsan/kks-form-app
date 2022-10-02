@@ -27,7 +27,9 @@ class TatananSevenController extends Controller
     public function index()
     {
         $tatananSeven = TatananSeven::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        return view('dashboard.indicator.tatanan7.index', compact('tatananSeven'));
+        $attachSeven = AttachmentSeven::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        $attachSevenNd = AttachmentSevenNd::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        return view('dashboard.indicator.tatanan7.index', compact('tatananSeven','attachSeven','attachSevenNd'));
     }
 
     /**

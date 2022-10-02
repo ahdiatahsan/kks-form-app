@@ -27,7 +27,9 @@ class TatananFourController extends Controller
     public function index()
     {
         $tatananFour = TatananFour::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        return view('dashboard.indicator.tatanan4.index', compact('tatananFour'));
+        $attachFour = AttachmentFour::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        $attachFourNd = AttachmentFourNd::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        return view('dashboard.indicator.tatanan4.index', compact('tatananFour','attachFour','attachFourNd'));
     }
 
     /**

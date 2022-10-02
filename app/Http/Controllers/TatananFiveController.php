@@ -27,7 +27,9 @@ class TatananFiveController extends Controller
     public function index()
     {
         $tatananFive = TatananFive::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        return view('dashboard.indicator.tatanan5.index', compact('tatananFive'));
+        $attachFive = AttachmentFive::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        $attachFiveNd = AttachmentFiveNd::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        return view('dashboard.indicator.tatanan5.index', compact('tatananFive','attachFive','attachFiveNd'));
     }
 
     /**
