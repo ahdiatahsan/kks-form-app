@@ -117,11 +117,6 @@ class TatananTwo extends Model
         'user_id'
     ];
 
-    public function tatanan_notes()
-    {
-        return $this->hasMany(TatananNote::class);
-    }
-
     public function user()
     {
         return $this->belongsTo(User::class);
