@@ -71,6 +71,8 @@ class User extends Authenticatable
         return $this->hasMany(Funding::class);
     }
 
+    //
+
     public function tatanan_ones()
     {
         return $this->hasMany(TatananOne::class);
@@ -208,5 +210,52 @@ class User extends Authenticatable
     public function attachment_nine_nds()
     {
         return $this->hasMany(AttachmentNineNd::class);
+    }
+    
+    //
+
+    public function note_ones()
+    {
+        return $this->hasMany(NoteOne::class);
+    }
+
+    public function note_twos()
+    {
+        return $this->hasMany(NoteTwo::class);
+    }
+
+    public function note_threes()
+    {
+        return $this->hasMany(NoteThree::class);
+    }
+
+    public function note_fours()
+    {
+        return $this->hasMany(NoteFour::class);
+    }
+
+    public function note_fives()
+    {
+        return $this->hasMany(NoteFive::class);
+    }
+
+    public function note_sixes()
+    {
+        return $this->hasMany(NoteSix::class);
+    }
+
+    public function note_sevens()
+    {
+        return $this->hasMany(NoteSeven::class);
+    }
+
+    public function note_eights()
+    {
+        return $this->hasMany(NoteEight::class);
+    }
+
+    public function note_nines()
+    {
+        return $this->hasMany(NoteNine::class);
     }
 }
