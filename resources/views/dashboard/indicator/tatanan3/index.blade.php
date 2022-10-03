@@ -109,6 +109,10 @@
                                                 <input class="form-control" type="file" name="p1_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p1 != null)
+                                                    Nilai : {{ substr($tatananThree->p1, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p1 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p1) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -192,6 +196,10 @@
                                                 <input class="form-control" type="file" name="p2_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p2 != null)
+                                                    Nilai : {{ substr($tatananThree->p2, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p2 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p2) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -295,6 +303,10 @@
                                                 <input class="form-control" type="file" name="p3_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p3 != null)
+                                                    Nilai : {{ substr($tatananThree->p3, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p3 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p3) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -394,6 +406,10 @@
                                                 <input class="form-control" type="file" name="p4_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p4 != null)
+                                                    Nilai : {{ substr($tatananThree->p4, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p4 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p4) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -496,6 +512,10 @@
                                                 <input class="form-control" type="file" name="p5_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p5 != null)
+                                                    Nilai : {{ substr($tatananThree->p5, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p5 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p5) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -588,6 +608,10 @@
                                                 <input class="form-control" type="file" name="p6_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p6 != null)
+                                                    Nilai : {{ substr($tatananThree->p6, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p6 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p6) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -670,6 +694,10 @@
                                                 <input class="form-control" type="file" name="p7_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p7 != null)
+                                                    Nilai : {{ substr($tatananThree->p7, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p7 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p7) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -759,6 +787,10 @@
                                                 <input class="form-control" type="file" name="p8_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p8 != null)
+                                                    Nilai : {{ substr($tatananThree->p8, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p8 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p8) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -848,6 +880,10 @@
                                                 <input class="form-control" type="file" name="p9_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p9 != null)
+                                                    Nilai : {{ substr($tatananThree->p9, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p9 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p9) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -952,6 +988,10 @@
                                                 <input class="form-control" type="file" name="p10_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p10 != null)
+                                                    Nilai : {{ substr($tatananThree->p10, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p10 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p10) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -1059,6 +1099,10 @@
                                                 <input class="form-control" type="file" name="p11_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p11 != null)
+                                                    Nilai : {{ substr($tatananThree->p11, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p11 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p11) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -1161,6 +1205,10 @@
                                                 <input class="form-control" type="file" name="p12_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p12 != null)
+                                                    Nilai : {{ substr($tatananThree->p12, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p12 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p12) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -1251,6 +1299,10 @@
                                                 <input class="form-control" type="file" name="p13_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p13 != null)
+                                                    Nilai : {{ substr($tatananThree->p13, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p13 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p13) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -1340,6 +1392,10 @@
                                                 <input class="form-control" type="file" name="p14_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p14 != null)
+                                                    Nilai : {{ substr($tatananThree->p14, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p14 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p14) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -1442,6 +1498,10 @@
                                                 <input class="form-control" type="file" name="p15_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p15 != null)
+                                                    Nilai : {{ substr($tatananThree->p15, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p15 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p15) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -1541,6 +1601,10 @@
                                                 <input class="form-control" type="file" name="p16_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p16 != null)
+                                                    Nilai : {{ substr($tatananThree->p16, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p16 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p16) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -1630,6 +1694,10 @@
                                                 <input class="form-control" type="file" name="p17_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p17 != null)
+                                                    Nilai : {{ substr($tatananThree->p17, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p17 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p17) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
@@ -1735,6 +1803,10 @@
                                                 <input class="form-control" type="file" name="p18_2">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($tatananThree->p18 != null)
+                                                    Nilai : {{ substr($tatananThree->p18, 2, 4) }}
+                                                    &nbsp; - &nbsp;
+                                                @endif
                                                 @if ($attachThree->p18 != null)
                                                     <a href="{{ asset('storage/attachmentThree/' . $attachThree->p18) }}"
                                                         target="_blank">Lihat Lampiran (pdf)</a>
