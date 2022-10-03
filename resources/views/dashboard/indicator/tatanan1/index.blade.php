@@ -42,11 +42,14 @@
                     <!--begin::Wrapper-->
                     <div class="w-100">
 
-                        @if (Auth::user()->id != '2' &&
-                            Auth::user()->id != '3' &&
-                            Auth::user()->id != '14' &&
-                            Auth::user()->id != '17' &&
-                            Auth::user()->hasAnyRole('district|village'))
+                        @if (Auth::user()->id == '2' ||
+                            Auth::user()->id == '3' ||
+                            Auth::user()->id == '14' ||
+                            Auth::user()->id == '17' ||
+                            Auth::user()->hasAnyRole('administrator'))
+                            <!--begin::noQuestion-->
+                            <!--end::noQuestion-->
+                        @else
                             <!--begin::noQuestion-->
                             <div class="text-center">
                                 <!--begin::Title-->
@@ -79,7 +82,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p1"
-                                                        value="a,100" {{ $tatananOne->p1 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p1 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada (Peraturan Daerah,
                                                         Perbub/Perwal, SK, SE)
                                                     </label>
@@ -103,6 +107,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p1_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p1 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p1) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p1 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p1) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -150,7 +165,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p2"
-                                                        value="a,100" {{ $tatananOne->p2 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p2 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada, tercantum di dokumen RPJMD,
                                                         RKPD, Renstra PD dan Renja PD
                                                     </label>
@@ -166,7 +182,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p2"
-                                                        value="c,25" {{ $tatananOne->p2 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p2 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Ada tercantum di dokumen Renstra
                                                         PD
                                                     </label>
@@ -174,7 +191,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p2"
-                                                        value="d,0" {{ $tatananOne->p2 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p2 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak tercantum di semua dokumen
                                                         perencanaan pembangunan daerah dan perencanaan perangkat daerah
                                                     </label>
@@ -191,6 +209,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p2_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p2 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p2) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p2 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p2) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -237,7 +266,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p3"
-                                                        value="a,100" {{ $tatananOne->p3 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p3 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Adanya penggerakan 5 klaster
                                                         GERMAS
                                                     </label>
@@ -245,7 +275,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p3"
-                                                        value="b,50" {{ $tatananOne->p3 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p3 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Adanya penggerakan 3 - 4 klaster
                                                         GERMAS
                                                     </label>
@@ -253,7 +284,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p3"
-                                                        value="c,25" {{ $tatananOne->p3 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p3 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Adanya penggerakan 1 - 2 klaster
                                                         GERMAS
                                                     </label>
@@ -261,7 +293,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p3"
-                                                        value="d,0" {{ $tatananOne->p3 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p3 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada penggerakan klaster
                                                         GERMAS
                                                     </label>
@@ -278,6 +311,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p3_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p3 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p3) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p3 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p3) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -333,28 +377,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p4"
-                                                        value="a,100" {{ $tatananOne->p4 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p4 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. IKS antara 0.8 - 1.0
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p4"
-                                                        value="b,50" {{ $tatananOne->p4 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p4 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. IKS antara 0.5 - 0.7
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p4"
-                                                        value="c,25" {{ $tatananOne->p4 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p4 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. IKS antara 0.3 - 0.4
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p4"
-                                                        value="d,0" {{ $tatananOne->p4 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p4 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. IKS kurang dari 0.3
                                                     </label>
                                                 </div>
@@ -370,6 +418,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p4_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p4 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p4) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p4 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p4) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -431,28 +490,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p5"
-                                                        value="a,100" {{ $tatananOne->p5 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p5 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p5"
-                                                        value="b,50" {{ $tatananOne->p5 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p5 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 - 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p5"
-                                                        value="c,25" {{ $tatananOne->p5 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p5 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 25 - 49.99%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p5"
-                                                        value="d,0" {{ $tatananOne->p5 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p5 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 25% </label>
                                                 </div>
                                             </div>
@@ -467,6 +530,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p5_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p5 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p5) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p5 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p5) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -518,28 +592,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p6"
-                                                        value="a,100" {{ $tatananOne->p6 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p6 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 86%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p6"
-                                                        value="b,50" {{ $tatananOne->p6 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p6 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 - 86%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p6"
-                                                        value="c,25" {{ $tatananOne->p6 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p6 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 25 - 49.99%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p6"
-                                                        value="d,0" {{ $tatananOne->p6 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p6 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 25% </label>
                                                 </div>
                                             </div>
@@ -554,6 +632,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p6_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p6 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p6) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p6 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p6) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -600,28 +689,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p7"
-                                                        value="a,100" {{ $tatananOne->p7 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p7 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p7"
-                                                        value="b,50" {{ $tatananOne->p7 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p7 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 70 - 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p7"
-                                                        value="c,25" {{ $tatananOne->p7 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p7 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 50 - 69.99%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p7"
-                                                        value="d,0" {{ $tatananOne->p7 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p7 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 50% </label>
                                                 </div>
                                             </div>
@@ -636,6 +729,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p7_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p7 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p7) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p7 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p7) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -688,28 +792,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p8"
-                                                        value="a,100" {{ $tatananOne->p8 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p8 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 60%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p8"
-                                                        value="b,50" {{ $tatananOne->p8 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p8 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 - 59.99%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p8"
-                                                        value="c,25" {{ $tatananOne->p8 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p8 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 40 - 49.99%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p8"
-                                                        value="d,0" {{ $tatananOne->p8 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p8 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 40% </label>
                                                 </div>
                                             </div>
@@ -724,6 +832,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p8_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p8 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p8) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p8 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p8) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -777,28 +896,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p9"
-                                                        value="a,100" {{ $tatananOne->p9 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p9 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 40%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p9"
-                                                        value="b,50" {{ $tatananOne->p9 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p9 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 30 - 40%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p9"
-                                                        value="c,25" {{ $tatananOne->p9 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p9 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 20 - 29.99%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p9"
-                                                        value="d,0" {{ $tatananOne->p9 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p9 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 20% </label>
                                                 </div>
                                             </div>
@@ -813,6 +936,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p9_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p9 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p9) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p9 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p9) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -873,28 +1007,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p10"
-                                                        value="a,100" {{ $tatananOne->p10 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p10 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p10"
-                                                        value="b,50" {{ $tatananOne->p10 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p10 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 60 - 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p10"
-                                                        value="c,25" {{ $tatananOne->p10 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p10 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 40 - 59%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p10"
-                                                        value="d,0" {{ $tatananOne->p10 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p10 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 40% </label>
                                                 </div>
                                             </div>
@@ -909,6 +1047,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p10_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p10 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p10) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p10 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p10) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -969,20 +1118,23 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p11"
-                                                        value="a,100" {{ $tatananOne->p11 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p11 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. < 10% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p11"
-                                                        value="b,50" {{ $tatananOne->p11 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p11 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 10 - 20%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p11"
-                                                        value="c,0" {{ $tatananOne->p11 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p11 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. > 20%
                                                     </label>
                                                 </div>
@@ -998,6 +1150,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p11_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p11 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p11) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p11 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p11) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1049,20 +1212,23 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p12"
-                                                        value="a,100" {{ $tatananOne->p12 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p12 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. < 15% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p12"
-                                                        value="b,50" {{ $tatananOne->p12 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p12 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 15 - 25%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p12"
-                                                        value="c,0" {{ $tatananOne->p12 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p12 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. > 25%
                                                     </label>
                                                 </div>
@@ -1078,6 +1244,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p12_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p12 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p12) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p12 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p12) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1124,21 +1301,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p13"
-                                                        value="a,100" {{ $tatananOne->p13 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p13 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 60%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p13"
-                                                        value="b,50" {{ $tatananOne->p13 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p13 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 40 - 59%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p13"
-                                                        value="c,0" {{ $tatananOne->p13 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p13 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 40% </label>
                                                 </div>
                                             </div>
@@ -1153,6 +1333,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p13_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p13 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p13) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p13 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p13) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1200,28 +1391,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p14"
-                                                        value="a,100" {{ $tatananOne->p14 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p14 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 90%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p14"
-                                                        value="b,50" {{ $tatananOne->p14 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p14 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 71- 90%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p14"
-                                                        value="c,25" {{ $tatananOne->p14 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p14 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 50 - 70%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p14"
-                                                        value="d,0" {{ $tatananOne->p14 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p14 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 50% </label>
                                                 </div>
                                             </div>
@@ -1236,6 +1431,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p14_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p14 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p14) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p14 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p14) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1282,20 +1488,23 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p15"
-                                                        value="a,100" {{ $tatananOne->p15 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p15 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. < 8% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p15"
-                                                        value="b,50" {{ $tatananOne->p15 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p15 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 8 - 10%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p15"
-                                                        value="c,0" {{ $tatananOne->p15 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p15 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. > 10%
                                                     </label>
                                                 </div>
@@ -1311,6 +1520,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p15_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p15 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p15) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p15 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p15) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1357,20 +1577,23 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p16"
-                                                        value="a,100" {{ $tatananOne->p16 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p16 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. < 8% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p16"
-                                                        value="b,50" {{ $tatananOne->p16 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p16 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 8 - 10%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p16"
-                                                        value="c,0" {{ $tatananOne->p16 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p16 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. > 10%
                                                     </label>
                                                 </div>
@@ -1386,6 +1609,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p16_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p16 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p16) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p16 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p16) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1451,28 +1685,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p17"
-                                                        value="a,100" {{ $tatananOne->p17 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p17 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p17"
-                                                        value="b,50" {{ $tatananOne->p17 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p17 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 60 - 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p17"
-                                                        value="c,25" {{ $tatananOne->p17 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p17 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 40 - 59.99%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p17"
-                                                        value="d,0" {{ $tatananOne->p17 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p17 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 40% </label>
                                                 </div>
                                             </div>
@@ -1487,6 +1725,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p17_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p17 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p17) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p17 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p17) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1534,28 +1783,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p18"
-                                                        value="a,100" {{ $tatananOne->p18 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p18 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p18"
-                                                        value="b,50" {{ $tatananOne->p18 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p18 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 60 - 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p18"
-                                                        value="c,25" {{ $tatananOne->p18 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p18 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 40 - 59.99%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p18"
-                                                        value="d,0" {{ $tatananOne->p18 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p18 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 40% </label>
                                                 </div>
                                             </div>
@@ -1570,6 +1823,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p18_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p18 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p18) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p18 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p18) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1627,28 +1891,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p19"
-                                                        value="a,100" {{ $tatananOne->p19 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p19 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 90%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p19"
-                                                        value="b,50" {{ $tatananOne->p19 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p19 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 70 - 90%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p19"
-                                                        value="c,25" {{ $tatananOne->p19 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p19 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 50 - 69 %
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p19"
-                                                        value="d,0" {{ $tatananOne->p19 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p19 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 50% </label>
                                                 </div>
                                             </div>
@@ -1663,6 +1931,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p19_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p19 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p19) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p19 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p19) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1709,28 +1988,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p20"
-                                                        value="a,100" {{ $tatananOne->p20 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p20 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 70%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p20"
-                                                        value="b,50" {{ $tatananOne->p20 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p20 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 51 - 70%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p20"
-                                                        value="c,25" {{ $tatananOne->p20 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p20 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 20 - 50 %
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p20"
-                                                        value="d,0" {{ $tatananOne->p20 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p20 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 20% </label>
                                                 </div>
                                             </div>
@@ -1745,6 +2028,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p20_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p20 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p20) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p20 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p20) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1791,14 +2085,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p21"
-                                                        value="a,100" {{ $tatananOne->p21 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p21 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Tidak ada Kejadian
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p21"
-                                                        value="b,0" {{ $tatananOne->p21 == 'b,0' ? 'checked' : '' }}>
+                                                        value="b,0"
+                                                        {{ $tatananOne->p21 == 'b,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada Kejadian
                                                     </label>
                                                 </div>
@@ -1814,6 +2110,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p21_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p21 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p21) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p21 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p21) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1862,28 +2169,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p22"
-                                                        value="a,100" {{ $tatananOne->p22 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p22 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 3 sentra
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p22"
-                                                        value="b,50" {{ $tatananOne->p22 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p22 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 2 - 3 sentra
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p22"
-                                                        value="c,25" {{ $tatananOne->p22 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p22 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 1 sentra
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p22"
-                                                        value="d,0" {{ $tatananOne->p22 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p22 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada
                                                     </label>
                                                 </div>
@@ -1899,6 +2210,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p22_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p22 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p22) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p22 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p22) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1953,14 +2275,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p23"
-                                                        value="a,100" {{ $tatananOne->p23 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p23 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Memiliki
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p23"
-                                                        value="b,0" {{ $tatananOne->p23 == 'b,0' ? 'checked' : '' }}>
+                                                        value="b,0"
+                                                        {{ $tatananOne->p23 == 'b,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Tidak memiliki
                                                     </label>
                                                 </div>
@@ -1976,6 +2300,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p23_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p23 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p23) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p23 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p23) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -2031,14 +2366,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p24"
-                                                        value="a,100" {{ $tatananOne->p24 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p24 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p24"
-                                                        value="b,0" {{ $tatananOne->p24 == 'b,0' ? 'checked' : '' }}>
+                                                        value="b,0"
+                                                        {{ $tatananOne->p24 == 'b,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. < 80% </label>
                                                 </div>
                                             </div>
@@ -2053,6 +2390,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p24_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p24 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p24) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p24 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p24) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -2100,21 +2448,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p25"
-                                                        value="a,100" {{ $tatananOne->p25 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p25 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 70%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p25"
-                                                        value="b,75" {{ $tatananOne->p25 == 'b,75' ? 'checked' : '' }}>
+                                                        value="b,75"
+                                                        {{ $tatananOne->p25 == 'b,75' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 - 70%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p25"
-                                                        value="c,25" {{ $tatananOne->p25 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p25 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                             </div>
@@ -2129,6 +2480,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p25_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p25 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p25) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p25 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p25) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -2175,28 +2537,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p26"
-                                                        value="a,100" {{ $tatananOne->p26 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p26 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 90%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p26"
-                                                        value="b,50" {{ $tatananOne->p26 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p26 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 85 - 89%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p26"
-                                                        value="c,25" {{ $tatananOne->p26 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p26 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 50 - 84%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p26"
-                                                        value="d,0" {{ $tatananOne->p26 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p26 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 50% </label>
                                                 </div>
                                             </div>
@@ -2211,6 +2577,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p26_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p26 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p26) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p26 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p26) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -2271,21 +2648,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p27"
-                                                        value="a,100" {{ $tatananOne->p27 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p27 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p27"
-                                                        value="b,50" {{ $tatananOne->p27 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p27 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 - 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p27"
-                                                        value="c,0" {{ $tatananOne->p27 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p27 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                             </div>
@@ -2300,6 +2680,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p27_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p27 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p27) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p27 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p27) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -2347,21 +2738,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p28"
-                                                        value="a,100" {{ $tatananOne->p28 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p28 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p28"
-                                                        value="b,50" {{ $tatananOne->p28 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p28 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 - 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p28"
-                                                        value="c,0" {{ $tatananOne->p28 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p28 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                             </div>
@@ -2376,6 +2770,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p28_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p28 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p28) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p28 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p28) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -2422,14 +2827,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p29"
-                                                        value="a,100" {{ $tatananOne->p29 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p29 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Penerapan KTR di 7 lokus/lokasi
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p29"
-                                                        value="b,75" {{ $tatananOne->p29 == 'b,75' ? 'checked' : '' }}>
+                                                        value="b,75"
+                                                        {{ $tatananOne->p29 == 'b,75' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Penerapan KTR di 5 - 6
                                                         lokus/lokasi
                                                     </label>
@@ -2437,7 +2844,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p29"
-                                                        value="c,50" {{ $tatananOne->p29 == 'c,50' ? 'checked' : '' }}>
+                                                        value="c,50"
+                                                        {{ $tatananOne->p29 == 'c,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Penerapan KTR di 3 - 4
                                                         lokus/lokasi
                                                     </label>
@@ -2445,14 +2853,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p29"
-                                                        value="d,25" {{ $tatananOne->p29 == 'd,25' ? 'checked' : '' }}>
+                                                        value="d,25"
+                                                        {{ $tatananOne->p29 == 'd,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Penerapan KTR pada < 2
                                                             lokus/lokasi </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p29"
-                                                        value="e,0" {{ $tatananOne->p29 == 'e,0' ? 'checked' : '' }}>
+                                                        value="e,0"
+                                                        {{ $tatananOne->p29 == 'e,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">e. Tidak ada penerapan KTR
                                                     </label>
                                                 </div>
@@ -2468,6 +2878,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p29_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p29 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p29) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p29 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p29) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -2516,7 +2937,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p30"
-                                                        value="a,100" {{ $tatananOne->p30 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p30 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Adanya regulasi dan penegakan
                                                         larangan iklan rokok di wilayah kabupaten / kota
                                                     </label>
@@ -2524,7 +2946,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p30"
-                                                        value="b,50" {{ $tatananOne->p30 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p30 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Adanya regulasi tapi belum ada
                                                         penegakan larangan iklan rokok di wilayah kabupaten/kota
                                                     </label>
@@ -2532,7 +2955,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p30"
-                                                        value="c,0" {{ $tatananOne->p30 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p30 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Tidak ada regulasi larangan
                                                         iklan rokok
                                                     </label>
@@ -2549,6 +2973,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p30_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p30 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p30) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p30 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p30) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -2612,14 +3047,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p31"
-                                                        value="a,100" {{ $tatananOne->p31 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p31 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. ≥ 95%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p31"
-                                                        value="b,0" {{ $tatananOne->p31 == 'b,0' ? 'checked' : '' }}>
+                                                        value="b,0"
+                                                        {{ $tatananOne->p31 == 'b,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. < 95% </label>
                                                 </div>
                                             </div>
@@ -2634,6 +3071,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p31_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p31 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p31) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p31 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p31) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -2680,20 +3128,23 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p32"
-                                                        value="a,100" {{ $tatananOne->p32 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p32 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. < 1% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p32"
-                                                        value="b,50" {{ $tatananOne->p32 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p32 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 1% - 5%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p32"
-                                                        value="c,0" {{ $tatananOne->p32 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p32 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. > 5%
                                                     </label>
                                                 </div>
@@ -2709,6 +3160,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p32_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p32 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p32) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p32 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p32) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -2762,20 +3224,23 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p33"
-                                                        value="a,100" {{ $tatananOne->p33 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p33 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. API < 1% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p33"
-                                                        value="b,50" {{ $tatananOne->p33 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p33 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. API 1-5%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p33"
-                                                        value="c,0" {{ $tatananOne->p33 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p33 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. API >5%
                                                     </label>
                                                 </div>
@@ -2791,6 +3256,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p33_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p33 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p33) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p33 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p33) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -2837,14 +3313,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p34"
-                                                        value="a,100" {{ $tatananOne->p34 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p34 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Sudah menerima
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p34"
-                                                        value="b,0" {{ $tatananOne->p34 == 'b,0' ? 'checked' : '' }}>
+                                                        value="b,0"
+                                                        {{ $tatananOne->p34 == 'b,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Belum menerima
                                                     </label>
                                                 </div>
@@ -2860,6 +3338,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p34_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p34 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p34) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p34 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p34) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -2912,7 +3401,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p35"
-                                                        value="a,100" {{ $tatananOne->p35 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p35 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Kurang dari 49 per 100.000
                                                         penduduk
                                                     </label>
@@ -2920,7 +3410,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p35"
-                                                        value="b,0" {{ $tatananOne->p35 == 'b,0' ? 'checked' : '' }}>
+                                                        value="b,0"
+                                                        {{ $tatananOne->p35 == 'b,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Lebih dari 49 per 100.00
                                                         penduduk
                                                     </label>
@@ -2937,6 +3428,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p35_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p35 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p35) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p35 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p35) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -2990,21 +3492,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p36"
-                                                        value="a,100" {{ $tatananOne->p36 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p36 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada, dilakukan secara rutin
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p36"
-                                                        value="b,50" {{ $tatananOne->p36 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p36 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada, tidak dilakukan rutin
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p36"
-                                                        value="c,0" {{ $tatananOne->p36 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p36 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Tidak ada kegiatan PSN
                                                     </label>
                                                 </div>
@@ -3020,6 +3525,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p36_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p36 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p36) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p36 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p36) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -3072,21 +3588,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p37"
-                                                        value="a,100" {{ $tatananOne->p37 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p37 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. 100%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p37"
-                                                        value="b,50" {{ $tatananOne->p37 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p37 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-99%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p37"
-                                                        value="c,0" {{ $tatananOne->p37 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p37 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Kurang dari 50%
                                                     </label>
                                                 </div>
@@ -3102,6 +3621,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p37_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p37 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p37) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p37 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p37) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -3148,14 +3678,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p38"
-                                                        value="a,100" {{ $tatananOne->p38 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p38 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Kurang dari 7%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p38"
-                                                        value="b,0" {{ $tatananOne->p38 == 'b,0' ? 'checked' : '' }}>
+                                                        value="b,0"
+                                                        {{ $tatananOne->p38 == 'b,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Lebih dari 7%
                                                     </label>
                                                 </div>
@@ -3171,6 +3703,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p38_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p38 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p38) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p38 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p38) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -3217,14 +3760,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p39"
-                                                        value="a,100" {{ $tatananOne->p39 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p39 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Tercapai
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p39"
-                                                        value="b,0" {{ $tatananOne->p39 == 'b,0' ? 'checked' : '' }}>
+                                                        value="b,0"
+                                                        {{ $tatananOne->p39 == 'b,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Tidak Tercapai
                                                     </label>
                                                 </div>
@@ -3240,6 +3785,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p39_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p39 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p39) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p39 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p39) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -3286,20 +3842,23 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p40"
-                                                        value="a,100" {{ $tatananOne->p40 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p40 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. < 1% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p40"
-                                                        value="b,50" {{ $tatananOne->p40 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p40 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 1-10%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p40"
-                                                        value="c,0" {{ $tatananOne->p40 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p40 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. > 10%
                                                     </label>
                                                 </div>
@@ -3315,6 +3874,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p40_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p40 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p40) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p40 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p40) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -3377,14 +3947,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p41"
-                                                        value="a,100" {{ $tatananOne->p41 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p41 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada Regulasi/Kebijakan
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p41"
-                                                        value="b,0" {{ $tatananOne->p41 == 'b,0' ? 'checked' : '' }}>
+                                                        value="b,0"
+                                                        {{ $tatananOne->p41 == 'b,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Tidak ada kebijakan
                                                     </label>
                                                 </div>
@@ -3400,6 +3972,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p41_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p41 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p41) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p41 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p41) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -3446,21 +4029,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p42"
-                                                        value="a,100" {{ $tatananOne->p42 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p42 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Dilaksanakan secara terencana
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p42"
-                                                        value="b,50" {{ $tatananOne->p42 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p42 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Dilaksanakan tanpa rencana
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p42"
-                                                        value="c,0" {{ $tatananOne->p42 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p42 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Tidak dilaksanakan.
                                                     </label>
                                                 </div>
@@ -3476,6 +4062,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p42_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p42 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p42) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p42 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p42) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -3522,28 +4119,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p43"
-                                                        value="a,100" {{ $tatananOne->p43 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p43 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 75%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p43"
-                                                        value="b,75" {{ $tatananOne->p43 == 'b,75' ? 'checked' : '' }}>
+                                                        value="b,75"
+                                                        {{ $tatananOne->p43 == 'b,75' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-75%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p43"
-                                                        value="c,50" {{ $tatananOne->p43 == 'c,50' ? 'checked' : '' }}>
+                                                        value="c,50"
+                                                        {{ $tatananOne->p43 == 'c,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 25-50%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p43"
-                                                        value="d,25" {{ $tatananOne->p43 == 'd,25' ? 'checked' : '' }}>
+                                                        value="d,25"
+                                                        {{ $tatananOne->p43 == 'd,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 25% </label>
                                                 </div>
                                             </div>
@@ -3558,6 +4159,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p43_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p43 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p43) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p43 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p43) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -3611,20 +4223,23 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p44"
-                                                        value="a,100" {{ $tatananOne->p44 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p44 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 50 %
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p44"
-                                                        value="b,50" {{ $tatananOne->p44 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p44 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. < 50% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p44"
-                                                        value="c,0" {{ $tatananOne->p44 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p44 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Tidak ada
                                                     </label>
                                                 </div>
@@ -3640,6 +4255,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p44_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p44 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p44) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p44 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p44) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -3692,7 +4318,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p45"
-                                                        value="a,100" {{ $tatananOne->p45 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p45 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada SK TPKJM dan sudah
                                                         diimplementasikan
                                                     </label>
@@ -3700,7 +4327,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p45"
-                                                        value="b,50" {{ $tatananOne->p45 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p45 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada SK TPKJM tapi belum
                                                         diimplementasikan
                                                     </label>
@@ -3708,7 +4336,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p45"
-                                                        value="c,0" {{ $tatananOne->p45 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p45 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Tidak ada SK TPKJM
                                                     </label>
                                                 </div>
@@ -3724,6 +4353,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p45_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p45 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p45) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p45 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p45) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -3776,21 +4416,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p46"
-                                                        value="a,100" {{ $tatananOne->p46 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p46 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. 100%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p46"
-                                                        value="b,50" {{ $tatananOne->p46 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p46 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 -99%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p46"
-                                                        value="c,25" {{ $tatananOne->p46 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p46 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                             </div>
@@ -3805,6 +4448,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p46_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p46 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p46) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p46 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p46) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -3867,21 +4521,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p47"
-                                                        value="a,100" {{ $tatananOne->p47 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p47 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 25%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p47"
-                                                        value="b,50" {{ $tatananOne->p47 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p47 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 10 - 24%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p47"
-                                                        value="c,25" {{ $tatananOne->p47 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p47 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 10% </label>
                                                 </div>
                                             </div>
@@ -3896,6 +4553,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p47_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p47 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p47) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p47 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p47) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -3943,21 +4611,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p48"
-                                                        value="a,100" {{ $tatananOne->p48 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p48 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 25%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p48"
-                                                        value="b,50" {{ $tatananOne->p48 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p48 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 10 - 24%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p48"
-                                                        value="c,25" {{ $tatananOne->p48 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p48 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 10% </label>
                                                 </div>
                                             </div>
@@ -3972,6 +4643,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p48_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p48 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p48) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p48 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p48) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -4025,21 +4707,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p49"
-                                                        value="a,100" {{ $tatananOne->p49 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p49 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. 100%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p49"
-                                                        value="b,50" {{ $tatananOne->p49 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p49 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 - 99%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p49"
-                                                        value="c,25" {{ $tatananOne->p49 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p49 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                             </div>
@@ -4054,6 +4739,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p49_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p49 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p49) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p49 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p49) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -4114,14 +4810,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p50"
-                                                        value="a,100" {{ $tatananOne->p50 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p50 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. ≥ 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p50"
-                                                        value="b,0" {{ $tatananOne->p50 == 'b,0' ? 'checked' : '' }}>
+                                                        value="b,0"
+                                                        {{ $tatananOne->p50 == 'b,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. < 80% </label>
                                                 </div>
                                             </div>
@@ -4136,6 +4834,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p50_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p50 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p50) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p50 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p50) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -4187,21 +4896,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p51"
-                                                        value="a,100" {{ $tatananOne->p51 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p51 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p51"
-                                                        value="b,50" {{ $tatananOne->p51 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p51 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 - 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p51"
-                                                        value="c,25" {{ $tatananOne->p51 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p51 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                             </div>
@@ -4216,6 +4928,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p51_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p51 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p51) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p51 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p51) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -4267,21 +4990,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p52"
-                                                        value="a,100" {{ $tatananOne->p52 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p52 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 60%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p52"
-                                                        value="b,50" {{ $tatananOne->p52 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p52 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-60%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p52"
-                                                        value="c,25" {{ $tatananOne->p52 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p52 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                             </div>
@@ -4296,6 +5022,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p52_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p52 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p52) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p52 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p52) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -4357,28 +5094,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p53"
-                                                        value="a,100" {{ $tatananOne->p53 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p53 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ya, ≥ 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p53"
-                                                        value="b,75" {{ $tatananOne->p53 == 'b,75' ? 'checked' : '' }}>
+                                                        value="b,75"
+                                                        {{ $tatananOne->p53 == 'b,75' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ya, 60% - 79%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p53"
-                                                        value="c,50" {{ $tatananOne->p53 == 'c,50' ? 'checked' : '' }}>
+                                                        value="c,50"
+                                                        {{ $tatananOne->p53 == 'c,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Ya, 40% - 59%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p53"
-                                                        value="d,25" {{ $tatananOne->p53 == 'd,25' ? 'checked' : '' }}>
+                                                        value="d,25"
+                                                        {{ $tatananOne->p53 == 'd,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Ya, < 40% </label>
                                                 </div>
                                             </div>
@@ -4393,6 +5134,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p53_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p53 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p53) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p53 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p53) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -4446,28 +5198,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p54"
-                                                        value="a,100" {{ $tatananOne->p54 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p54 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ya, ≥ 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p54"
-                                                        value="b,75" {{ $tatananOne->p54 == 'b,75' ? 'checked' : '' }}>
+                                                        value="b,75"
+                                                        {{ $tatananOne->p54 == 'b,75' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ya, 50% - 79%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p54"
-                                                        value="c,50" {{ $tatananOne->p54 == 'c,50' ? 'checked' : '' }}>
+                                                        value="c,50"
+                                                        {{ $tatananOne->p54 == 'c,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Ya, 20% - 49%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p54"
-                                                        value="d,25" {{ $tatananOne->p54 == 'd,25' ? 'checked' : '' }}>
+                                                        value="d,25"
+                                                        {{ $tatananOne->p54 == 'd,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Ya, tapi hanya < 20% </label>
                                                 </div>
                                             </div>
@@ -4482,6 +5238,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p54_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p54 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p54) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p54 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p54) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -4534,14 +5301,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p55"
-                                                        value="a,100" {{ $tatananOne->p55 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p55 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p55"
-                                                        value="b,0" {{ $tatananOne->p55 == 'b,0' ? 'checked' : '' }}>
+                                                        value="b,0"
+                                                        {{ $tatananOne->p55 == 'b,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Tidak ada
                                                     </label>
                                                 </div>
@@ -4557,6 +5326,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p55_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p55 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p55) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p55 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p55) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -4603,21 +5383,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p56"
-                                                        value="a,100" {{ $tatananOne->p56 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p56 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada, berfungsi, mencukupi
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p56"
-                                                        value="b,50" {{ $tatananOne->p56 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p56 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada, berfungsi, tidak mencukupi
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p56"
-                                                        value="c,0" {{ $tatananOne->p56 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p56 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Tidak ada
                                                     </label>
                                                 </div>
@@ -4633,6 +5416,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p56_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p56 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p56) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p56 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p56) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -4680,14 +5474,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p57"
-                                                        value="a,100" {{ $tatananOne->p57 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p57 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p57"
-                                                        value="b,0" {{ $tatananOne->p57 == 'b,0' ? 'checked' : '' }}>
+                                                        value="b,0"
+                                                        {{ $tatananOne->p57 == 'b,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Tidak ada
                                                     </label>
                                                 </div>
@@ -4703,6 +5499,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p57_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p57 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p57) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p57 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p57) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -4766,21 +5573,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p58"
-                                                        value="a,100" {{ $tatananOne->p58 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p58 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. ≥ 125%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p58"
-                                                        value="b,50" {{ $tatananOne->p58 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p58 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 100-125%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p58"
-                                                        value="c,0" {{ $tatananOne->p58 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p58 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. ≤ 100%
                                                     </label>
                                                 </div>
@@ -4796,6 +5606,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p58_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p58 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p58) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p58 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p58) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -4842,21 +5663,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p59"
-                                                        value="a,100" {{ $tatananOne->p59 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p59 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. ≥ 2400 kkal/kapita/hari
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p59"
-                                                        value="b,50" {{ $tatananOne->p59 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p59 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 2100-2400 kkal/kapita/hari
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p59"
-                                                        value="c,0" {{ $tatananOne->p59 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p59 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 2100 kkal/kapita/hari
                                                             </label>
                                                 </div>
@@ -4872,6 +5696,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p59_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p59 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p59) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p59 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p59) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -4918,21 +5753,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p60"
-                                                        value="a,100" {{ $tatananOne->p60 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p60 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. ≥ 1.5%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p60"
-                                                        value="b,50" {{ $tatananOne->p60 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p60 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 0 - 1.5%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p60"
-                                                        value="c,0" {{ $tatananOne->p60 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p60 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 0%
                                                     </label>
                                                 </div>
@@ -4948,6 +5786,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p60_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p60 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p60) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p60 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p60) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -5000,7 +5849,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p61"
-                                                        value="a,100" {{ $tatananOne->p61 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p61 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Memiliki stok CPPD dan regulasi
                                                         perda
                                                     </label>
@@ -5008,7 +5858,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p61"
-                                                        value="b,80" {{ $tatananOne->p61 == 'b,80' ? 'checked' : '' }}>
+                                                        value="b,80"
+                                                        {{ $tatananOne->p61 == 'b,80' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Memiliki stok CPPD dan regulasi
                                                         non perda
                                                     </label>
@@ -5016,28 +5867,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p61"
-                                                        value="c,60" {{ $tatananOne->p61 == 'c,60' ? 'checked' : '' }}>
+                                                        value="c,60"
+                                                        {{ $tatananOne->p61 == 'c,60' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Memiliki stok CPPD
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p61"
-                                                        value="d,40" {{ $tatananOne->p61 == 'd,40' ? 'checked' : '' }}>
+                                                        value="d,40"
+                                                        {{ $tatananOne->p61 == 'd,40' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Memiliki regulasi perda
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p61"
-                                                        value="e,20" {{ $tatananOne->p61 == 'e,20' ? 'checked' : '' }}>
+                                                        value="e,20"
+                                                        {{ $tatananOne->p61 == 'e,20' ? 'checked' : '' }}>
                                                     <label class="form-check-label">e. Memiliki regulasi non perda
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p61"
-                                                        value="f,0" {{ $tatananOne->p61 == 'f,0' ? 'checked' : '' }}>
+                                                        value="f,0"
+                                                        {{ $tatananOne->p61 == 'f,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">f. Tidak memiliki stok dan
                                                         regulasi
                                                     </label>
@@ -5054,6 +5909,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p61_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p61 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p61) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p61 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p61) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -5100,21 +5966,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p62"
-                                                        value="a,100" {{ $tatananOne->p62 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p62 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. harga eceran lebih kecil HET
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p62"
-                                                        value="b,50" {{ $tatananOne->p62 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p62 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. harga eceran sama dengan HET
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p62"
-                                                        value="c,0" {{ $tatananOne->p62 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p62 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. harga eceran lebih besar dari
                                                         HET
                                                     </label>
@@ -5131,6 +6000,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p62_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p62 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p62) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p62 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p62) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -5184,28 +6064,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p63"
-                                                        value="a,100" {{ $tatananOne->p63 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p63 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. ≥ 90.0
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p63"
-                                                        value="b,50" {{ $tatananOne->p63 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p63 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 85.0 - 90.0
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p63"
-                                                        value="c,25" {{ $tatananOne->p63 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananOne->p63 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 80.0 - 85.0
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p63"
-                                                        value="d,0" {{ $tatananOne->p63 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p63 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 80.0 </label>
                                                 </div>
                                             </div>
@@ -5220,6 +6104,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p63_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p63 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p63) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p63 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p63) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -5266,7 +6161,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p64"
-                                                        value="a,100" {{ $tatananOne->p64 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p64 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada program food loss dan food
                                                         waste
                                                     </label>
@@ -5274,21 +6170,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p64"
-                                                        value="b,50" {{ $tatananOne->p64 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p64 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada program food loss
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p64"
-                                                        value="c,50" {{ $tatananOne->p64 == 'c,50' ? 'checked' : '' }}>
+                                                        value="c,50"
+                                                        {{ $tatananOne->p64 == 'c,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Ada program food waste
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p64"
-                                                        value="d,0" {{ $tatananOne->p64 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p64 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada program
                                                     </label>
                                                 </div>
@@ -5304,6 +6203,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p64_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p64 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p64) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p64 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p64) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -5350,14 +6260,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p65"
-                                                        value="a,100" {{ $tatananOne->p65 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p65 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada regulasi dan berjalan aktif
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p65"
-                                                        value="b,50" {{ $tatananOne->p65 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p65 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada regulasi tapi tidak
                                                         berjalan
                                                     </label>
@@ -5365,7 +6277,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p65"
-                                                        value="c,50" {{ $tatananOne->p65 == 'c,50' ? 'checked' : '' }}>
+                                                        value="c,50"
+                                                        {{ $tatananOne->p65 == 'c,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Tidak ada regulasi tapi
                                                         berjalan aktif
                                                     </label>
@@ -5373,7 +6286,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p65"
-                                                        value="d,0" {{ $tatananOne->p65 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananOne->p65 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada regulasi dan kegiatan
                                                     </label>
                                                 </div>
@@ -5389,6 +6303,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p65_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p65 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p65) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p65 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p65) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -5440,21 +6365,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p66"
-                                                        value="a,100" {{ $tatananOne->p66 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p66 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Lebih dari 1 kali per bulan
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p66"
-                                                        value="b,50" {{ $tatananOne->p66 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p66 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 1 kali per bulan
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p66"
-                                                        value="c,0" {{ $tatananOne->p66 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p66 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Tidak rutin dilakukan
                                                     </label>
                                                 </div>
@@ -5470,6 +6398,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p66_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p66 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p66) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p66 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p66) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -5517,21 +6456,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p67"
-                                                        value="a,100" {{ $tatananOne->p67 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p67 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada dilakukan secara rutin
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p67"
-                                                        value="b,50" {{ $tatananOne->p67 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p67 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada tapi tidak dilakukan rutin
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p67"
-                                                        value="c,0" {{ $tatananOne->p67 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p67 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Tidak ada penyuluhan
                                                     </label>
                                                 </div>
@@ -5547,6 +6489,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p67_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p67 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p67) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p67 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p67) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -5593,21 +6546,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p68"
-                                                        value="a,100" {{ $tatananOne->p68 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananOne->p68 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada dilakukan secara rutin
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p68"
-                                                        value="b,50" {{ $tatananOne->p68 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananOne->p68 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada tapi tidak dilakukan rutin
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p68"
-                                                        value="c,0" {{ $tatananOne->p68 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananOne->p68 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Tidak ada
                                                     </label>
                                                 </div>
@@ -5623,6 +6579,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p68_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachOne->p68 != null)
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOne->p68) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachOneNd->p68 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentOne/' . $attachOneNd->p68) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>

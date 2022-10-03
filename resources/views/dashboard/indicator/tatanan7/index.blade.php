@@ -42,11 +42,14 @@
                     <!--begin::Wrapper-->
                     <div class="w-100">
 
-                        @if (Auth::user()->id != '3' &&
-                            Auth::user()->id != '14' &&
-                            Auth::user()->id != '24' &&
-                            Auth::user()->id != '25' &&
-                            Auth::user()->hasAnyRole('district|village'))
+                        @if (Auth::user()->id == '3' ||
+                            Auth::user()->id == '14' ||
+                            Auth::user()->id == '24' ||
+                            Auth::user()->id == '25' ||
+                            Auth::user()->hasAnyRole('administrator'))
+                            <!--begin::noQuestion-->
+                            <!--end::noQuestion-->
+                        @else
                             <!--begin::noQuestion-->
                             <div class="text-center">
                                 <!--begin::Title-->
@@ -87,14 +90,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p1"
-                                                        value="a,100" {{ $tatananSeven->p1 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p1 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p1"
-                                                        value="b,0" {{ $tatananSeven->p1 == 'b,0' ? 'checked' : '' }}>
+                                                        value="b,0"
+                                                        {{ $tatananSeven->p1 == 'b,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Tidak ada
                                                     </label>
                                                 </div>
@@ -110,6 +115,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p1_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p1 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p1) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p1 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p1) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -164,28 +180,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p2"
-                                                        value="a,100" {{ $tatananSeven->p2 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p2 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Masuk dalam RPJMD dan RKPD
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p2"
-                                                        value="b,50" {{ $tatananSeven->p2 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p2 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Masuk dalam RPJMD
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p2"
-                                                        value="c,25" {{ $tatananSeven->p2 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananSeven->p2 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Masuk dalam RKPD
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p2"
-                                                        value="d,0" {{ $tatananSeven->p2 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananSeven->p2 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak masuk satu pun
                                                     </label>
                                                 </div>
@@ -201,6 +221,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p2_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p2 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p2) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p2 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p2) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -267,14 +298,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p3"
-                                                        value="a,100" {{ $tatananSeven->p3 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p3 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. >80% Kantor telah menerapkan K3
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p3"
-                                                        value="b,50" {{ $tatananSeven->p3 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p3 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-80% Kantor telah menerapkan
                                                         K3
                                                     </label>
@@ -282,14 +315,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p3"
-                                                        value="c,25" {{ $tatananSeven->p3 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananSeven->p3 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% Kantor telah menerapkan K3
                                                             </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p3"
-                                                        value="d,0" {{ $tatananSeven->p3 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananSeven->p3 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada
                                                     </label>
                                                 </div>
@@ -305,6 +340,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p3_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p3 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p3) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p3 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p3) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -351,21 +397,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p4"
-                                                        value="a,100" {{ $tatananSeven->p4 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p4 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Menurun
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p4"
-                                                        value="b,50" {{ $tatananSeven->p4 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p4 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Tetap
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p4"
-                                                        value="c,0" {{ $tatananSeven->p4 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananSeven->p4 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Meningkat
                                                     </label>
                                                 </div>
@@ -381,6 +430,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p4_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p4 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p4) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p4 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p4) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -429,27 +489,31 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p5"
-                                                        value="a,100" {{ $tatananSeven->p5 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p5 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p5"
-                                                        value="b,50" {{ $tatananSeven->p5 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p5 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p5"
-                                                        value="c,25" {{ $tatananSeven->p5 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananSeven->p5 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p5"
-                                                        value="d,0" {{ $tatananSeven->p5 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananSeven->p5 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada
                                                     </label>
                                                 </div>
@@ -465,6 +529,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p5_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p5 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p5) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p5 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p5) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -512,27 +587,31 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p6"
-                                                        value="a,100" {{ $tatananSeven->p6 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p6 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p6"
-                                                        value="b,50" {{ $tatananSeven->p6 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p6 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p6"
-                                                        value="c,25" {{ $tatananSeven->p6 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananSeven->p6 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p6"
-                                                        value="d,0" {{ $tatananSeven->p6 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananSeven->p6 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada
                                                     </label>
                                                 </div>
@@ -548,6 +627,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p6_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p6 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p6) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p6 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p6) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -594,27 +684,31 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p7"
-                                                        value="a,100" {{ $tatananSeven->p7 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p7 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p7"
-                                                        value="b,50" {{ $tatananSeven->p7 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p7 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p7"
-                                                        value="c,25" {{ $tatananSeven->p7 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananSeven->p7 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p7"
-                                                        value="d,0" {{ $tatananSeven->p7 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananSeven->p7 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada
                                                     </label>
                                                 </div>
@@ -630,6 +724,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p7_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p7 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p7) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p7 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p7) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -676,27 +781,31 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p8"
-                                                        value="a,100" {{ $tatananSeven->p8 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p8 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p8"
-                                                        value="b,50" {{ $tatananSeven->p8 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p8 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p8"
-                                                        value="c,25" {{ $tatananSeven->p8 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananSeven->p8 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p8"
-                                                        value="d,0" {{ $tatananSeven->p8 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananSeven->p8 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada
                                                     </label>
                                                 </div>
@@ -712,6 +821,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p8_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p8 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p8) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p8 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p8) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -784,27 +904,31 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p9"
-                                                        value="a,100" {{ $tatananSeven->p9 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p9 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p9"
-                                                        value="b,50" {{ $tatananSeven->p9 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p9 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p9"
-                                                        value="c,25" {{ $tatananSeven->p9 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananSeven->p9 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p9"
-                                                        value="d,0" {{ $tatananSeven->p9 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananSeven->p9 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada
                                                     </label>
                                                 </div>
@@ -820,6 +944,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p9_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p9 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p9) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p9 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p9) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -873,14 +1008,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p10"
-                                                        value="a,100" {{ $tatananSeven->p10 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p10 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada dilakukan secara rutin
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p10"
-                                                        value="b,50" {{ $tatananSeven->p10 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p10 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada, tapi tidak dilakukan secara
                                                         rutin
                                                     </label>
@@ -888,7 +1025,8 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p10"
-                                                        value="c,0" {{ $tatananSeven->p10 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananSeven->p10 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Tidak ada
                                                     </label>
                                                 </div>
@@ -904,6 +1042,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p10_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p10 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p10) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p10 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p10) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -958,14 +1107,16 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p11"
-                                                        value="a,100" {{ $tatananSeven->p11 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p11 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada dilakukan
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p11"
-                                                        value="b,0" {{ $tatananSeven->p11 == 'b,0' ? 'checked' : '' }}>
+                                                        value="b,0"
+                                                        {{ $tatananSeven->p11 == 'b,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Tidak dilakukan
                                                     </label>
                                                 </div>
@@ -981,6 +1132,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p11_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p11 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p11) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p11 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p11) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1041,28 +1203,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p12"
-                                                        value="a,100" {{ $tatananSeven->p12 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p12 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p12"
-                                                        value="b,50" {{ $tatananSeven->p12 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p12 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 60 - 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p12"
-                                                        value="c,25" {{ $tatananSeven->p12 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananSeven->p12 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 40 - 59.99%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p12"
-                                                        value="d,0" {{ $tatananSeven->p12 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananSeven->p12 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 40% </label>
                                                 </div>
                                             </div>
@@ -1077,6 +1243,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p12_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p12 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p12) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p12 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p12) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1123,21 +1300,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p13"
-                                                        value="a,100" {{ $tatananSeven->p13 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p13 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Menurun
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p13"
-                                                        value="b,50" {{ $tatananSeven->p13 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p13 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Tetap
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p13"
-                                                        value="c,0" {{ $tatananSeven->p13 == 'c,0' ? 'checked' : '' }}>
+                                                        value="c,0"
+                                                        {{ $tatananSeven->p13 == 'c,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Meningkat
                                                     </label>
                                                 </div>
@@ -1153,6 +1333,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p13_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p13 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p13) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p13 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p13) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1207,28 +1398,32 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p14"
-                                                        value="a,100" {{ $tatananSeven->p14 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p14 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p14"
-                                                        value="b,50" {{ $tatananSeven->p14 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p14 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 60 - 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p14"
-                                                        value="c,25" {{ $tatananSeven->p14 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananSeven->p14 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. 40 - 59%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p14"
-                                                        value="d,0" {{ $tatananSeven->p14 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananSeven->p14 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. < 40% </label>
                                                 </div>
                                             </div>
@@ -1243,6 +1438,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p14_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p14 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p14) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p14 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p14) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1314,27 +1520,31 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p15"
-                                                        value="a,100" {{ $tatananSeven->p15 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p15 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p15"
-                                                        value="b,50" {{ $tatananSeven->p15 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p15 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p15"
-                                                        value="c,25" {{ $tatananSeven->p15 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananSeven->p15 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p15"
-                                                        value="d,0" {{ $tatananSeven->p15 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananSeven->p15 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada
                                                     </label>
                                                 </div>
@@ -1350,6 +1560,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p15_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p15 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p15) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p15 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p15) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1400,27 +1621,31 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p16"
-                                                        value="a,100" {{ $tatananSeven->p16 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p16 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p16"
-                                                        value="b,50" {{ $tatananSeven->p16 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p16 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p16"
-                                                        value="c,25" {{ $tatananSeven->p16 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananSeven->p16 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p16"
-                                                        value="d,0" {{ $tatananSeven->p16 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananSeven->p16 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada
                                                     </label>
                                                 </div>
@@ -1436,6 +1661,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p16_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p16 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p16) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p16 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p16) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1489,21 +1725,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p17"
-                                                        value="a,100" {{ $tatananSeven->p17 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p17 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. lebih dari 75% total kecamatan
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p17"
-                                                        value="b,50" {{ $tatananSeven->p17 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p17 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-75% total kecamatan
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p17"
-                                                        value="c,25" {{ $tatananSeven->p17 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananSeven->p17 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. kurang dari 50% total kecamatan
                                                     </label>
                                                 </div>
@@ -1519,6 +1758,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p17_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p17 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p17) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p17 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p17) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1566,21 +1816,24 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p18"
-                                                        value="a,100" {{ $tatananSeven->p18 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p18 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. lebih dari 75%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p18"
-                                                        value="b,50" {{ $tatananSeven->p18 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p18 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-75 %
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p18"
-                                                        value="c,25" {{ $tatananSeven->p18 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananSeven->p18 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. kurang dari 50% total kecamatan
                                                     </label>
                                                 </div>
@@ -1596,6 +1849,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p18_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p18 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p18) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p18 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p18) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1651,27 +1915,31 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p19"
-                                                        value="a,100" {{ $tatananSeven->p19 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p19 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p19"
-                                                        value="b,50" {{ $tatananSeven->p19 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p19 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p19"
-                                                        value="c,25" {{ $tatananSeven->p19 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananSeven->p19 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p19"
-                                                        value="d,0" {{ $tatananSeven->p19 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananSeven->p19 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada
                                                     </label>
                                                 </div>
@@ -1687,6 +1955,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p19_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p19 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p19) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p19 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p19) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1733,27 +2012,31 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p20"
-                                                        value="a,100" {{ $tatananSeven->p20 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p20 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p20"
-                                                        value="b,50" {{ $tatananSeven->p20 == 'b,50' ? 'checked' : '' }}>
+                                                        value="b,50"
+                                                        {{ $tatananSeven->p20 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p20"
-                                                        value="c,25" {{ $tatananSeven->p20 == 'c,25' ? 'checked' : '' }}>
+                                                        value="c,25"
+                                                        {{ $tatananSeven->p20 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p20"
-                                                        value="d,0" {{ $tatananSeven->p20 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananSeven->p20 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada pembinaan dan
                                                         pengawasan
                                                     </label>
@@ -1770,6 +2053,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p20_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p20 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p20) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p20 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p20) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -1823,27 +2117,31 @@
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p21"
-                                                        value="a,100" {{ $tatananSeven->p21 == 'a,100' ? 'checked' : '' }}>
+                                                        value="a,100"
+                                                        {{ $tatananSeven->p21 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. > 80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p21"
-                                                        value="b,75" {{ $tatananSeven->p21 == 'b,75' ? 'checked' : '' }}>
+                                                        value="b,75"
+                                                        {{ $tatananSeven->p21 == 'b,75' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50-80%
                                                     </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p21"
-                                                        value="c,50" {{ $tatananSeven->p21 == 'c,50' ? 'checked' : '' }}>
+                                                        value="c,50"
+                                                        {{ $tatananSeven->p21 == 'c,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. < 50% </label>
                                                 </div>
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p21"
-                                                        value="d,0" {{ $tatananSeven->p21 == 'd,0' ? 'checked' : '' }}>
+                                                        value="d,0"
+                                                        {{ $tatananSeven->p21 == 'd,0' ? 'checked' : '' }}>
                                                     <label class="form-check-label">d. Tidak ada UMKM yang memiliki
                                                         pelayanan
                                                         kesehatan/Pos UKK
@@ -1861,6 +2159,17 @@
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p21_2">
+                                            </div>
+                                            <div class="input-group input-group-sm pb-2 pt-2">
+                                                @if ($attachSeven->p21 != null)
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSeven->p21) }}"
+                                                        target="_blank">Lihat Lampiran (pdf)</a>
+                                                @endif
+                                                @if ($attachSevenNd->p21 != null)
+                                                    &nbsp; - &nbsp;
+                                                    <a href="{{ asset('storage/attachmentSeven/' . $attachSevenNd->p21) }}"
+                                                        target="_blank">Lihat Dokumentasi (img)</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
