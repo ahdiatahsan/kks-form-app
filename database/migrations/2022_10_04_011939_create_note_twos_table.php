@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('note_twos', function (Blueprint $table) {
             $table->id();
+            $table->string('code')->unique();
+            $table->string('question');
+            $table->string('answer')->nullable();
+            $table->string('score')->nullable();
+            $table->string('attachment_pdf')->nullable();
+            $table->string('attachment_img')->nullable();
+            $table->text('note')->nullable();
+            $table->foreignId('user_id')->nullable()->constrained('users')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }
