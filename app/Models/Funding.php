@@ -15,7 +15,7 @@ class Funding extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'title',
         'attachment_pdf',
         'attachment_img',
         'description',

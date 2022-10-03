@@ -15,7 +15,7 @@ class InstitutionalBuilder extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'description',
+        'title',
         'attachment_pdf',
         'attachment_img',
         'user_id'

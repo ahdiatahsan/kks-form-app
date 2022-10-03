@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('fundings', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('title');
             $table->string('attachment_pdf')->nullable();
             $table->string('attachment_img')->nullable();
             $table->string('description')->nullable();
