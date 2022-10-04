@@ -177,9 +177,8 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             2. Kegiatan penyelenggaraan kesehatan dan keselamatan kerja di Kawasan
-                                            Perkantoran,
-                                            Perindustrian (IKM) dan UMKM masuk dalam dokumen perencanaan pembangunan
-                                            daerah
+                                            Perkantoran, Perindustrian (IKM) dan UMKM masuk dalam dokumen perencanaan
+                                            pembangunan daerah
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -930,8 +929,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             9. Jumlah Industri kecil dan menengah yang menyelenggarakan program
-                                            Kesehatan
-                                            Keselamatan Kerja/K3
+                                            Kesehatan Keselamatan Kerja/K3
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1140,9 +1138,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             11. Pemanfaatan kembali material dan sumber daya yang digunakan melalui
-                                            konsep
-                                            4R
-                                            oleh Industri kecil dan menengah
+                                            konsep 4R oleh Industri kecil dan menengah
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1238,11 +1234,9 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             12. Persentase perusahaan menyampaikan laporan Rencana Pengelolaan
-                                            Lingkungan
-                                            (RKL)/
-                                            Rencana Pemantauan Lingkungan (RPL) / Upaya Pengelolaan Lingkungan (UKL)/
-                                            Upaya
-                                            Pemantauan Lingkungan (UPL) secara berkala 6 bulan sekali
+                                            Lingkungan (RKL)/ Rencana Pemantauan Lingkungan (RPL) / Upaya Pengelolaan
+                                            Lingkungan (UKL)/ Upaya Pemantauan Lingkungan (UPL) secara berkala 6 bulan
+                                            sekali
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1675,8 +1669,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             16. Persentase UMKM sektor makanan, minuman, industri pengolahan yang
-                                            memiliki
-                                            Sertifikat Laik Higiene Sanitasi (SLHS), PIRT, POM
+                                            memiliki Sertifikat Laik Higiene Sanitasi (SLHS), PIRT, POM
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1981,8 +1974,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             19. Persentase UMKM yang sudah menerapkan dan menuhi syarat standar
-                                            kesehatan
-                                            lingkungan kerja
+                                            kesehatan lingkungan kerja
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -2192,7 +2184,7 @@
                                     <!--begin::Row-->
                                     <div class="form-group">
                                         <div class="col-lg-12">
-                                            21. Persentase UMKM yang memiliki pelayanan kesehatan/ Pos UKK
+                                            21. Persentase UMKM yang memiliki pelayanan kesehatan / Pos UKK
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">

@@ -165,8 +165,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             2. Upaya pencegahan dan penanggulangan bencana masuk ke dalam dokumen
-                                            perencanaan
-                                            daerah (seperti RPJMD, Renstra dan RKPD)
+                                            perencanaan daerah (seperti RPJMD, Renstra dan RKPD)
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -457,8 +456,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             5. Adanya rencana penanggulangan bencana dan rencana penanggulangan
-                                            kedaruratan
-                                            bencana
+                                            kedaruratan bencana
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -639,8 +637,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             7. Melakukan kegiatan simulasi tanggap penanggulangan bencana minimal 1 kali
-                                            dalam
-                                            setahun.
+                                            dalam setahun.
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -737,8 +734,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             8. Keberadaan persediaan logistik dan peralatan yang mencukupi di
-                                            masing-masing
-                                            klaster daerah rawan bencana
+                                            masing-masing klaster daerah rawan bencana
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -921,9 +917,8 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             10. Persentase desa/kelurahan tangguh bencana (Destana) yang sudah
-                                            menerapkan
-                                            Standar Nasional Indonesia/SNI sebagai acuan bersama dalam melakukan upaya
-                                            pengelolaan resiko bencana di daerah rawan bencana
+                                            menerapkan Standar Nasional Indonesia/SNI sebagai acuan bersama dalam
+                                            melakukan upaya pengelolaan resiko bencana di daerah rawan bencana
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1052,8 +1047,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             11. Adanya sistem peringatan dini terintegrasi sesuai ancaman bencana
-                                            wilayahnya
-                                            (EWS longsor, EWS banjir, EWS tsunami)
+                                            wilayahnya (EWS longsor, EWS banjir, EWS tsunami)
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1253,9 +1247,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             13. Pelaksanaan diseminasi informasi peringatan dini kepada stakeholder
-                                            terkait
-                                            dan
-                                            masyarakat
+                                            terkait dan masyarakat
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1562,8 +1554,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             16. Tersedianya SKDR sebagai sistem pemantauan perkembangan trend suatu
-                                            penyakit
-                                            menular yang potensial KLB/wabah dari waktu ke waktu
+                                            penyakit menular yang potensial KLB/wabah dari waktu ke waktu
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1777,8 +1768,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             18. Persentase penyelenggaraan program Satuan Pendidikan Aman Bencana (SPAB)
-                                            di
-                                            sekolah pada daerah rawan bencana
+                                            di sekolah pada daerah rawan bencana
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1888,9 +1878,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             19. Adanya fasilitas sarana prasarana pendidikan yang aman dari resiko
-                                            bencana
-                                            di
-                                            setiap satuan pendidikan
+                                            bencana di setiap satuan pendidikan
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1984,8 +1972,8 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             20. Memiliki Forum Pengurangan Risiko Bencana (FPRB) sebagai upaya
-                                            pemberdayaan
-                                            masyarakat dalam penanggulangan bencana di Kawasan Rawan Bencana (KRB)
+                                            pemberdayaan masyarakat dalam penanggulangan bencana di Kawasan Rawan
+                                            Bencana (KRB)
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -2099,8 +2087,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             21. Melakukan kerjasama dengan pemerintah daerah lain yang berbatasan dengan
-                                            kawasan
-                                            Rawan Bencana (KRB) dalam upaya penanggulangan bencana
+                                            kawasan Rawan Bencana (KRB) dalam upaya penanggulangan bencana
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -2187,8 +2174,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             22. Adanya kerjasama desa/kelurahan rawan bencana dengan desa/kelurahan
-                                            sekitarnya
-                                            dalam rangka penanggulangan bencana
+                                            sekitarnya dalam rangka penanggulangan bencana
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">

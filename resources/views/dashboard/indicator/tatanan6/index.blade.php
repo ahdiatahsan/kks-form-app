@@ -250,9 +250,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             3. Adanya regulasi/kebijakan terkait sistem manajemen keselamatan lalu
-                                            lintas
-                                            dan
-                                            angkutan jalan
+                                            lintas dan angkutan jalan
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -430,9 +428,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             5. Penyediaan layanan transportasi publik dan kawasan tertib lalu lintas
-                                            masuk
-                                            ke
-                                            dalam dokumen perencanaan pembangunan daerah
+                                            masuk ke dalam dokumen perencanaan pembangunan daerah
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1160,8 +1156,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             12. Persentase jam kerja pengemudi : maksimal 12 jam dan 4 jam istirahat
-                                            angkutan
-                                            umum
+                                            angkutan umum
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1265,7 +1260,7 @@
                                     <!--begin::Row-->
                                     <div class="form-group">
                                         <div class="col-lg-12">
-                                            13. Persentase perusahaan angkutan yang telah membuat dan melaporkan Sistem
+                                            13. Persentase perusahaan angkutan yang telah membuat dan melaporkan sistem
                                             manajemen keselamatan
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
@@ -1360,8 +1355,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             14. Pelaksanaan pengecekan terhadap kondisi kesehatan pengemudi cek narkoba,
-                                            cek
-                                            kesehatan dan sebagainya
+                                            cek kesehatan dan sebagainya
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1483,8 +1477,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             15. Terdapat pos, fasilitas dan petugas pemeriksa kelaikan umum, fasilitas
-                                            perbaikan
-                                            ringan kendaraan umum pada Terminal
+                                            perbaikan ringan kendaraan umum pada Terminal
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1891,8 +1884,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             19. Tersedia ruang tunggu, fasilitas ibadah, rumah makan, fasilitas dan
-                                            petugas
-                                            kebersihan, lampu penerangan ruangan
+                                            petugas kebersihan, lampu penerangan ruangan
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1987,8 +1979,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             20. Tersedia fasilitas bagi penumpang penyandang disabilitas dan ibu hamil
-                                            atau
-                                            menyusui
+                                            atau menyusui
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -2182,10 +2173,8 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             22. Persentase sentra pangan jajanan/kantin dalam terminal yang telah
-                                            memenuhi
-                                            standar kesehatan higiene (tempat cuci tangan,tempat mencuci piring,tempat
-                                            sampah,
-                                            dll.)
+                                            memenuhi standar kesehatan higiene (tempat cuci tangan,tempat mencuci piring,tempat
+                                            sampah, dll.)
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -2865,8 +2854,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             29. Persentase halte yang berfungsi dari jumlah eksisting secara layak
-                                            pakai,
-                                            terawat dan bersih
+                                            pakai, terawat dan bersih
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">

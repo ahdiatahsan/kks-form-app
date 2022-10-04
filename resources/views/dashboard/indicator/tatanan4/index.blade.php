@@ -436,8 +436,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             4. Keberadaan rapat koordinasi (rakor) Tim Pembina UKS/M yang dilakukan
-                                            secara
-                                            rutin
+                                            secara rutin
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -558,8 +557,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             5. Presentase Sekolah/Madrasah yang memiliki tim pelaksana UKS/M dibuktikan
-                                            dengan
-                                            SK
+                                            dengan SK
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1432,8 +1430,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             13. Presentase sekolah pendidikan usia dini/PAUD yang menyelenggarakan
-                                            promosi
-                                            kesehatan dan penjaringan kesehatan
+                                            promosi kesehatan dan penjaringan kesehatan
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1550,8 +1547,7 @@
                                     <!--begin::Row-->
                                     <div class="form-group">
                                         <div class="col-lg-12">
-                                            14. Jumlah sekolah yang menerapkan model pembelajaran sekolah sehat, contoh
-                                            :
+                                            14. Jumlah sekolah yang menerapkan model pembelajaran sekolah sehat, contoh:
                                             sekolah menjadi pusat pembelajaran sekolah sehat, dll.
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
@@ -1662,11 +1658,8 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             15. Keberadaan sekolah yang mengembangkan sistem informasi terintegrasi
-                                            (contoh
-                                            :
-                                            data peserta didik, data kesehatan, data kondisi kesehatan lingkungan
-                                            sekolah,
-                                            dll.)
+                                            (contoh: data peserta didik, data kesehatan, data kondisi kesehatan
+                                            lingkungan sekolah, dll.)
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1765,8 +1758,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             16. Adanya kegiatan kemitraan sekolah dengan pihak luar untuk mencapai
-                                            sekolah
-                                            sehat
+                                            sekolah sehat
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">

@@ -85,8 +85,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             1. Adanya Tim Penanganan Masalah Kesejahteraan Sosial (Tim Koordinasi
-                                            Penanggulangan
-                                            Kemiskinan Daerah/TKPKD/Tim Bansos Pangan dll.)
+                                            Penanggulangan Kemiskinan Daerah/TKPKD/Tim Bansos Pangan dll.)
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -276,8 +275,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             3. Adanya peraturan mengenai Penanganan Masalah Kesejahteraan Sosial suaikan
-                                            dengan
-                                            daerahnya
+                                            dengan daerahnya
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -364,8 +362,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             4. Adanya layanan pengaduan terkait masalah-masalah sosial (masalah bantuan
-                                            sosial
-                                            dll.)
+                                            sosial dll.)
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -457,9 +454,8 @@
                                     <!--begin::Row-->
                                     <div class="form-group">
                                         <div class="col-lg-12">
-                                            5. Adanya Penanganan Masalah Kesejahteraan Sosial dalam Rencana Pembangunan
-                                            jangka
-                                            Menengah Daerah/RPJMD
+                                            5. Adanya penanganan masalah kesejahteraan sosial dalam Rencana Pembangunan
+                                            Jangka Menengah Daerah/RPJMD
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -567,8 +563,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             6. Adanya kegiatan penanganan pemerlu pelayanan kesejahteraan sosial (PPKS)
-                                            yang
-                                            aktif dalam setahun terakhir
+                                            yang aktif dalam setahun terakhir
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -754,8 +749,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             8. Adanya kegiatan pelatihan khusus bagi pemerlu pelayanan kesejahteraan
-                                            sosial
-                                            (PPKS)
+                                            sosial (PPKS)
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -852,9 +846,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             9. Keberadaan penggiat penanganan pemerlu pelayanan kesejahteraan sosial
-                                            (PPKS)
-                                            baik
-                                            secara individu/kelompok
+                                            (PPKS) baik secara individu/kelompok
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -941,11 +933,10 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             10. Adanya kerjasama dengan stakeholder masyarakat (seperti pihak swasta,
-                                            akademisi,
-                                            instansi pemerintah terkait, lembaga keagamaan, individu/donatur dll) dalam
-                                            kegiatan
-                                            penanganan pemerlu pelayanan kesejahteraan sosial (PPKS) di daerah setahun
-                                            terakhir
+                                            akademisi, instansi pemerintah terkait, lembaga keagamaan, individu/donatur
+                                            ,dll) dalam kegiatan penanganan pemerlu pelayanan kesejahteraan sosial
+                                            (PPKS)
+                                            di daerah setahun terakhir
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1173,9 +1164,8 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             12. Adanya upaya pemerintah daerah dan swasta dalam peningkatan kemampuan
-                                            ekonomi
-                                            untuk komunitas adat terpencil dan daerah perbatasan (misal pendidikan dan
-                                            pelatihan, bantuan stimulan dll.)
+                                            ekonomi untuk komunitas adat terpencil dan daerah perbatasan (misal
+                                            pendidikan dan pelatihan, bantuan stimulan dll.)
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1382,9 +1372,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             14. Adanya program pemenuhan kebutuhan kesehatan bagi komunitas adat
-                                            terpencil
-                                            dan
-                                            daerah perbatasan
+                                            terpencil dan daerah perbatasan
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1481,8 +1469,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             15. Adanya pemenuhan hak sipil bagi komunitas adat terpencil dan daerah
-                                            perbatasan,
-                                            misal hak sipil pendaftaran pernikahan
+                                            perbatasan, misal hak sipil pendaftaran pernikahan
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1588,8 +1575,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             16. Adanya penggiat komunitas adat terpencil baik secara
-                                            individu/kelompok/lembaga
-                                            sosial/yayasan
+                                            individu/kelompok/lembaga sosial/yayasan
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1820,8 +1806,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             18. Adanya penyelenggaraan penanganan kekerasan anak, perempuan dan lansia
-                                            dalam
-                                            Rencana Pembangunan Jangka Menengah Daerah/RPJMD
+                                            dalam Rencana Pembangunan Jangka Menengah Daerah/RPJMD
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -2130,9 +2115,7 @@
                                                         value="a,100"
                                                         {{ $tatananEight->p21 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada upaya dan capaian angka
-                                                        sunat
-                                                        pada
-                                                        perempuan menurun dibanding tahun sebelumnya
+                                                        sunat pada perempuan menurun dibanding tahun sebelumnya
                                                     </label>
                                                 </div>
                                                 <div
@@ -2141,9 +2124,7 @@
                                                         value="b,50"
                                                         {{ $tatananEight->p21 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada upaya dan capaian angka
-                                                        sunat
-                                                        pada
-                                                        perempuan stabil sama dibanding tahun sebelumnya
+                                                        sunat pada perempuan stabil sama dibanding tahun sebelumnya
                                                     </label>
                                                 </div>
                                                 <div
@@ -2152,9 +2133,7 @@
                                                         value="c,25"
                                                         {{ $tatananEight->p21 == 'c,25' ? 'checked' : '' }}>
                                                     <label class="form-check-label">c. Ada upaya dan capaian angka
-                                                        sunat
-                                                        pada
-                                                        perempuan meningkat dibanding tahun sebelumnya
+                                                        sunat pada perempuan meningkat dibanding tahun sebelumnya
                                                     </label>
                                                 </div>
                                                 <div
@@ -2235,8 +2214,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             22. Adanya upaya pendidikan penyuluhan, komunikasi dan informasi tentang
-                                            penanganan
-                                            kekerasan terhadap perempuan
+                                            penanganan kekerasan terhadap perempuan
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -2335,9 +2313,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             23. Adanya UPTD PA/P2TP2A (Pusat Pelayanan Terpadu Pemberdayaan Perempuan
-                                            dan
-                                            Anak)
-                                            dalam penanganan kekerasan pada anak, perempuan dan lansia
+                                            dan Anak) dalam penanganan kekerasan pada anak, perempuan dan lansia
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -2540,8 +2516,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             25. Keberadaan penggiat penanganan kekerasan terhadap anak, perempuan dan
-                                            lansia
-                                            baik secara individu/kelompok
+                                            lansia baik secara individu/kelompok
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -2643,8 +2618,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             26. Jumlah kasus kekerasan terhadap anak, perempuan dan lansia yang
-                                            dilaporkan
-                                            setahun terakhir
+                                            dilaporkan setahun terakhir
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -2960,10 +2934,8 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             29. Adanya sarana prasarana dalam mendukung program Rute Aman Selamat ke
-                                            Sekolah
-                                            (RASS) seperti halte penumpang angkutan umum, Zone Selamat Sekolah (ZOSS)
-                                            dan
-                                            fasilitas untuk pesepeda dan pejalan kaki
+                                            Sekolah (RASS) seperti halte penumpang angkutan umum, Zone Selamat Sekolah
+                                            (ZOSS) dan fasilitas untuk pesepeda dan pejalan kaki
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -3081,9 +3053,8 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             30. Adanya upaya dan peran serta keluarga, masyarakat, media massa dan
-                                            pemerintah
-                                            daerah dalam upaya mencegah radikalisme dan tindak pidana terorisme setahun
-                                            terakhir
+                                            pemerintah daerah dalam upaya mencegah radikalisme dan tindak pidana
+                                            terorisme setahun terakhir
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -3190,9 +3161,7 @@
                                                         value="a,100"
                                                         {{ $tatananEight->p31 == 'a,100' ? 'checked' : '' }}>
                                                     <label class="form-check-label">a. Ada pemberdayaan dan
-                                                        kegiatannya
-                                                        rutin
-                                                        dilakukan
+                                                        kegiatannya rutin dilakukan
                                                     </label>
                                                 </div>
                                                 <div
@@ -3201,9 +3170,7 @@
                                                         value="b,50"
                                                         {{ $tatananEight->p31 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada pemberdayaan tapi
-                                                        kegiatannya
-                                                        tidak
-                                                        rutin dilakukan
+                                                        kegiatannya tidak rutin dilakukan
                                                     </label>
                                                 </div>
                                                 <div
@@ -3289,8 +3256,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             32. Keberadaan regulasi dalam pencegahan dan penanggulangan radikalisme dan
-                                            aksi
-                                            terorisme
+                                            aksi terorisme
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -3398,8 +3364,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             33. Kerjasama pemerintah daerah dengan stakeholder terkait dalam pencegahan
-                                            dan
-                                            penanggulangan radikalisme
+                                            dan penanggulangan radikalisme
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -3506,8 +3471,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             34. Kegiatan edukasi seperti sosialisasi, penyebaran materi komunikasi,
-                                            informasi
-                                            dan edukasi tentang bahaya Terorisme
+                                            informasi dan edukasi tentang bahaya terorisme
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">

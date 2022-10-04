@@ -2673,7 +2673,7 @@
                                     <!--begin::Row-->
                                     <div class="form-group">
                                         <div class="col-lg-12">
-                                            27.Memiliki dokumen RISPAM
+                                            27. Memiliki dokumen RISPAM
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">

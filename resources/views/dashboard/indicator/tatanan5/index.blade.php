@@ -279,8 +279,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             3. Adanya desa wisata yang dikelola oleh Lembaga Pemasyarakatan Masyarakat
-                                            Desa
-                                            (LPMD)
+                                            Desa (LPMD)
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -401,8 +400,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             4. Tersedianya informasi pariwisata di tempat umum (hotel,
-                                            bandara/pelabuhan,
-                                            dll)
+                                            bandara/pelabuhan, dll)
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1472,8 +1470,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             14. Adanya kerjasama dengan Petugas Keamanan (Polisi Pariwisata,
-                                            Satpam/Masyarakat
-                                            yang ditunjuk)
+                                            Satpam/Masyarakat yang ditunjuk)
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -1814,8 +1811,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             17. Keberadaan rencana kerja dan implementasi program pengembangan Kelompok
-                                            Sadar
-                                            Wisata (Pokdarwis, Bumdes)
+                                            Sadar Wisata (Pokdarwis, Bumdes)
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -2009,8 +2005,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             19. Dinas pariwisata mengalokasikan program pemberdayaan masyrakat di
-                                            destinasi
-                                            wisata berupa gerakan Aksi Sapta Pesona dan Gerakan Sadar Wisata
+                                            destinasi wisata berupa gerakan Aksi Sapta Pesona dan Gerakan Sadar Wisata
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
@@ -2107,8 +2102,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             20. Keberadaan pembinaan kesehatan terhadap kelompok masyarakat sekitar daya
-                                            tarik
-                                            wisata (kelompok tari, kelompok seni, pedagang aksesoris dll) setahun
+                                            tarik wisata (kelompok tari, kelompok seni, pedagang aksesoris dll) setahun
                                             terakhir
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
@@ -2128,9 +2122,7 @@
                                                         value="b,50"
                                                         {{ $tatananFive->p20 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ya, kegiatan dilakukan secara
-                                                        aktif
-                                                        tapi
-                                                        tidak secara berkala
+                                                        aktif tapi tidak secara berkala
                                                     </label>
                                                 </div>
                                                 <div
@@ -2212,8 +2204,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             21. Persentase TPP Non SLHS yang dilakukan pembinaan/pengawasan dengan
-                                            pemberian
-                                            label
+                                            pemberian label
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">

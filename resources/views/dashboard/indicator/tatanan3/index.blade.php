@@ -1759,12 +1759,9 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             18. Persentase pasar yang melakukan kegiatan kemitraan dengan berbagai pihak
-                                            diluar
-                                            manajemen pasar (instansi pemerintah lain, bank, media, perguruan tinggi dan
-                                            perusahaan swasta lainnya) yang dilakukan secara rutin dalam rangka
-                                            mewujudkan
-                                            pasar
-                                            sehat
+                                            diluar manajemen pasar (instansi pemerintah lain, bank, media, perguruan
+                                            tinggi dan perusahaan swasta lainnya) yang dilakukan secara rutin dalam
+                                            rangka mewujudkan pasar sehat
                                             <div class="fluid-container pt-4 pb-2">
                                                 <div
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
