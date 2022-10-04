@@ -84,26 +84,6 @@
         </div>
         <div class="row gy-5 g-xl-8">
             <div class="col-xl-4">
-                <!--begin::Pokok-->
-                <a href="{{ route('tatananMain.index') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
-                    <!--begin::Body-->
-                    <div class="card-body">
-                        <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
-                        <span class="svg-icon svg-icon-white svg-icon-3x ms-n1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path opacity="0.3" d="M7 20.5L2 17.6V11.8L7 8.90002L12 11.8V17.6L7 20.5ZM21 20.8V18.5L19 17.3L17 18.5V20.8L19 22L21 20.8Z" fill="black"/>
-                                <path d="M22 14.1V6L15 2L8 6V14.1L15 18.2L22 14.1Z" fill="black"/>
-                            </svg>
-                        </span>
-                        <!--end::Svg Icon-->
-                        <div class="text-white fw-bolder fs-2 mb-2 mt-5">Indikator Pokok</div>
-                        <div class="fw-bold text-white">Indikator Pokok KKS Enrekang</div>
-                    </div>
-                    <!--end::Body-->
-                </a>
-                <!--end::Pokok-->
-            </div>
-            <div class="col-xl-4">
                 <!--begin::Khusus-->
                 <a href="{{ route('tatanan-menu') }}" class="card bg-success hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
