@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('note_sevens', function (Blueprint $table) {
             $table->id();
             $table->string('code')->unique();
-            $table->string('question');
+            $table->string('question', 300);
             $table->string('answer')->nullable();
             $table->string('score')->nullable();
             $table->string('attachment_pdf')->nullable();
