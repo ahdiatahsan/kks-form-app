@@ -38,25 +38,27 @@ Auth::routes([
     'verify' => false, // Email Verification Routes...
 ]);
 
-Route::get('/', [DashboardController::class, 'index'])->name('home');
-Route::get('/specialIndicator', [DashboardController::class, 'tatanan_menu'])->name('tatanan-menu');
-Route::get('/institutionalMenu', [DashboardController::class, 'institutional_menu'])->name('institutional-menu');
+Route::group(['middleware' => 'prevent-back-history'], function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('home');
+    Route::get('/specialIndicator', [DashboardController::class, 'tatanan_menu'])->name('tatanan-menu');
+    Route::get('/institutionalMenu', [DashboardController::class, 'institutional_menu'])->name('institutional-menu');
 
-Route::resource('introduction', IntroductionController::class);
-Route::resource('funding', FundingController::class);
-Route::resource('conclusion', ConclusionController::class);
+    Route::resource('introduction', IntroductionController::class);
+    Route::resource('funding', FundingController::class);
+    Route::resource('conclusion', ConclusionController::class);
 
-Route::resource('institutionalBuilder', InstitutionalBuilderController::class);
-Route::resource('institutionalKks', InstitutionalKksController::class);
-Route::resource('institutionalDistrict', InstitutionalDistrictController::class);
-Route::resource('institutionalVillage', InstitutionalVillageController::class);
+    Route::resource('institutionalBuilder', InstitutionalBuilderController::class);
+    Route::resource('institutionalKks', InstitutionalKksController::class);
+    Route::resource('institutionalDistrict', InstitutionalDistrictController::class);
+    Route::resource('institutionalVillage', InstitutionalVillageController::class);
 
-Route::resource('tatananOne', TatananOneController::class);
-Route::resource('tatananTwo', TatananTwoController::class);
-Route::resource('tatananThree', TatananThreeController::class);
-Route::resource('tatananFour', TatananFourController::class);
-Route::resource('tatananFive', TatananFiveController::class);
-Route::resource('tatananSix', TatananSixController::class);
-Route::resource('tatananSeven', TatananSevenController::class);
-Route::resource('tatananEight', TatananEightController::class);
-Route::resource('tatananNine', TatananNineController::class);
+    Route::resource('tatananOne', TatananOneController::class);
+    Route::resource('tatananTwo', TatananTwoController::class);
+    Route::resource('tatananThree', TatananThreeController::class);
+    Route::resource('tatananFour', TatananFourController::class);
+    Route::resource('tatananFive', TatananFiveController::class);
+    Route::resource('tatananSix', TatananSixController::class);
+    Route::resource('tatananSeven', TatananSevenController::class);
+    Route::resource('tatananEight', TatananEightController::class);
+    Route::resource('tatananNine', TatananNineController::class);
+});
