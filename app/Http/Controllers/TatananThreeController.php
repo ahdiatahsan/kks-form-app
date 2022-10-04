@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\TatananThree;
 use App\Models\AttachmentThree;
 use App\Models\AttachmentThreeNd;
+use App\Models\NoteThree;
 use App\Http\Requests\StoreTatananThreeRequest;
 use App\Http\Requests\UpdateTatananThreeRequest;
 use Illuminate\Support\Facades\Auth;
@@ -116,6 +117,11 @@ class TatananThreeController extends Controller
                 $attachThree->update([
                     $converted => $attachName,
                 ]);
+
+                $noteThreePdf = NoteThree::where('code', '=', $converted)->first();
+                $noteThreePdf->update([
+                    'attachment_pdf' => $attachName,
+                ]);
             }
         }
 
@@ -141,6 +147,11 @@ class TatananThreeController extends Controller
                 $attachThreeNd->update([
                     $converted => $attachName,
                 ]);
+
+                $noteThreeImg = NoteThree::where('code', '=', $converted)->first();
+                $noteThreeImg->update([
+                    'attachment_img' => $attachName,
+                ]);
             }
         }
 
@@ -148,6 +159,17 @@ class TatananThreeController extends Controller
             if ($request->has($field1)) {
                 $tatananThree->update([
                     $field1 => $request->input($field1),
+                ]);
+
+                $noteThreeQa = NoteThree::where('code', '=', $field1)->first();
+                $userId = Auth::user()->id;
+                $answer = substr($request->input($field1), 0, 1);
+                $score = substr($request->input($field1), 2, 4);
+
+                $noteThreeQa->update([
+                    'answer' => $answer,
+                    'score' => $score,
+                    'user_id' => $userId,
                 ]);
             }
         }

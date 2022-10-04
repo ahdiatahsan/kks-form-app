@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\TatananOne;
 use App\Models\AttachmentOne;
 use App\Models\AttachmentOneNd;
+use App\Models\NoteOne;
 use App\Http\Requests\StoreTatananOneRequest;
 use App\Http\Requests\UpdateTatananOneRequest;
 use Illuminate\Support\Facades\Auth;
@@ -116,6 +117,11 @@ class TatananOneController extends Controller
                 $attachOne->update([
                     $converted => $attachName,
                 ]);
+
+                $noteOnePdf = NoteOne::where('code', '=', $converted)->first();
+                $noteOnePdf->update([
+                    'attachment_pdf' => $attachName,
+                ]);
             }
         }
 
@@ -141,6 +147,11 @@ class TatananOneController extends Controller
                 $attachOneNd->update([
                     $converted => $attachName,
                 ]);
+
+                $noteOneImg = NoteOne::where('code', '=', $converted)->first();
+                $noteOneImg->update([
+                    'attachment_img' => $attachName,
+                ]);
             }
         }
 
@@ -148,6 +159,17 @@ class TatananOneController extends Controller
             if ($request->has($field1)) {
                 $tatananOne->update([
                     $field1 => $request->input($field1),
+                ]);
+
+                $noteOneQa = NoteOne::where('code', '=', $field1)->first();
+                $userId = Auth::user()->id;
+                $answer = substr($request->input($field1), 0, 1);
+                $score = substr($request->input($field1), 2, 4);
+
+                $noteOneQa->update([
+                    'answer' => $answer,
+                    'score' => $score,
+                    'user_id' => $userId,
                 ]);
             }
         }

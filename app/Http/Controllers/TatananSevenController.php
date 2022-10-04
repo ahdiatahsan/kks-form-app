@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\TatananSeven;
 use App\Models\AttachmentSeven;
 use App\Models\AttachmentSevenNd;
+use App\Models\NoteSeven;
 use App\Http\Requests\StoreTatananSevenRequest;
 use App\Http\Requests\UpdateTatananSevenRequest;
 use Illuminate\Support\Facades\Auth;
@@ -116,6 +117,11 @@ class TatananSevenController extends Controller
                 $attachSeven->update([
                     $converted => $attachName,
                 ]);
+
+                $noteSevenPdf = NoteSeven::where('code', '=', $converted)->first();
+                $noteSevenPdf->update([
+                    'attachment_pdf' => $attachName,
+                ]);
             }
         }
 
@@ -141,6 +147,11 @@ class TatananSevenController extends Controller
                 $attachSevenNd->update([
                     $converted => $attachName,
                 ]);
+
+                $noteSevenImg = NoteSeven::where('code', '=', $converted)->first();
+                $noteSevenImg->update([
+                    'attachment_img' => $attachName,
+                ]);
             }
         }
 
@@ -148,6 +159,17 @@ class TatananSevenController extends Controller
             if ($request->has($field1)) {
                 $tatananSeven->update([
                     $field1 => $request->input($field1),
+                ]);
+
+                $noteSevenQa = NoteSeven::where('code', '=', $field1)->first();
+                $userId = Auth::user()->id;
+                $answer = substr($request->input($field1), 0, 1);
+                $score = substr($request->input($field1), 2, 4);
+
+                $noteSevenQa->update([
+                    'answer' => $answer,
+                    'score' => $score,
+                    'user_id' => $userId,
                 ]);
             }
         }

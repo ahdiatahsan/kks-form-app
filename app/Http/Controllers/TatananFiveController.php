@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\TatananFive;
 use App\Models\AttachmentFive;
 use App\Models\AttachmentFiveNd;
+use App\Models\NoteFive;
 use App\Http\Requests\StoreTatananFiveRequest;
 use App\Http\Requests\UpdateTatananFiveRequest;
 use Illuminate\Support\Facades\Auth;
@@ -116,6 +117,11 @@ class TatananFiveController extends Controller
                 $attachFive->update([
                     $converted => $attachName,
                 ]);
+
+                $noteFivePdf = NoteFive::where('code', '=', $converted)->first();
+                $noteFivePdf->update([
+                    'attachment_pdf' => $attachName,
+                ]);
             }
         }
 
@@ -141,6 +147,11 @@ class TatananFiveController extends Controller
                 $attachFiveNd->update([
                     $converted => $attachName,
                 ]);
+
+                $noteFiveImg = NoteFive::where('code', '=', $converted)->first();
+                $noteFiveImg->update([
+                    'attachment_img' => $attachName,
+                ]);
             }
         }
 
@@ -148,6 +159,17 @@ class TatananFiveController extends Controller
             if ($request->has($field1)) {
                 $tatananFive->update([
                     $field1 => $request->input($field1),
+                ]);
+
+                $noteFiveQa = NoteFive::where('code', '=', $field1)->first();
+                $userId = Auth::user()->id;
+                $answer = substr($request->input($field1), 0, 1);
+                $score = substr($request->input($field1), 2, 4);
+
+                $noteFiveQa->update([
+                    'answer' => $answer,
+                    'score' => $score,
+                    'user_id' => $userId,
                 ]);
             }
         }

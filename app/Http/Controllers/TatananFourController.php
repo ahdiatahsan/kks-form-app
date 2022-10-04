@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\TatananFour;
 use App\Models\AttachmentFour;
 use App\Models\AttachmentFourNd;
+use App\Models\NoteFour;
 use App\Http\Requests\StoreTatananFourRequest;
 use App\Http\Requests\UpdateTatananFourRequest;
 use Illuminate\Support\Facades\Auth;
@@ -116,6 +117,11 @@ class TatananFourController extends Controller
                 $attachFour->update([
                     $converted => $attachName,
                 ]);
+
+                $noteFourPdf = NoteFour::where('code', '=', $converted)->first();
+                $noteFourPdf->update([
+                    'attachment_pdf' => $attachName,
+                ]);
             }
         }
 
@@ -141,6 +147,11 @@ class TatananFourController extends Controller
                 $attachFourNd->update([
                     $converted => $attachName,
                 ]);
+
+                $noteFourImg = NoteFour::where('code', '=', $converted)->first();
+                $noteFourImg->update([
+                    'attachment_img' => $attachName,
+                ]);
             }
         }
 
@@ -148,6 +159,17 @@ class TatananFourController extends Controller
             if ($request->has($field1)) {
                 $tatananFour->update([
                     $field1 => $request->input($field1),
+                ]);
+
+                $noteFourQa = NoteFour::where('code', '=', $field1)->first();
+                $userId = Auth::user()->id;
+                $answer = substr($request->input($field1), 0, 1);
+                $score = substr($request->input($field1), 2, 4);
+
+                $noteFourQa->update([
+                    'answer' => $answer,
+                    'score' => $score,
+                    'user_id' => $userId,
                 ]);
             }
         }

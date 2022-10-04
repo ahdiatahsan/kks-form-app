@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\TatananSix;
 use App\Models\AttachmentSix;
 use App\Models\AttachmentSixNd;
+use App\Models\NoteSix;
 use App\Http\Requests\StoreTatananSixRequest;
 use App\Http\Requests\UpdateTatananSixRequest;
 use Illuminate\Support\Facades\Auth;
@@ -116,6 +117,11 @@ class TatananSixController extends Controller
                 $attachSix->update([
                     $converted => $attachName,
                 ]);
+
+                $noteSixPdf = NoteSix::where('code', '=', $converted)->first();
+                $noteSixPdf->update([
+                    'attachment_pdf' => $attachName,
+                ]);
             }
         }
 
@@ -141,6 +147,11 @@ class TatananSixController extends Controller
                 $attachSixNd->update([
                     $converted => $attachName,
                 ]);
+
+                $noteSixImg = NoteSix::where('code', '=', $converted)->first();
+                $noteSixImg->update([
+                    'attachment_img' => $attachName,
+                ]);
             }
         }
 
@@ -148,6 +159,17 @@ class TatananSixController extends Controller
             if ($request->has($field1)) {
                 $tatananSix->update([
                     $field1 => $request->input($field1),
+                ]);
+
+                $noteSixQa = NoteSix::where('code', '=', $field1)->first();
+                $userId = Auth::user()->id;
+                $answer = substr($request->input($field1), 0, 1);
+                $score = substr($request->input($field1), 2, 4);
+
+                $noteSixQa->update([
+                    'answer' => $answer,
+                    'score' => $score,
+                    'user_id' => $userId,
                 ]);
             }
         }

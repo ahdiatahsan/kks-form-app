@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\TatananTwo;
 use App\Models\AttachmentTwo;
 use App\Models\AttachmentTwoNd;
+use App\Models\NoteTwo;
 use App\Http\Requests\StoreTatananTwoRequest;
 use App\Http\Requests\UpdateTatananTwoRequest;
 use Illuminate\Support\Facades\Auth;
@@ -116,6 +117,11 @@ class TatananTwoController extends Controller
                 $attachTwo->update([
                     $converted => $attachName,
                 ]);
+
+                $noteTwoPdf = NoteTwo::where('code', '=', $converted)->first();
+                $noteTwoPdf->update([
+                    'attachment_pdf' => $attachName,
+                ]);
             }
         }
 
@@ -141,6 +147,11 @@ class TatananTwoController extends Controller
                 $attachTwoNd->update([
                     $converted => $attachName,
                 ]);
+
+                $noteTwoImg = NoteTwo::where('code', '=', $converted)->first();
+                $noteTwoImg->update([
+                    'attachment_img' => $attachName,
+                ]);
             }
         }
 
@@ -148,6 +159,17 @@ class TatananTwoController extends Controller
             if ($request->has($field1)) {
                 $tatananTwo->update([
                     $field1 => $request->input($field1),
+                ]);
+
+                $noteTwoQa = NoteTwo::where('code', '=', $field1)->first();
+                $userId = Auth::user()->id;
+                $answer = substr($request->input($field1), 0, 1);
+                $score = substr($request->input($field1), 2, 4);
+
+                $noteTwoQa->update([
+                    'answer' => $answer,
+                    'score' => $score,
+                    'user_id' => $userId,
                 ]);
             }
         }

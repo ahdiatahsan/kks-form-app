@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\TatananEight;
 use App\Models\AttachmentEight;
 use App\Models\AttachmentEightNd;
+use App\Models\NoteEight;
 use App\Http\Requests\StoreTatananEightRequest;
 use App\Http\Requests\UpdateTatananEightRequest;
 use Illuminate\Support\Facades\Auth;
@@ -116,6 +117,11 @@ class TatananEightController extends Controller
                 $attachEight->update([
                     $converted => $attachName,
                 ]);
+
+                $noteEightPdf = NoteEight::where('code', '=', $converted)->first();
+                $noteEightPdf->update([
+                    'attachment_pdf' => $attachName,
+                ]);
             }
         }
 
@@ -141,6 +147,11 @@ class TatananEightController extends Controller
                 $attachEightNd->update([
                     $converted => $attachName,
                 ]);
+
+                $noteEightImg = NoteEight::where('code', '=', $converted)->first();
+                $noteEightImg->update([
+                    'attachment_img' => $attachName,
+                ]);
             }
         }
 
@@ -148,6 +159,17 @@ class TatananEightController extends Controller
             if ($request->has($field1)) {
                 $tatananEight->update([
                     $field1 => $request->input($field1),
+                ]);
+
+                $noteEightQa = NoteEight::where('code', '=', $field1)->first();
+                $userId = Auth::user()->id;
+                $answer = substr($request->input($field1), 0, 1);
+                $score = substr($request->input($field1), 2, 4);
+
+                $noteEightQa->update([
+                    'answer' => $answer,
+                    'score' => $score,
+                    'user_id' => $userId,
                 ]);
             }
         }

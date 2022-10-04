@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\TatananNine;
 use App\Models\AttachmentNine;
 use App\Models\AttachmentNineNd;
+use App\Models\NoteNine;
 use App\Http\Requests\StoreTatananNineRequest;
 use App\Http\Requests\UpdateTatananNineRequest;
 use Illuminate\Support\Facades\Auth;
@@ -116,6 +117,11 @@ class TatananNineController extends Controller
                 $attachNine->update([
                     $converted => $attachName,
                 ]);
+
+                $noteNinePdf = NoteNine::where('code', '=', $converted)->first();
+                $noteNinePdf->update([
+                    'attachment_pdf' => $attachName,
+                ]);
             }
         }
 
@@ -141,6 +147,11 @@ class TatananNineController extends Controller
                 $attachNineNd->update([
                     $converted => $attachName,
                 ]);
+
+                $noteNineImg = NoteNine::where('code', '=', $converted)->first();
+                $noteNineImg->update([
+                    'attachment_img' => $attachName,
+                ]);
             }
         }
 
@@ -148,6 +159,17 @@ class TatananNineController extends Controller
             if ($request->has($field1)) {
                 $tatananNine->update([
                     $field1 => $request->input($field1),
+                ]);
+
+                $noteNineQa = NoteNine::where('code', '=', $field1)->first();
+                $userId = Auth::user()->id;
+                $answer = substr($request->input($field1), 0, 1);
+                $score = substr($request->input($field1), 2, 4);
+
+                $noteNineQa->update([
+                    'answer' => $answer,
+                    'score' => $score,
+                    'user_id' => $userId,
                 ]);
             }
         }
