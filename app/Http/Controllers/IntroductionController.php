@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Introduction;
 use App\Http\Requests\StoreIntroductionRequest;
 use App\Http\Requests\UpdateIntroductionRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 
 class IntroductionController extends Controller
 {
@@ -12,7 +15,7 @@ class IntroductionController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -20,7 +23,8 @@ class IntroductionController extends Controller
      */
     public function index()
     {
-        //
+        $introduction = Introduction::first();
+        return view('dashboard.introduction.index', compact('introduction'));
     }
 
     /**
@@ -63,7 +67,7 @@ class IntroductionController extends Controller
      */
     public function edit(Introduction $introduction)
     {
-        //
+        return view('dashboard.introduction.edit', compact('introduction'));
     }
 
     /**
@@ -73,9 +77,31 @@ class IntroductionController extends Controller
      * @param  \App\Models\Introduction  $introduction
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateIntroductionRequest $request, Introduction $introduction)
+    public function update(Request $request, Introduction $introduction)
     {
-        //
+       if ($request->file() != null) {
+            $request->validate([
+                'attachment' => 'required|file|max:3048|mimes:pdf'
+            ], [
+                'attachment.mimes' => 'Berkas harus berupa file pdf.'
+            ]);
+
+            if (Storage::exists('public/introduction/' . $introduction->attachment)) {
+                Storage::delete('public/introduction/' . $introduction->attachment);
+            }
+
+            $attachFile = $request->file('attachment');
+            $extension = $attachFile->extension();
+            $attachName = 'Pendahuluan KKS Enrekang ' . date('Y') . '.' . $extension;
+            Storage::putFileAs('public/introduction', $attachFile, $attachName);
+
+            $introduction->attachment = $attachName;
+        }
+
+        $introduction->body = $request->input('body');
+        $introduction->save();
+
+        return redirect()->route('introduction.edit', $introduction->id)->with('success', 'Data Pendahuluan Berhasil Disimpan.');
     }
 
     /**
