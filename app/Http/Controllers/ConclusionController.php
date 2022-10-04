@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Conclusion;
 use App\Http\Requests\StoreConclusionRequest;
 use App\Http\Requests\UpdateConclusionRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 
 class ConclusionController extends Controller
 {
@@ -20,7 +23,8 @@ class ConclusionController extends Controller
      */
     public function index()
     {
-        //
+        $conclusion = Conclusion::first();
+        return view('dashboard.conclusion.index', compact('conclusion'));
     }
 
     /**
@@ -63,7 +67,7 @@ class ConclusionController extends Controller
      */
     public function edit(Conclusion $conclusion)
     {
-        //
+        return view('dashboard.conclusion.edit', compact('conclusion'));
     }
 
     /**
@@ -73,9 +77,31 @@ class ConclusionController extends Controller
      * @param  \App\Models\Conclusion  $conclusion
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateConclusionRequest $request, Conclusion $conclusion)
+    public function update(Request $request, Conclusion $conclusion)
     {
-        //
+        if ($request->file() != null) {
+            $request->validate([
+                'attachment' => 'required|file|max:3048|mimes:pdf'
+            ], [
+                'attachment.mimes' => 'Berkas harus berupa file pdf.'
+            ]);
+
+            if (Storage::exists('public/conclusion/' . $conclusion->attachment)) {
+                Storage::delete('public/conclusion/' . $conclusion->attachment);
+            }
+
+            $attachFile = $request->file('attachment');
+            $extension = $attachFile->extension();
+            $attachName = 'Penutup KKS Enrekang ' . date('Y') . '.' . $extension;
+            Storage::putFileAs('public/conclusion', $attachFile, $attachName);
+
+            $conclusion->attachment = $attachName;
+        }
+
+        $conclusion->body = $request->input('body');
+        $conclusion->save();
+
+        return redirect()->route('conclusion.edit', $conclusion->id)->with('success', 'Data Penutup Berhasil Disimpan.');
     }
 
     /**
