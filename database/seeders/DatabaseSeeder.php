@@ -48,6 +48,16 @@ class DatabaseSeeder extends Seeder
             AttachmentSevenNdSeeder::class,
             AttachmentEightNdSeeder::class,
             AttachmentNineNdSeeder::class,
+
+            NoteOneSeeder::class,
+            NoteTwoSeeder::class,
+            NoteThreeSeeder::class,
+            NoteFourSeeder::class,
+            NoteFiveSeeder::class,
+            NoteSixSeeder::class,
+            NoteSevenSeeder::class,
+            NoteEightSeeder::class,
+            NoteNineSeeder::class,
         ]);
     }
 }
