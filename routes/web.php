@@ -51,7 +51,6 @@ Route::resource('institutionalKks', InstitutionalKksController::class);
 Route::resource('institutionalDistrict', InstitutionalDistrictController::class);
 Route::resource('institutionalVillage', InstitutionalVillageController::class);
 
-Route::resource('tatananMain', TatananMainController::class);
 Route::resource('tatananOne', TatananOneController::class);
 Route::resource('tatananTwo', TatananTwoController::class);
 Route::resource('tatananThree', TatananThreeController::class);
