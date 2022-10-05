@@ -9,6 +9,9 @@
             <x-slot name="title">Kelembagaan</x-slot>
 
             <x-slot name="breadcrumb">
+                <li class="breadcrumb-item">
+                    <span class="text-muted">Menu</span>
+                </li>
             </x-slot>
 
             <x-slot name="backbutton">
@@ -22,7 +25,7 @@
         <div class="row gy-5 g-xl-8">
             <div class="col-xl-6">
                 <!--begin::Tim Pembina-->
-                <a href="#" class="card bg-success hoverable card-xl-stretch mb-xl-8">
+                <a href="{{ route('institutionalBuilder.index') }}" class="card bg-success hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
@@ -42,7 +45,7 @@
             </div>
             <div class="col-xl-6">
                 <!--begin::Form KKS-->
-                <a href="#" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
+                <a href="{{ route('institutionalKks.index') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm008.svg-->
@@ -64,7 +67,7 @@
         <div class="row gy-5 g-xl-8">
             <div class="col-xl-6">
                 <!--begin::Form Kecamatan-->
-                <a href="#" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
+                <a href="{{ route('institutionalDistrict.index') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
@@ -84,7 +87,7 @@
             </div>
             <div class="col-xl-6">
                 <!--begin::Form Desa-->
-                <a href="#" class="card bg-success hoverable card-xl-stretch mb-xl-8">
+                <a href="{{ route('institutionalVillage.index') }}" class="card bg-success hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm008.svg-->
