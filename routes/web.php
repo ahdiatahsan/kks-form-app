@@ -39,19 +39,34 @@ Auth::routes([
 ]);
 
 Route::group(['middleware' => 'prevent-back-history'], function () {
+    # Single Page
     Route::get('/', [DashboardController::class, 'index'])->name('home');
     Route::get('/specialIndicator', [DashboardController::class, 'tatanan_menu'])->name('tatanan-menu');
     Route::get('/institutionalMenu', [DashboardController::class, 'institutional_menu'])->name('institutional-menu');
 
+    # Introduction
     Route::resource('introduction', IntroductionController::class);
+
+    # Funding
     Route::resource('funding', FundingController::class);
+    Route::get('funding-datatable', [FundingController::class, 'datatable'])->name('funding.datatable');
+
+    # Conclusion
     Route::resource('conclusion', ConclusionController::class);
 
+    # Institutional Builder
     Route::resource('institutionalBuilder', InstitutionalBuilderController::class);
+
+    # Institutional Kks
     Route::resource('institutionalKks', InstitutionalKksController::class);
+
+    # Institutional District
     Route::resource('institutionalDistrict', InstitutionalDistrictController::class);
+
+    # Institutional Village
     Route::resource('institutionalVillage', InstitutionalVillageController::class);
 
+    # Special Indicator
     Route::resource('tatananOne', TatananOneController::class);
     Route::resource('tatananTwo', TatananTwoController::class);
     Route::resource('tatananThree', TatananThreeController::class);
