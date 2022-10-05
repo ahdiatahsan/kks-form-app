@@ -14,7 +14,7 @@
 
             <x-slot name="breadcrumb">
                 <li class="breadcrumb-item">
-                    <span class="text-muted">Pendanaan</span>
+                    <span class="text-muted">Beranda</span>
                 </li>
             </x-slot>
 
@@ -55,13 +55,13 @@
                     class="table table-sm table-row-bordered gy-5 gs-4 border rounded no-footer nowrap dataTable">
                     <thead>
                         <tr class="border-gray-200 fw-bold bg-lighten fs-7">
-                            <th class="min-w-30px">No.</th>
+                            <th class="mw-50px">No.</th>
                             <th class="min-w-150px">Judul</th>
                             <th class="min-w-150px">Tanggal Kegiatan</th>
                             <th class="min-w-150px">Keterangan</th>
                             <th class="min-w-150px">OPD</th>
-                            <th class="min-w-100px">Berkas</th>
-                            <th class="text-end min-w-100px">Opsi</th>
+                            <th>Berkas</th>
+                            <th>Opsi</th>
                         </tr>
                     </thead>
                 </table>
