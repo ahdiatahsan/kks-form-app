@@ -77,6 +77,7 @@
                     <!--begin::Alert-->
                     <x-dashboard.alert.success />
                     <x-dashboard.alert.error />
+                    <x-dashboard.alert.warning />
                     <!--end::Alert-->
                     
                     <!--begin::Post-->
