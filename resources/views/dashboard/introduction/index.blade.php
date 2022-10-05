@@ -15,6 +15,7 @@
             </x-slot>
 
             <x-slot name="backbutton">
+                @if (Auth::user()->hasAnyRole('administrator'))
                 <!--begin::Button-->
                 <a href="{{ route('introduction.edit', $introduction->id) }}" class="btn btn-sm btn-light-success fw-bolder">
                     <span class="svg-icon svg-icon-muted svg-icon-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -31,6 +32,7 @@
                     </svg></span> Ubah Pendahuluan
                 </a>
                 <!--end::Button-->
+                @endif
             </x-slot>
         </x-dashboard.toolbar.main>
     </x-slot>
