@@ -10,7 +10,7 @@
         </span>
     
         <div class="d-flex flex-column">
-            <h4 class="mb-1 text-danger">Terjadi Kesalahan!</h4>
+            <h4 class="mb-1 text-danger pb-4">Terjadi Kesalahan!</h4>
             <span>
                 <ul>
                     @foreach ($errors->all() as $error)
