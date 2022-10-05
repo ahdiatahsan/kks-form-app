@@ -9,6 +9,9 @@
             <x-slot name="title">Indikator Khusus</x-slot>
 
             <x-slot name="breadcrumb">
+                <li class="breadcrumb-item">
+                    <span class="text-muted">Menu</span>
+                </li>
             </x-slot>
 
             <x-slot name="backbutton">
