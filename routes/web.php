@@ -7,7 +7,6 @@ use App\Http\Controllers\InstitutionalKksController;
 use App\Http\Controllers\InstitutionalDistrictController;
 use App\Http\Controllers\InstitutionalVillageController;
 use App\Http\Controllers\FundingController;
-use App\Http\Controllers\TatananMainController;
 use App\Http\Controllers\TatananOneController;
 use App\Http\Controllers\TatananTwoController;
 use App\Http\Controllers\TatananThreeController;
