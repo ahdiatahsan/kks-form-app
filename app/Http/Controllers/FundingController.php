@@ -100,7 +100,13 @@ class FundingController extends Controller
      */
     public function edit(Funding $funding)
     {
-        return view('dashboard.funding.edit', compact('funding'));
+        //Check Active User //
+        $activeUser = Auth::user();
+        if ($funding->user_id == $activeUser->id || $activeUser->hasRole('administrator')) {
+            return view('dashboard.funding.edit', compact('funding'));
+        } else {
+            return redirect()->route('funding.index')->with('warning', 'Anda tidak dapat mengubah data milik pengguna lain.');
+        }
     }
 
     /**

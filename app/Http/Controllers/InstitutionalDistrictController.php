@@ -126,7 +126,13 @@ class InstitutionalDistrictController extends Controller
      */
     public function edit(InstitutionalDistrict $institutionalDistrict)
     {
-        return view('dashboard.institutional.district.edit', compact('institutionalDistrict'));
+        //Check Active User //
+        $activeUser = Auth::user();
+        if ($institutionalDistrict->user_id == $activeUser->id || $activeUser->hasRole('administrator')) {
+            return view('dashboard.institutional.district.edit', compact('institutionalDistrict'));
+        } else {
+            return redirect()->route('institutionalDistrict.index')->with('warning', 'Anda tidak dapat mengubah data milik pengguna lain.');
+        }
     }
 
     /**

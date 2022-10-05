@@ -104,7 +104,13 @@ class InstitutionalVillageController extends Controller
      */
     public function edit(InstitutionalVillage $institutionalVillage)
     {
-        return view('dashboard.institutional.village.edit', compact('institutionalVillage'));
+        //Check Active User //
+        $activeUser = Auth::user();
+        if ($institutionalVillage->user_id == $activeUser->id || $activeUser->hasRole('administrator')) {
+            return view('dashboard.institutional.village.edit', compact('institutionalVillage'));
+        } else {
+            return redirect()->route('institutionalVillage.index')->with('warning', 'Anda tidak dapat mengubah data milik pengguna lain.');
+        }
     }
 
     /**
