@@ -59,7 +59,7 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
     Route::get('institutionalBuilder-datatable', [InstitutionalBuilderController::class, 'datatable'])->name('builder.datatable');
 
     # Institutional Kks
-    Route::resource('institutionalKks', InstitutionalKksController::class);
+    Route::resource('institutionalKks', InstitutionalKksController::class)->parameters(['institutionalKks' => 'institutionalKks']);
     Route::get('institutionalKks-datatable', [InstitutionalKksController::class, 'datatable'])->name('kks.datatable');
 
     # Institutional District
