@@ -50,11 +50,11 @@ class FundingController extends Controller
     {
         $this->validate_request($request);
         $request->validate([
-            'attachment_pdf' => 'required|file|max:3048|mimes:pdf',
+            'attachment_pdf' => 'required|file|max:5048|mimes:pdf',
             'attachment_img' => 'required|file|max:2048|mimes:jpeg,jpg,png,webp'
         ], [
             'attachment_pdf.mimes' => 'Berkas harus berupa file pdf.',
-            'attachment_pdf.max' => 'Berkas tidak boleh lebih besar dari 3 MB',
+            'attachment_pdf.max' => 'Berkas tidak boleh lebih besar dari 5 MB',
             'attachment_img.mimes' => 'Dokumentasi harus berupa file jpeg/jpg/png/webp.',
             'attachment_img.max' => 'Dokumentasi tidak boleh lebih besar dari 2 MB',
         ]);
@@ -118,10 +118,10 @@ class FundingController extends Controller
 
         if ($request->hasFile('attachment_pdf')) {
             $request->validate([
-                'attachment_pdf' => 'required|file|max:3048|mimes:pdf'
+                'attachment_pdf' => 'required|file|max:5048|mimes:pdf'
             ], [
                 'attachment_pdf.mimes' => 'Berkas harus berupa file pdf.',
-                'attachment_pdf.max' => 'Berkas tidak boleh lebih besar dari 3 MB',
+                'attachment_pdf.max' => 'Berkas tidak boleh lebih besar dari 5 MB',
             ]);
 
             if (Storage::exists('public/funding/' . $funding->attachment_pdf)) {
