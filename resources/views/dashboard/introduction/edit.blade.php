@@ -10,7 +10,7 @@
 
             <x-slot name="breadcrumb">
                 <li class="breadcrumb-item">
-                    <span class="text-muted">Form Ubah</span>
+                    <span class="text-muted">Form Ubah Data</span>
                 </li>
             </x-slot>
 
@@ -44,30 +44,31 @@
                 <div class="card-header">
                     <h3 class="card-title align-items-start flex-column">
                         <span class="card-label fw-bolder text-dark fs-5 my-1">Pendahuluan</span>
-                        <span class="text-muted mt-1 fw-bold fs-7">Form Ubah</span>
+                        <span class="text-muted mt-1 fw-bold fs-7">Form Ubah Data</span>
                     </h3>
                 </div>
                 <!--end::Card header-->
                 <!--begin::Card body-->
                 <div class="card-body">
-                    <div class="mb-8">
-                        <label class="form-label">
+                    <div class="mb-3">
+                        <label class="form-label fs-7">
                             <span class="">Berkas Pendahuluan</span>
                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                 title="Ukuran maksimal berkas (pdf) adalah 3MB."></i>
                         </label>
-                        <div class="input-group input-group-sm pb-5">
-                            <input class="form-control" type="file" name="attachment" {{ $introduction->attachment == null ? 'required' : '' }}>
+                        <div class="input-group input-group-sm pb-3">
+                            <input class="form-control" type="file" name="attachment"
+                                {{ $introduction->attachment == null ? 'required' : '' }}>
                         </div>
                         @if ($introduction->attachment != null)
-                        <div class="input-group input-group-sm">
-                            <a href="{{ asset('storage/introduction/' . $introduction->attachment) }}"
-                                target="_blank">Lihat Berkas (PDF)</a>
-                        </div>
-                    @endif
+                            <div class="input-group input-group-sm pb-2">
+                                <a href="{{ asset('storage/introduction/' . $introduction->attachment) }}"
+                                    target="_blank">Lihat Berkas</a>
+                            </div>
+                        @endif
                     </div>
                     <div>
-                        <label class="form-label">Isi Pendahuluan</label>
+                        <label class="form-label fs-7">Isi Pendahuluan</label>
                         <textarea class="form-control" name="body" id="body" rows="5">{{ $introduction->body }}</textarea>
                     </div>
                 </div>
