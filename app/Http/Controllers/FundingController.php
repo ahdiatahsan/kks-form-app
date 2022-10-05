@@ -3,8 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Funding;
-use App\Http\Requests\StoreFundingRequest;
-use App\Http\Requests\UpdateFundingRequest;
+// use App\Http\Requests\StoreFundingRequest;
+// use App\Http\Requests\UpdateFundingRequest;
+use Illuminate\Http\Request;
+use Carbon\Carbon;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Yajra\DataTables\DataTables;
 
 class FundingController extends Controller
 {
@@ -12,7 +19,7 @@ class FundingController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -20,7 +27,7 @@ class FundingController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.funding.index');
     }
 
     /**
@@ -30,7 +37,7 @@ class FundingController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.funding.create');
     }
 
     /**
@@ -39,9 +46,39 @@ class FundingController extends Controller
      * @param  \App\Http\Requests\StoreFundingRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreFundingRequest $request)
+    public function store(Request $request)
     {
-        //
+        $this->validate_request($request);
+        $request->validate([
+            'attachment_pdf' => 'required|file|max:3048|mimes:pdf',
+            'attachment_img' => 'required|file|max:2048|mimes:jpeg,jpg,png,webp'
+        ], [
+            'attachment_pdf.mimes' => 'Berkas harus berupa file pdf.',
+            'attachment_pdf.max' => 'Berkas tidak boleh lebih besar dari 3 MB',
+            'attachment_img.mimes' => 'Dokumentasi harus berupa file jpeg/jpg/png/webp.',
+            'attachment_img.max' => 'Dokumentasi tidak boleh lebih besar dari 2 MB',
+        ]);
+
+        $slug = Str::slug($request->input('title') . '-' . time());
+
+        $attachPdf = $request->file('attachment_pdf');
+        $pdfName = $slug . '.' . $attachPdf->getClientOriginalExtension();
+        Storage::putFileAs('public/funding', $attachPdf, $pdfName);
+
+        $attachImg = $request->file('attachment_img');
+        $imgName = $slug . '.' . $attachImg->getClientOriginalExtension();
+        Storage::putFileAs('public/funding', $attachImg, $imgName);
+
+        Funding::create([
+            'title' => $request->input('title'),
+            'date_activity' => $request->input('date_activity'),
+            'description' => $request->input('description'),
+            'attachment_pdf' => $pdfName,
+            'attachment_img' => $imgName,
+            'user_id' => Auth::user()->id
+        ]);
+
+        return redirect()->route('funding.create')->with('success', 'Data pendanaan berhasil ditambahkan.');
     }
 
     /**
@@ -63,7 +100,7 @@ class FundingController extends Controller
      */
     public function edit(Funding $funding)
     {
-        //
+        return view('dashboard.funding.edit', compact('funding'));
     }
 
     /**
@@ -73,9 +110,65 @@ class FundingController extends Controller
      * @param  \App\Models\Funding  $funding
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateFundingRequest $request, Funding $funding)
+    public function update(Request $request, Funding $funding)
     {
-        //
+        $this->validate_request($request);
+
+        $slug = Str::slug($request->input('title') . '-' . time());
+
+        if ($request->hasFile('attachment_pdf')) {
+            $request->validate([
+                'attachment_pdf' => 'required|file|max:3048|mimes:pdf'
+            ], [
+                'attachment_pdf.mimes' => 'Berkas harus berupa file pdf.',
+                'attachment_pdf.max' => 'Berkas tidak boleh lebih besar dari 3 MB',
+            ]);
+
+            if (Storage::exists('public/funding/' . $funding->attachment_pdf)) {
+                Storage::delete('public/funding/' . $funding->attachment_pdf);
+            }
+
+            $attachPdf = $request->file('attachment_pdf');
+            $pdfName = $slug . '.' . $attachPdf->getClientOriginalExtension();
+            Storage::putFileAs('public/funding', $attachPdf, $pdfName);
+
+            $funding->attachment_pdf = $pdfName;
+        } else {
+            $pdfName = $slug . '.pdf';
+            Storage::move('public/funding/' . $funding->attachment_pdf, 'public/funding/' . $pdfName);
+            $funding->attachment_pdf = $pdfName;
+        }
+
+        if ($request->hasFile('attachment_img')) {
+            $request->validate([
+                'attachment_img' => 'required|file|max:2048|mimes:jpeg,jpg,png,webp'
+            ], [
+                'attachment_img.mimes' => 'Dokumentasi harus berupa file jpeg/jpg/png/webp.',
+                'attachment_img.max' => 'Dokumentasi tidak boleh lebih besar dari 2 MB',
+            ]);
+
+            if (Storage::exists('public/funding/' . $funding->attachment_img)) {
+                Storage::delete('public/funding/' . $funding->attachment_img);
+            }
+
+            $attachImg = $request->file('attachment_img');
+            $imgName = $slug . '.' . $attachImg->getClientOriginalExtension();
+            Storage::putFileAs('public/funding', $attachImg, $imgName);
+
+            $funding->attachment_img = $imgName;
+        } else {
+            $extension = Str::substr($funding->attachment_img, strpos($funding->attachment_img, ".") + 1, 4);
+            $imgName = $slug . '.' . $extension;
+            Storage::move('public/funding/' . $funding->attachment_img, 'public/funding/' . $imgName);
+            $funding->attachment_img = $imgName;
+        }
+
+        $funding->title = $request->input('title');
+        $funding->date_activity = $request->input('date_activity');
+        $funding->description = $request->input('description');
+        $funding->save();
+
+        return redirect()->route('funding.edit', $funding->id)->with('success', 'Data pendanaan telah diubah.');
     }
 
     /**
@@ -86,6 +179,55 @@ class FundingController extends Controller
      */
     public function destroy(Funding $funding)
     {
-        //
+        Session::flash('success', 'Data Pendanaan ' . $funding->title . ' telah dihapus.');
+
+        if (Storage::exists('public/funding/' . $funding->attachment_pdf)) {
+            Storage::delete('public/funding/' . $funding->attachment_pdf);
+        }
+
+        if (Storage::exists('public/funding/' . $funding->attachment_img)) {
+            Storage::delete('public/funding/' . $funding->attachment_img);
+        }
+
+        $funding->delete();
+    }
+
+    /**
+     * Yajra datatable
+     */
+    public function datatable(Request $request)
+    {
+        if ($request->ajax()) {
+            $fundings = Funding::with('user')->get();
+
+            return DataTables::of($fundings)
+                ->editColumn('date_activity', function ($funding) {
+                    $date_activity = Carbon::parse($funding->date_activity)->locale('id');
+                    $date_activity->settings(['formatFunction' => 'translatedFormat']);
+                    return $date_activity->format('l, j F Y');
+                })
+                ->addColumn('attachment', function ($funding) {
+                    return view('dashboard.funding.attachment', compact('funding'))->render();
+                })
+                ->addColumn('action', function ($funding) {
+                    return view('dashboard.funding.action', compact('funding'))->render();
+                })
+                ->rawColumns(['attachment', 'action'])
+                ->addIndexColumn()
+                ->make(true);
+        }
+    }
+
+    /**
+     * Validate request
+     */
+    public function validate_request($request)
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'date_activity' => 'required|date',
+            'description' => 'required|string',
+            'user_id' => 'numeric'
+        ]);
     }
 }
