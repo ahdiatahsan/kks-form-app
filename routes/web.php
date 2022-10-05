@@ -47,24 +47,28 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
     # Introduction
     Route::resource('introduction', IntroductionController::class);
 
+    # Conclusion
+    Route::resource('conclusion', ConclusionController::class);
+
     # Funding
     Route::resource('funding', FundingController::class);
     Route::get('funding-datatable', [FundingController::class, 'datatable'])->name('funding.datatable');
 
-    # Conclusion
-    Route::resource('conclusion', ConclusionController::class);
-
     # Institutional Builder
     Route::resource('institutionalBuilder', InstitutionalBuilderController::class);
+    Route::get('institutionalBuilder-datatable', [InstitutionalBuilderController::class, 'datatable'])->name('builder.datatable');
 
     # Institutional Kks
     Route::resource('institutionalKks', InstitutionalKksController::class);
+    Route::get('institutionalKks-datatable', [InstitutionalKksController::class, 'datatable'])->name('kks.datatable');
 
     # Institutional District
     Route::resource('institutionalDistrict', InstitutionalDistrictController::class);
+    Route::get('institutionalDistrict-datatable', [InstitutionalDistrictController::class, 'datatable'])->name('district.datatable');
 
     # Institutional Village
     Route::resource('institutionalVillage', InstitutionalVillageController::class);
+    Route::get('institutionalVillage-datatable', [InstitutionalVillageController::class, 'datatable'])->name('village.datatable');
 
     # Special Indicator
     Route::resource('tatananOne', TatananOneController::class);
