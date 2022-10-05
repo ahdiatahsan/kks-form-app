@@ -37,14 +37,14 @@
                         </span>
                         <!--end::Svg Icon-->
                         <div class="text-white fw-bolder fs-2 mb-2 mt-5">Tim Pembina</div>
-                        <div class="fw-bold text-white">Tim Pembina KKS Enrekang</div>
+                        <div class="fw-bold text-white">Tim Pembina -KKS Enrekang</div>
                     </div>
                     <!--end::Body-->
                 </a>
                 <!--end::Tim Pembina-->
             </div>
             <div class="col-xl-6">
-                <!--begin::Form KKS-->
+                <!--begin::Forum Kabupaten-->
                 <a href="{{ route('institutionalKks.index') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
@@ -56,17 +56,17 @@
                             </svg>
                         </span>
                         <!--end::Svg Icon-->
-                        <div class="text-white fw-bolder fs-2 mb-2 mt-5">Form KKS</div>
-                        <div class="fw-bold text-white">Form KKS Enrekang</div>
+                        <div class="text-white fw-bolder fs-2 mb-2 mt-5">Forum Kabupaten</div>
+                        <div class="fw-bold text-white">Forum Kabupaten - KKS Enrekang</div>
                     </div>
                     <!--end::Body-->
                 </a>
-                <!--end::Form KKS-->
+                <!--end::Forum Kabupaten-->
             </div>
         </div>
         <div class="row gy-5 g-xl-8">
             <div class="col-xl-6">
-                <!--begin::Form Kecamatan-->
+                <!--begin::Forkom Kecamatan-->
                 <a href="{{ route('institutionalDistrict.index') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
@@ -78,15 +78,15 @@
                             </svg>
                         </span>
                         <!--end::Svg Icon-->
-                        <div class="text-white fw-bolder fs-2 mb-2 mt-5">Form Kecamatan</div>
-                        <div class="fw-bold text-white">Form Kecamatan KKS Enrekang</div>
+                        <div class="text-white fw-bolder fs-2 mb-2 mt-5">Forkom Kecamatan</div>
+                        <div class="fw-bold text-white">Forkom Kecamatan - KKS Enrekang</div>
                     </div>
                     <!--end::Body-->
                 </a>
-                <!--end::Form Kecamatan-->
+                <!--end::Forkom Kecamatan-->
             </div>
             <div class="col-xl-6">
-                <!--begin::Form Desa-->
+                <!--begin::Pokja Desa Kelurahan-->
                 <a href="{{ route('institutionalVillage.index') }}" class="card bg-success hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
@@ -98,12 +98,12 @@
                             </svg>
                         </span>
                         <!--end::Svg Icon-->
-                        <div class="text-white fw-bolder fs-2 mb-2 mt-5">Form Desa</div>
-                        <div class="fw-bold text-white">Form Desa KKS Enrekang</div>
+                        <div class="text-white fw-bolder fs-2 mb-2 mt-5">Pokja Desa Kelurahan</div>
+                        <div class="fw-bold text-white">Pokja Desa Kelurahan - KKS Enrekang</div>
                     </div>
                     <!--end::Body-->
                 </a>
-                <!--end::Form Desa-->
+                <!--end::Pokja Desa Kelurahan-->
             </div>
         </div>
     </x-slot>
