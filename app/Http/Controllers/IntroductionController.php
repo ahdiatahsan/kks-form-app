@@ -83,7 +83,8 @@ class IntroductionController extends Controller
             $request->validate([
                 'attachment' => 'required|file|max:3048|mimes:pdf'
             ], [
-                'attachment.mimes' => 'Berkas harus berupa file pdf.'
+                'attachment.mimes' => 'Berkas harus berupa file pdf.',
+                'attachment.max' => 'Berkas tidak boleh lebih besar dari 3 MB'
             ]);
 
             if (Storage::exists('public/introduction/' . $introduction->attachment)) {
