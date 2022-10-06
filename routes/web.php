@@ -37,7 +37,7 @@ Auth::routes([
     'verify' => false, // Email Verification Routes...
 ]);
 
-Route::group(['middleware' => 'prevent-back-history'], function () {
+Route::group(['middleware' => ['auth','prevent-back-history']], function () {
     # Single Page
     Route::get('/', [DashboardController::class, 'index'])->name('home');
     Route::get('/specialIndicator', [DashboardController::class, 'tatanan_menu'])->name('tatanan-menu');
