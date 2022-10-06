@@ -16,7 +16,10 @@ class InstitutionalKksController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['permission:kks-view'])->only(['index', 'show', 'datatable']);
+        $this->middleware(['permission:kks-create'])->only(['create', 'store']);
+        $this->middleware(['permission:kks-update'])->only(['edit', 'update']);
+        $this->middleware(['permission:kks-delete'])->only(['destroy']);
     }
     
     /**

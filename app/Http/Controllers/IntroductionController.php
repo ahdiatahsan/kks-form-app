@@ -13,7 +13,10 @@ class IntroductionController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['permission:introduction-view'])->only(['index', 'show']);
+        $this->middleware(['permission:introduction-create'])->only(['create', 'store']);
+        $this->middleware(['permission:introduction-update'])->only(['edit', 'update']);
+        $this->middleware(['permission:introduction-delete'])->only(['destroy']);
     }
 
     /**

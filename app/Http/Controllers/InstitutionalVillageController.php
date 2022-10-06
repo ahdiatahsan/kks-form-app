@@ -16,7 +16,10 @@ class InstitutionalVillageController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['permission:village-view'])->only(['index', 'show', 'datatable']);
+        $this->middleware(['permission:village-create'])->only(['create', 'store']);
+        $this->middleware(['permission:village-update'])->only(['edit', 'update']);
+        $this->middleware(['permission:village-delete'])->only(['destroy']);
     }
     
     /**

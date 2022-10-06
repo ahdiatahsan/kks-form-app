@@ -18,7 +18,10 @@ class InstitutionalDistrictController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['permission:district-view'])->only(['index', 'show', 'datatable']);
+        $this->middleware(['permission:district-create'])->only(['create', 'store']);
+        $this->middleware(['permission:district-update'])->only(['edit', 'update']);
+        $this->middleware(['permission:district-delete'])->only(['destroy']);
     }
 
     /**

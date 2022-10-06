@@ -17,7 +17,10 @@ class FundingController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['permission:funding-view'])->only(['index', 'show', 'datatable']);
+        $this->middleware(['permission:funding-create'])->only(['create', 'store']);
+        $this->middleware(['permission:funding-update'])->only(['edit', 'update']);
+        $this->middleware(['permission:funding-delete'])->only(['destroy']);
     }
 
     /**

@@ -13,7 +13,10 @@ class ConclusionController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['permission:conclusion-view'])->only(['index', 'show']);
+        $this->middleware(['permission:conclusion-create'])->only(['create', 'store']);
+        $this->middleware(['permission:conclusion-update'])->only(['edit', 'update']);
+        $this->middleware(['permission:conclusion-delete'])->only(['destroy']);
     }
     
     /**

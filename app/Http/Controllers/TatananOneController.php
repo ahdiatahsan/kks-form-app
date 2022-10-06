@@ -17,7 +17,10 @@ class TatananOneController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['permission:tatanan-view'])->only(['index', 'show']);
+        $this->middleware(['permission:tatanan-create'])->only(['create', 'store']);
+        $this->middleware(['permission:tatanan-update'])->only(['edit', 'update']);
+        $this->middleware(['permission:tatanan-delete'])->only(['destroy']);
     }
 
     /**

@@ -16,7 +16,10 @@ class InstitutionalBuilderController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['permission:builder-view'])->only(['index', 'show', 'datatable']);
+        $this->middleware(['permission:builder-create'])->only(['create', 'store']);
+        $this->middleware(['permission:builder-update'])->only(['edit', 'update']);
+        $this->middleware(['permission:builder-delete'])->only(['destroy']);
     }
 
     /**
