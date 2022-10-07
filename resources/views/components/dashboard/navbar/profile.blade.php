@@ -36,9 +36,9 @@
             <div class="separator my-2"></div>
             <!--end::Menu separator-->
             <!--begin::Menu item-->
-            <div class="menu-item px-5">
+            {{-- <div class="menu-item px-5">
                 <a href="#" class="menu-link px-5">Profil Saya</a>
-            </div>
+            </div> --}}
             <!--end::Menu item-->
             <!--begin::Menu item-->
             <div class="menu-item px-5">
