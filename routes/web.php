@@ -17,6 +17,7 @@ use App\Http\Controllers\TatananSevenController;
 use App\Http\Controllers\TatananEightController;
 use App\Http\Controllers\TatananNineController;
 use App\Http\Controllers\ConclusionController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -40,8 +41,9 @@ Auth::routes([
 Route::group(['middleware' => ['auth','prevent-back-history']], function () {
     # Single Page
     Route::get('/', [DashboardController::class, 'index'])->name('home');
-    Route::get('/specialIndicator', [DashboardController::class, 'tatanan_menu'])->name('tatanan-menu');
     Route::get('/institutionalMenu', [DashboardController::class, 'institutional_menu'])->name('institutional-menu');
+    Route::get('/specialIndicator', [DashboardController::class, 'tatanan_menu'])->name('tatanan-menu');
+    Route::get('/specialIndicatorNote', [DashboardController::class, 'note_menu'])->name('note-menu');
 
     # Introduction
     Route::resource('introduction', IntroductionController::class);
@@ -68,6 +70,11 @@ Route::group(['middleware' => ['auth','prevent-back-history']], function () {
     # Institutional Village
     Route::resource('institutionalVillage', InstitutionalVillageController::class);
     Route::get('institutionalVillage-datatable', [InstitutionalVillageController::class, 'datatable'])->name('village.datatable');
+
+    # User
+    Route::resource('user', UserController::class);
+    Route::get('user-datatable', [UserController::class, 'datatable'])->name('user.datatable');
+    Route::get('user-select2-district', [UserController::class, 'select2_district'])->name('user.select2-district');
 
     # Special Indicator
     Route::resource('tatananOne', TatananOneController::class);
