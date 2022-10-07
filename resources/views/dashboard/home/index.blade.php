@@ -41,7 +41,7 @@
                 <!--end::introduction-->
             </div>
             <div class="col-xl-4">
-                <!--begin::Kelembagaan-->
+                <!--begin::institutional-->
                 <a href="{{ route('institutional-menu') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
@@ -58,7 +58,7 @@
                     </div>
                     <!--end::Body-->
                 </a>
-                <!--end::Kelembagaan-->
+                <!--end::institutional-->
             </div>
             <div class="col-xl-4">
                 <!--begin::funding-->
@@ -81,11 +81,9 @@
                 </a>
                 <!--end::funding-->
             </div>
-        </div>
-        <div class="row gy-5 g-xl-8">
             <div class="col-xl-4">
-                <!--begin::Khusus-->
-                <a href="{{ route('tatanan-menu') }}" class="card bg-success hoverable card-xl-stretch mb-xl-8">
+                <!--begin::specialIndicator-->
+                <a href="{{ route('tatanan-menu') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
                         <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm008.svg-->
@@ -101,10 +99,30 @@
                     </div>
                     <!--end::Body-->
                 </a>
-                <!--end::Khusus-->
+                <!--end::specialIndicator-->
             </div>
             <div class="col-xl-4">
-                <!--begin::Penutup-->
+                <!--begin::specialIndicatorNote-->
+                <a href="{{ route('note-menu') }}" class="card bg-success hoverable card-xl-stretch mb-xl-8">
+                    <!--begin::Body-->
+                    <div class="card-body">
+                        <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm008.svg-->
+                        <span class="svg-icon svg-icon-white svg-icon-3x ms-n1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 16 19" fill="none">
+                                <path d="M12 0.400024H1C0.4 0.400024 0 0.800024 0 1.40002V2.40002C0 3.00002 0.4 3.40002 1 3.40002H12C12.6 3.40002 13 3.00002 13 2.40002V1.40002C13 0.800024 12.6 0.400024 12 0.400024Z" fill="black"/>
+                                <path opacity="0.3" d="M15 8.40002H1C0.4 8.40002 0 8.00002 0 7.40002C0 6.80002 0.4 6.40002 1 6.40002H15C15.6 6.40002 16 6.80002 16 7.40002C16 8.00002 15.6 8.40002 15 8.40002ZM16 12.4C16 11.8 15.6 11.4 15 11.4H1C0.4 11.4 0 11.8 0 12.4C0 13 0.4 13.4 1 13.4H15C15.6 13.4 16 13 16 12.4ZM12 17.4C12 16.8 11.6 16.4 11 16.4H1C0.4 16.4 0 16.8 0 17.4C0 18 0.4 18.4 1 18.4H11C11.6 18.4 12 18 12 17.4Z" fill="black"/>
+                            </svg>
+                        </span>
+                        <!--end::Svg Icon-->
+                        <div class="text-white fw-bolder fs-2 mb-2 mt-5">Catatan Indikator Khusus</div>
+                        <div class="fw-bold text-white">Catatan Indikator Khusus KKS Enrekang</div>
+                    </div>
+                    <!--end::Body-->
+                </a>
+                <!--end::specialIndicatorNote-->
+            </div>
+            <div class="col-xl-4">
+                <!--begin::conclusion-->
                 <a href="{{ route('conclusion.index') }}" class="card bg-primary hoverable card-xl-stretch mb-5 mb-xl-8">
                     <!--begin::Body-->
                     <div class="card-body">
@@ -121,7 +139,29 @@
                     </div>
                     <!--end::Body-->
                 </a>
-                <!--end::Khusus-->
+                <!--end::conclusion-->
+            </div>
+            <div class="col-xl-4">
+                <!--begin::user-->
+                <a href="{{ route('user.index') }}" class="card bg-success hoverable card-xl-stretch mb-xl-8">
+                    <!--begin::Body-->
+                    <div class="card-body">
+                        <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
+                        <span class="svg-icon svg-icon-white svg-icon-3x ms-n1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M16.0173 9H15.3945C14.2833 9 13.263 9.61425 12.7431 10.5963L12.154 11.7091C12.0645 11.8781 12.1072 12.0868 12.2559 12.2071L12.6402 12.5183C13.2631 13.0225 13.7556 13.6691 14.0764 14.4035L14.2321 14.7601C14.2957 14.9058 14.4396 15 14.5987 15H18.6747C19.7297 15 20.4057 13.8774 19.912 12.945L18.6686 10.5963C18.1487 9.61425 17.1285 9 16.0173 9Z" fill="black"/>
+                                <rect opacity="0.3" x="14" y="4" width="4" height="4" rx="2" fill="black"/>
+                                <path d="M4.65486 14.8559C5.40389 13.1224 7.11161 12 9 12C10.8884 12 12.5961 13.1224 13.3451 14.8559L14.793 18.2067C15.3636 19.5271 14.3955 21 12.9571 21H5.04292C3.60453 21 2.63644 19.5271 3.20698 18.2067L4.65486 14.8559Z" fill="black"/>
+                                <rect opacity="0.3" x="6" y="5" width="6" height="6" rx="3" fill="black"/>
+                            </svg>
+                        </span>
+                        <!--end::Svg Icon-->
+                        <div class="text-white fw-bolder fs-2 mb-2 mt-5">Pengguna</div>
+                        <div class="fw-bold text-white">Pengguna Aplikasi KKS Enrekang</div>
+                    </div>
+                    <!--end::Body-->
+                </a>
+                <!--end::user-->
             </div>
         </div>
     </x-slot>
