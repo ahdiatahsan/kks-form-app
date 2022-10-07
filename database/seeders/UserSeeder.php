@@ -113,6 +113,8 @@ class UserSeeder extends Seeder
             'note-view',
 
             'conclusion-view',
+
+            'user-view',
         ]);
 
         //Kecamatan
@@ -136,6 +138,8 @@ class UserSeeder extends Seeder
             'funding-view',
 
             'conclusion-view',
+
+            'user-view',
         ]);
 
         //Desa
@@ -159,6 +163,8 @@ class UserSeeder extends Seeder
             'funding-view',
 
             'conclusion-view',
+
+            'user-view',
         ]);
 
         # Create users
