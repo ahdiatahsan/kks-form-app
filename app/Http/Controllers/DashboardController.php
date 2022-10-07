@@ -26,6 +26,16 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function institutional_menu()
+    {
+        return view('dashboard.institutional.index');
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function tatanan_menu()
     {
         return view('dashboard.indicator.index');
@@ -36,8 +46,8 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function institutional_menu()
+    public function note_menu()
     {
-        return view('dashboard.institutional.index');
+        return view('dashboard.note.index');
     }
 }
