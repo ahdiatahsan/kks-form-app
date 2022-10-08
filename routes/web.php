@@ -17,6 +17,15 @@ use App\Http\Controllers\TatananSevenController;
 use App\Http\Controllers\TatananEightController;
 use App\Http\Controllers\TatananNineController;
 use App\Http\Controllers\ConclusionController;
+use App\Http\Controllers\NoteEightController;
+use App\Http\Controllers\NoteFiveController;
+use App\Http\Controllers\NoteFourController;
+use App\Http\Controllers\NoteNineController;
+use App\Http\Controllers\NoteOneController;
+use App\Http\Controllers\NoteSevenController;
+use App\Http\Controllers\NoteSixController;
+use App\Http\Controllers\NoteThreeController;
+use App\Http\Controllers\NoteTwoController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -86,4 +95,32 @@ Route::group(['middleware' => ['auth','prevent-back-history']], function () {
     Route::resource('tatananSeven', TatananSevenController::class);
     Route::resource('tatananEight', TatananEightController::class);
     Route::resource('tatananNine', TatananNineController::class);
+
+    # Special Indicator Note
+    Route::resource('noteOne', NoteOneController::class);
+    Route::get('noteOne-datatable', [NoteOneController::class, 'datatable'])->name('noteOne.datatable');
+
+    Route::resource('noteTwo', NoteTwoController::class);
+    Route::get('noteTwo-datatable', [NoteTwoController::class, 'datatable'])->name('noteTwo.datatable');
+
+    Route::resource('noteThree', NoteThreeController::class);
+    Route::get('noteThree-datatable', [NoteThreeController::class, 'datatable'])->name('noteThree.datatable');
+
+    Route::resource('noteFour', NoteFourController::class);
+    Route::get('noteFour-datatable', [NoteFourController::class, 'datatable'])->name('noteFour.datatable');
+
+    Route::resource('noteFive', NoteFiveController::class);
+    Route::get('noteFive-datatable', [NoteFiveController::class, 'datatable'])->name('noteFive.datatable');
+
+    Route::resource('noteSix', NoteSixController::class);
+    Route::get('noteSix-datatable', [NoteSixController::class, 'datatable'])->name('noteSix.datatable');
+
+    Route::resource('noteSeven', NoteSevenController::class);
+    Route::get('noteSeven-datatable', [NoteSevenController::class, 'datatable'])->name('noteSeven.datatable');
+
+    Route::resource('noteEight', NoteEightController::class);
+    Route::get('noteEight-datatable', [NoteEightController::class, 'datatable'])->name('noteEight.datatable');
+
+    Route::resource('noteNine', NoteNineController::class);
+    Route::get('noteNine-datatable', [NoteNineController::class, 'datatable'])->name('noteNine.datatable');
 });
