@@ -4,9 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\NoteTwo;
 use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 
 class NoteTwoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['permission:note-view'])->only(['index', 'show', 'datatable']);
+        $this->middleware(['permission:note-create'])->only(['create', 'store']);
+        $this->middleware(['permission:note-update'])->only(['edit', 'update']);
+        $this->middleware(['permission:note-delete'])->only(['destroy']);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +23,7 @@ class NoteTwoController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.note.tatanan2.index');
     }
 
     /**
@@ -69,7 +78,14 @@ class NoteTwoController extends Controller
      */
     public function update(Request $request, NoteTwo $noteTwo)
     {
-        //
+        $request->validate([
+            'note' => 'string'
+        ]);
+
+        $noteTwo->note = $request->input('note');
+        $noteTwo->save();
+
+        return redirect()->route('noteTwo.index')->with('success', 'Catatan untuk pertanyaan nomor '. $noteTwo->id .' berhasil disimpan.');
     }
 
     /**
@@ -81,5 +97,26 @@ class NoteTwoController extends Controller
     public function destroy(NoteTwo $noteTwo)
     {
         //
+    }
+    
+    /**
+     * Yajra datatable
+     */
+    public function datatable(Request $request)
+    {
+        if ($request->ajax()) {
+            $noteTwos = noteTwo::with('user')->get();
+
+            return DataTables::of($noteTwos)
+                ->addColumn('attachment', function ($noteTwo) {
+                    return view('dashboard.note.tatanan2.attachment', compact('noteTwo'))->render();
+                })
+                ->addColumn('action', function ($noteTwo) {
+                    return view('dashboard.note.tatanan2.action', compact('noteTwo'))->render();
+                })
+                ->rawColumns(['attachment', 'action'])
+                ->addIndexColumn()
+                ->make(true);
+        }
     }
 }
