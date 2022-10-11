@@ -36,9 +36,9 @@
             <div class="separator my-2"></div>
             <!--end::Menu separator-->
             <!--begin::Menu item-->
-            {{-- <div class="menu-item px-5">
-                <a href="#" class="menu-link px-5">Profil Saya</a>
-            </div> --}}
+            <div class="menu-item px-5">
+                <a href="{{ route('profile.index') }}" class="menu-link px-5">Profil Saya</a>
+            </div>
             <!--end::Menu item-->
             <!--begin::Menu item-->
             <div class="menu-item px-5">
