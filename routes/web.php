@@ -8,6 +8,7 @@ use App\Http\Controllers\InstitutionalDistrictController;
 use App\Http\Controllers\InstitutionalVillageController;
 use App\Http\Controllers\FundingController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TatananOneController;
 use App\Http\Controllers\TatananTwoController;
 use App\Http\Controllers\TatananThreeController;
@@ -89,6 +90,9 @@ Route::group(['middleware' => ['auth','prevent-back-history']], function () {
     Route::resource('user', UserController::class);
     Route::get('user-datatable', [UserController::class, 'datatable'])->name('user.datatable');
     Route::get('user-select2-district', [UserController::class, 'select2_district'])->name('user.select2-district');
+
+    # Profile
+    Route::resource('profile', ProfileController::class);
 
     # Special Indicator
     Route::resource('tatananOne', TatananOneController::class);
