@@ -7,6 +7,7 @@ use App\Http\Controllers\InstitutionalKksController;
 use App\Http\Controllers\InstitutionalDistrictController;
 use App\Http\Controllers\InstitutionalVillageController;
 use App\Http\Controllers\FundingController;
+use App\Http\Controllers\PublicController;
 use App\Http\Controllers\TatananOneController;
 use App\Http\Controllers\TatananTwoController;
 use App\Http\Controllers\TatananThreeController;
@@ -47,9 +48,13 @@ Auth::routes([
     'verify' => false, // Email Verification Routes...
 ]);
 
+//public
+Route::get('/', [PublicController::class, 'index'])->name('landing');
+
+//administrator
 Route::group(['middleware' => ['auth','prevent-back-history']], function () {
     # Single Page
-    Route::get('/', [DashboardController::class, 'index'])->name('home');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('home');
     Route::get('/institutionalMenu', [DashboardController::class, 'institutional_menu'])->name('institutional-menu');
     Route::get('/specialIndicator', [DashboardController::class, 'tatanan_menu'])->name('tatanan-menu');
     Route::get('/specialIndicatorNote', [DashboardController::class, 'note_menu'])->name('note-menu');
