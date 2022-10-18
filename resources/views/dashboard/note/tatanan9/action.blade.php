@@ -1,4 +1,4 @@
-@if ($noteNine->answer != null && Auth::user()->hasAnyRole('administrator'))
+@if ($noteNine->answer != null && Auth::user()->hasAnyRole('administrator|office'))
     <div class="d-flex justify-content-center">
         <div class="ms-2">
             <a href="#" class="btn btn-sm btn-icon btn-light-success btn-active-light-dark" data-bs-toggle="modal"
@@ -47,6 +47,7 @@
                             <textarea class="form-control" name="note" id="note" rows="5">{{ $noteNine->note }}</textarea>
                         </div>
                         <div class="text-end px-5">
+                            @if (Auth::user()->hasAnyRole('administrator'))
                             <button type="submit" class="btn btn-sm btn-success">
                                 <span class="svg-icon svg-icon-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -62,6 +63,7 @@
                                             fill="black"></path>
                                     </svg>
                                 </span>Simpan</button>
+                            @endif
                         </div>
                     </form>
                 </div>
