@@ -135,7 +135,7 @@
                     <i class="icon-paint-brush"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">Brand Identity</h3>
+                    <h3 class="h2">Lorem Ipsum</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
                     Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                     Sunt suscipit voluptas ipsa in tempora esse soluta sint.
@@ -148,7 +148,7 @@
                     <i class="icon-group"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">Illustration</h3>
+                    <h3 class="h2">Lorem Ipsum</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
                     Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                     Sunt suscipit voluptas ipsa in tempora esse soluta sint.
@@ -161,7 +161,7 @@
                     <i class="icon-megaphone"></i>
                 </div>  
                 <div class="service-text">
-                    <h3 class="h2">Marketing</h3>
+                    <h3 class="h2">Lorem Ipsum</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
                     Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                     Sunt suscipit voluptas ipsa in tempora esse soluta sint.
@@ -174,7 +174,7 @@
                     <i class="icon-earth"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">Web Design</h3>
+                    <h3 class="h2">Lorem Ipsum</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
                     Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                     Sunt suscipit voluptas ipsa in tempora esse soluta sint.
@@ -187,7 +187,7 @@
                     <i class="icon-cube"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">Packaging Design</h3>
+                    <h3 class="h2">Lorem Ipsum</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
                     Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                     Sunt suscipit voluptas ipsa in tempora esse soluta sint.
@@ -198,7 +198,7 @@
             <div class="col-block service-item">
                 <div class="service-icon"><i class="icon-lego-block"></i></div>
                 <div class="service-text">
-                    <h3 class="h2">Web Development</h3>
+                    <h3 class="h2">Lorem Ipsum</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
                     Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                     Sunt suscipit voluptas ipsa in tempora esse soluta sint.
