@@ -188,7 +188,7 @@ class FundingController extends Controller
      */
     public function destroy(Funding $funding)
     {
-        Session::flash('success', 'Data Pendanaan ' . $funding->title . ' telah dihapus.');
+        Session::flash('success', 'Data Pendanaan (' . $funding->title . ') telah dihapus.');
 
         if (Storage::exists('public/funding/' . $funding->attachment_pdf)) {
             Storage::delete('public/funding/' . $funding->attachment_pdf);

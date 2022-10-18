@@ -190,7 +190,7 @@ class InstitutionalVillageController extends Controller
      */
     public function destroy(InstitutionalVillage $institutionalVillage)
     {
-        Session::flash('success', 'Data Kelembagaan Forum Kabupaten (' . $institutionalVillage->title . ') telah dihapus.');
+        Session::flash('success', 'Data Kelembagaan Pokja Desa Kelurahan (' . $institutionalVillage->title . ') telah dihapus.');
 
         if (Storage::exists('public/institutionalVillage/' . $institutionalVillage->attachment_pdf)) {
             Storage::delete('public/institutionalVillage/' . $institutionalVillage->attachment_pdf);

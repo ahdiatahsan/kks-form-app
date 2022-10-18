@@ -212,7 +212,7 @@ class InstitutionalDistrictController extends Controller
      */
     public function destroy(InstitutionalDistrict $institutionalDistrict)
     {
-        Session::flash('success', 'Data Kelembagaan Forum Kabupaten (' . $institutionalDistrict->title . ') telah dihapus.');
+        Session::flash('success', 'Data Kelembagaan Forkom Kecamatan (' . $institutionalDistrict->title . ') telah dihapus.');
 
         if (Storage::exists('public/institutionalDistrict/' . $institutionalDistrict->attachment_pdf)) {
             Storage::delete('public/institutionalDistrict/' . $institutionalDistrict->attachment_pdf);
