@@ -59,7 +59,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">
-                            <span class="fs-7">Berkas Pendanaan</span>
+                            <span class="fs-7">Berkas</span>
                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                 title="Ukuran maksimal berkas (pdf) adalah 5MB."></i>
                         </label>
