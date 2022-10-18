@@ -81,6 +81,7 @@
                 </a>
                 <!--end::funding-->
             </div>
+            @if (Auth::user()->hasAnyRole('administrator|office'))
             <div class="col-xl-4">
                 <!--begin::specialIndicator-->
                 <a href="{{ route('tatanan-menu') }}" class="card bg-primary hoverable card-xl-stretch mb-xl-8">
@@ -121,6 +122,7 @@
                 </a>
                 <!--end::specialIndicatorNote-->
             </div>
+            @endif
             <div class="col-xl-4">
                 <!--begin::conclusion-->
                 <a href="{{ route('conclusion.index') }}" class="card bg-primary hoverable card-xl-stretch mb-5 mb-xl-8">
