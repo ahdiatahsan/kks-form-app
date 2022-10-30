@@ -22,7 +22,8 @@
     ================================================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('landing/css/base.css') }}">
     <link rel="stylesheet" href="{{ asset('landing/css/vendor.css') }}">
     <link rel="stylesheet" href="{{ asset('landing/css/main.css') }}">
@@ -57,7 +58,7 @@
 
             <div class="header-nav__content">
                 <h3>Menu</h3>
-                
+
                 <ul class="header-nav__list">
                     <li class="current"><a class="smoothscroll" href="#home" title="beranda">Beranda</a></li>
                     <li><a class="smoothscroll" href="#about" title="tentang">Tentang</a></li>
@@ -66,7 +67,7 @@
 
             </div> <!-- end header-nav__content -->
 
-        </nav>  <!-- end header-nav -->
+        </nav> <!-- end header-nav -->
 
         <a class="header-menu-toggle" href="#0">
             <span class="header-menu-text">Menu</span>
@@ -78,7 +79,9 @@
 
     <!-- home
     ================================================== -->
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{{ asset('media/landing.jpg') }}" data-natural-width=2560 data-natural-height=1600 data-position-y=center>
+    <section id="home" class="s-home target-section" data-parallax="scroll"
+        data-image-src="{{ asset('media/landing.jpg') }}" data-natural-width=2560 data-natural-height=1600
+        data-position-y=center>
 
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
@@ -116,19 +119,32 @@
         <div class="row section-header has-bottom-sep">
             <div class="col-full">
                 <h3 class="subhead">Tentang</h3>
-                <h1 class="display-2">KKS Enrekang 2022</h1>
+                <h1 class="display-2">Kabupaten/Kota Sehat Enrekang 2022</h1>
             </div>
         </div> <!-- end section-header -->
 
         <div class="row about-desc">
             <div class="col-full">
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt. 
+                    Kabupaten/Kota Sehat adalah suatu kondisi kabupaten/kota yang
+                    bersih, nyaman, aman dan sehat untuk dihuni penduduk, yang dicapai
+                    melalui terselenggaranya penerapan beberapa tatanan dan kegiatan
+                    yang terintegrasi yang disepakati masyarakat dan pemerintah daerah.
+                    Pengembangan Kabupaten/Kota Sehat adalah bagian dari dinamika dan semangat warga, pemerintah daerah,
+                    serta lembaga legislatif di Kabupaten Enrekang dengan bantuan Pemerintah yang berperan membina dan memfasilitasi
+                    potensi yang ada. 
+                </p>
+                <p>
+                    Pencapaian Kabupaten/Kota Sehat merupakan suatu proses yang berjalan terus menerus
+                    menciptakan dan meningkatan kualitas lingkungan baik fisik, sosial, budaya, mengembangkan ekonomi
+                    masyarakat dengan mengembangkan potensi-potensi masyarakat dengan cara memberdayakan mereka agar
+                    dapat saling mendukung dalam menerapkan fungsi-fungsi kehidupan dalam membangun potensi maksimal
+                    suatu Kota/Desa.
                 </p>
             </div>
         </div>
 
-        <div class="row services-list block-1-2 block-tab-full">
+        {{-- <div class="row services-list block-1-2 block-tab-full">
 
             <div class="col-block service-item">
                 <div class="service-icon">
@@ -136,9 +152,9 @@
                 </div>
                 <div class="service-text">
                     <h3 class="h2">Lorem Ipsum</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
                 </div>
             </div>
@@ -149,9 +165,9 @@
                 </div>
                 <div class="service-text">
                     <h3 class="h2">Lorem Ipsum</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
                 </div>
             </div>
@@ -159,12 +175,12 @@
             <div class="col-block service-item">
                 <div class="service-icon">
                     <i class="icon-megaphone"></i>
-                </div>  
+                </div>
                 <div class="service-text">
                     <h3 class="h2">Lorem Ipsum</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
                 </div>
             </div>
@@ -175,9 +191,9 @@
                 </div>
                 <div class="service-text">
                     <h3 class="h2">Lorem Ipsum</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
                 </div>
             </div>
@@ -188,25 +204,26 @@
                 </div>
                 <div class="service-text">
                     <h3 class="h2">Lorem Ipsum</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
-    
-            <div class="col-block service-item">
-                <div class="service-icon"><i class="icon-lego-block"></i></div>
-                <div class="service-text">
-                    <h3 class="h2">Lorem Ipsum</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
                 </div>
             </div>
 
-        </div> <!-- end services-list -->
+            <div class="col-block service-item">
+                <div class="service-icon"><i class="icon-lego-block"></i></div>
+                <div class="service-text">
+                    <h3 class="h2">Lorem Ipsum</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+        </div>  --}}
+        <!-- end services-list -->
 
     </section> <!-- end s-services -->
 
@@ -217,11 +234,12 @@
 
             <div class="col-twelve">
                 <div class="copyright">
-                    <span>© Copyright - Enrekang {{ date('Y') }}</span> 
+                    <span>© Enrekang - {{ date('Y') }}</span>
                 </div>
 
                 <div class="go-top">
-                    <a class="smoothscroll" title="Ke Atas" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+                    <a class="smoothscroll" title="Ke Atas" href="#top"><i class="icon-arrow-up"
+                            aria-hidden="true"></i></a>
                 </div>
             </div>
 
