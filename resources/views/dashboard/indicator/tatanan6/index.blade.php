@@ -101,13 +101,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p1_1">
+                                                <input class="form-control" type="file" name="p1_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p1_2">
+                                                <input class="form-control" type="file" name="p1_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p1 != null)
@@ -186,13 +186,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p2_1">
+                                                <input class="form-control" type="file" name="p2_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p2_2">
+                                                <input class="form-control" type="file" name="p2_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p2 != null)
@@ -273,13 +273,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p3_1">
+                                                <input class="form-control" type="file" name="p3_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p3_2">
+                                                <input class="form-control" type="file" name="p3_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p3 != null)
@@ -359,13 +359,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p4_1">
+                                                <input class="form-control" type="file" name="p4_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p4_2">
+                                                <input class="form-control" type="file" name="p4_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p4 != null)
@@ -442,7 +442,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p5"
                                                         value="b,50"
-                                                        {{ $tatananSix->p5 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p5 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Masuk dalam RPJMD
                                                     </label>
                                                 </div>
@@ -467,13 +467,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p5_1">
+                                                <input class="form-control" type="file" name="p5_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p5_2">
+                                                <input class="form-control" type="file" name="p5_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p5 != null)
@@ -560,7 +560,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p6"
                                                         value="b,50"
-                                                        {{ $tatananSix->p6 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p6 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 - 80 %
                                                     </label>
                                                 </div>
@@ -584,13 +584,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p6_1">
+                                                <input class="form-control" type="file" name="p6_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p6_2">
+                                                <input class="form-control" type="file" name="p6_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p6 != null)
@@ -667,7 +667,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p7"
                                                         value="b,50"
-                                                        {{ $tatananSix->p7 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p7 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 - 80% dari jumlah kendaraan
                                                     </label>
                                                 </div>
@@ -684,13 +684,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p7_1">
+                                                <input class="form-control" type="file" name="p7_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p7_2">
+                                                <input class="form-control" type="file" name="p7_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p7 != null)
@@ -761,7 +761,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p8"
                                                         value="b,50"
-                                                        {{ $tatananSix->p8 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p8 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 - 80% dari jumlah kendaraan
                                                     </label>
                                                 </div>
@@ -786,13 +786,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p8_1">
+                                                <input class="form-control" type="file" name="p8_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p8_2">
+                                                <input class="form-control" type="file" name="p8_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p8 != null)
@@ -864,7 +864,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p9"
                                                         value="b,50"
-                                                        {{ $tatananSix->p9 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p9 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada dari pemerintah/swasta dan
                                                         terakreditasi
                                                     </label>
@@ -892,13 +892,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p9_1">
+                                                <input class="form-control" type="file" name="p9_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p9_2">
+                                                <input class="form-control" type="file" name="p9_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p9 != null)
@@ -977,7 +977,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p10"
                                                         value="b,50"
-                                                        {{ $tatananSix->p10 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p10 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 60-61%
                                                     </label>
                                                 </div>
@@ -993,13 +993,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p10_1">
+                                                <input class="form-control" type="file" name="p10_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p10_2">
+                                                <input class="form-control" type="file" name="p10_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p10 != null)
@@ -1072,7 +1072,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p11"
                                                         value="b,50"
-                                                        {{ $tatananSix->p11 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p11 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Sebagian korban mendapatkan
                                                         santunan
                                                     </label>
@@ -1092,13 +1092,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p11_1">
+                                                <input class="form-control" type="file" name="p11_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p11_2">
+                                                <input class="form-control" type="file" name="p11_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p11 != null)
@@ -1171,7 +1171,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p12"
                                                         value="b,50"
-                                                        {{ $tatananSix->p12 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p12 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 - 79 %, perusahaan yang
                                                         melaksanakan
                                                     </label>
@@ -1197,13 +1197,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p12_1">
+                                                <input class="form-control" type="file" name="p12_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p12_2">
+                                                <input class="form-control" type="file" name="p12_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p12 != null)
@@ -1275,7 +1275,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p13"
                                                         value="b,50"
-                                                        {{ $tatananSix->p13 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p13 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 - 80 % belum memenuhi
                                                     </label>
                                                 </div>
@@ -1291,13 +1291,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p13_1">
+                                                <input class="form-control" type="file" name="p13_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p13_2">
+                                                <input class="form-control" type="file" name="p13_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p13 != null)
@@ -1370,7 +1370,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p14"
                                                         value="b,50"
-                                                        {{ $tatananSix->p14 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p14 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. ada, yang melaksanakan
                                                         perusahaan
                                                         angkutan
@@ -1399,13 +1399,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p14_1">
+                                                <input class="form-control" type="file" name="p14_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p14_2">
+                                                <input class="form-control" type="file" name="p14_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p14 != null)
@@ -1491,7 +1491,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p15"
                                                         value="b,50"
-                                                        {{ $tatananSix->p15 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p15 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Tersedia, Sebagian
                                                     </label>
                                                 </div>
@@ -1507,13 +1507,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p15_1">
+                                                <input class="form-control" type="file" name="p15_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p15_2">
+                                                <input class="form-control" type="file" name="p15_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p15 != null)
@@ -1584,7 +1584,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p16"
                                                         value="b,50"
-                                                        {{ $tatananSix->p16 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p16 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada, berfungsi tapi tidak bersih
                                                     </label>
                                                 </div>
@@ -1610,13 +1610,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p16_1">
+                                                <input class="form-control" type="file" name="p16_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p16_2">
+                                                <input class="form-control" type="file" name="p16_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p16 != null)
@@ -1687,7 +1687,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p17"
                                                         value="b,50"
-                                                        {{ $tatananSix->p17 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p17 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 1 tahun sekali
                                                     </label>
                                                 </div>
@@ -1713,13 +1713,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p17_1">
+                                                <input class="form-control" type="file" name="p17_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p17_2">
+                                                <input class="form-control" type="file" name="p17_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p17 != null)
@@ -1793,7 +1793,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p18"
                                                         value="b,50"
-                                                        {{ $tatananSix->p18 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p18 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Melakukan pemantauan kualitas
                                                         udara
                                                     </label>
@@ -1820,13 +1820,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p18_1">
+                                                <input class="form-control" type="file" name="p18_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p18_2">
+                                                <input class="form-control" type="file" name="p18_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p18 != null)
@@ -1898,7 +1898,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p19"
                                                         value="b,50"
-                                                        {{ $tatananSix->p19 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p19 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. ada, sebagian
                                                     </label>
                                                 </div>
@@ -1915,13 +1915,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p19_1">
+                                                <input class="form-control" type="file" name="p19_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p19_2">
+                                                <input class="form-control" type="file" name="p19_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p19 != null)
@@ -1993,7 +1993,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p20"
                                                         value="b,50"
-                                                        {{ $tatananSix->p20 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p20 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. ada, sebagian
                                                     </label>
                                                 </div>
@@ -2010,13 +2010,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p20_1">
+                                                <input class="form-control" type="file" name="p20_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p20_2">
+                                                <input class="form-control" type="file" name="p20_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p20 != null)
@@ -2092,7 +2092,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p21"
                                                         value="b,50"
-                                                        {{ $tatananSix->p21 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p21 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. ada, kurang
                                                     </label>
                                                 </div>
@@ -2109,13 +2109,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p21_1">
+                                                <input class="form-control" type="file" name="p21_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p21_2">
+                                                <input class="form-control" type="file" name="p21_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p21 != null)
@@ -2188,7 +2188,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p22"
                                                         value="b,50"
-                                                        {{ $tatananSix->p22 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p22 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 - 80 % belum memenuhi
                                                         standar
                                                     </label>
@@ -2215,13 +2215,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p22_1">
+                                                <input class="form-control" type="file" name="p22_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p22_2">
+                                                <input class="form-control" type="file" name="p22_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p22 != null)
@@ -2294,7 +2294,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p23"
                                                         value="b,50"
-                                                        {{ $tatananSix->p23 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p23 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. ada, toilet pria dan wanita
                                                     </label>
                                                 </div>
@@ -2321,13 +2321,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p23_1">
+                                                <input class="form-control" type="file" name="p23_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p23_2">
+                                                <input class="form-control" type="file" name="p23_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p23 != null)
@@ -2407,13 +2407,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p24_1">
+                                                <input class="form-control" type="file" name="p24_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p24_2">
+                                                <input class="form-control" type="file" name="p24_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p24 != null)
@@ -2485,7 +2485,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p25"
                                                         value="b,50"
-                                                        {{ $tatananSix->p25 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p25 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada, tidak lengkap
                                                     </label>
                                                 </div>
@@ -2502,13 +2502,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p25_1">
+                                                <input class="form-control" type="file" name="p25_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p25_2">
+                                                <input class="form-control" type="file" name="p25_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p25 != null)
@@ -2588,13 +2588,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p26_1">
+                                                <input class="form-control" type="file" name="p26_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p26_2">
+                                                <input class="form-control" type="file" name="p26_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p26 != null)
@@ -2670,7 +2670,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p27"
                                                         value="b,50"
-                                                        {{ $tatananSix->p27 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p27 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Tetap/sama dari tahun lalu
                                                     </label>
                                                 </div>
@@ -2687,13 +2687,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p27_1">
+                                                <input class="form-control" type="file" name="p27_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p27_2">
+                                                <input class="form-control" type="file" name="p27_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p27 != null)
@@ -2766,7 +2766,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p28"
                                                         value="b,50"
-                                                        {{ $tatananSix->p28 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p28 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. tersedia, petugas keamanan dan
                                                         pos
                                                         keamanan
@@ -2785,13 +2785,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p28_1">
+                                                <input class="form-control" type="file" name="p28_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p28_2">
+                                                <input class="form-control" type="file" name="p28_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p28 != null)
@@ -2868,7 +2868,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p29"
                                                         value="b,75"
-                                                        {{ $tatananSix->p29 == 'b,75' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p29 == 'b,75' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 60-79%
                                                     </label>
                                                 </div>
@@ -2892,13 +2892,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p29_1">
+                                                <input class="form-control" type="file" name="p29_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p29_2">
+                                                <input class="form-control" type="file" name="p29_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p29 != null)
@@ -2977,7 +2977,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p30"
                                                         value="b,50"
-                                                        {{ $tatananSix->p30 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p30 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada tapi tidak mudah dihubungi
                                                     </label>
                                                 </div>
@@ -2994,13 +2994,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p30_1">
+                                                <input class="form-control" type="file" name="p30_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p30_2">
+                                                <input class="form-control" type="file" name="p30_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p30 != null)
@@ -3073,7 +3073,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p31"
                                                         value="b,50"
-                                                        {{ $tatananSix->p31 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p31 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. ada data/informasi dan tidak
                                                         dilakukan
                                                         updating
@@ -3092,13 +3092,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p31_1">
+                                                <input class="form-control" type="file" name="p31_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p31_2">
+                                                <input class="form-control" type="file" name="p31_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p31 != null)
@@ -3179,13 +3179,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p32_1">
+                                                <input class="form-control" type="file" name="p32_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p32_2">
+                                                <input class="form-control" type="file" name="p32_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p32 != null)
@@ -3270,7 +3270,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p33"
                                                         value="b,50"
-                                                        {{ $tatananSix->p33 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p33 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Tetap/sama dengan tahun lalu
                                                     </label>
                                                 </div>
@@ -3287,13 +3287,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p33_1">
+                                                <input class="form-control" type="file" name="p33_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p33_2">
+                                                <input class="form-control" type="file" name="p33_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p33 != null)
@@ -3380,7 +3380,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p34"
                                                         value="b,50"
-                                                        {{ $tatananSix->p34 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p34 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada namun tidak berfungsi
                                                     </label>
                                                 </div>
@@ -3397,13 +3397,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p34_1">
+                                                <input class="form-control" type="file" name="p34_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p34_2">
+                                                <input class="form-control" type="file" name="p34_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p34 != null)
@@ -3474,7 +3474,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p35"
                                                         value="b,50"
-                                                        {{ $tatananSix->p35 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p35 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Tetap
                                                     </label>
                                                 </div>
@@ -3491,13 +3491,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p35_1">
+                                                <input class="form-control" type="file" name="p35_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p35_2">
+                                                <input class="form-control" type="file" name="p35_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p35 != null)
@@ -3568,7 +3568,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p36"
                                                         value="b,50"
-                                                        {{ $tatananSix->p36 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p36 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada, Tidak berfungsi
                                                     </label>
                                                 </div>
@@ -3585,13 +3585,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p36_1">
+                                                <input class="form-control" type="file" name="p36_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p36_2">
+                                                <input class="form-control" type="file" name="p36_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p36 != null)
@@ -3670,7 +3670,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p37"
                                                         value="b,50"
-                                                        {{ $tatananSix->p37 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p37 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada namun tidak rutin
                                                     </label>
                                                 </div>
@@ -3687,13 +3687,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p37_1">
+                                                <input class="form-control" type="file" name="p37_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p37_2">
+                                                <input class="form-control" type="file" name="p37_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p37 != null)
@@ -3764,7 +3764,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p38"
                                                         value="b,50"
-                                                        {{ $tatananSix->p38 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p38 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Tetap
                                                     </label>
                                                 </div>
@@ -3781,13 +3781,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p38_1">
+                                                <input class="form-control" type="file" name="p38_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p38_2">
+                                                <input class="form-control" type="file" name="p38_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p38 != null)
@@ -3867,13 +3867,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p39_1">
+                                                <input class="form-control" type="file" name="p39_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p39_2">
+                                                <input class="form-control" type="file" name="p39_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p39 != null)
@@ -3953,13 +3953,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p40_1">
+                                                <input class="form-control" type="file" name="p40_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p40_2">
+                                                <input class="form-control" type="file" name="p40_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p40 != null)
@@ -4039,13 +4039,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p41_1">
+                                                <input class="form-control" type="file" name="p41_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p41_2">
+                                                <input class="form-control" type="file" name="p41_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p41 != null)
@@ -4125,7 +4125,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p42"
                                                         value="b,50"
-                                                        {{ $tatananSix->p42 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p42 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. Ada, aktif namun tidak memiliki
                                                         Dasar
                                                         penetapan/SK
@@ -4152,13 +4152,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p42_1">
+                                                <input class="form-control" type="file" name="p42_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p42_2">
+                                                <input class="form-control" type="file" name="p42_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p42 != null)
@@ -4229,7 +4229,7 @@
                                                     class="form-check form-check-custom form-check-solid form-check-sm pb-4">
                                                     <input class="form-check-input" type="radio" name="p43"
                                                         value="b,50"
-                                                        {{ $tatananSix->p43 == 'b,50' ? 'checked' : '' }}>>
+                                                        {{ $tatananSix->p43 == 'b,50' ? 'checked' : '' }}>
                                                     <label class="form-check-label">b. 50 - 80%
                                                     </label>
                                                 </div>
@@ -4245,13 +4245,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p43_1">
+                                                <input class="form-control" type="file" name="p43_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p43_2">
+                                                <input class="form-control" type="file" name="p43_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananSix->p43 != null)

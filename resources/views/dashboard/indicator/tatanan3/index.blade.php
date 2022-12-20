@@ -100,13 +100,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p1_1">
+                                                <input class="form-control" type="file" name="p1_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p1_2">
+                                                <input class="form-control" type="file" name="p1_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p1 != null)
@@ -187,13 +187,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p2_1">
+                                                <input class="form-control" type="file" name="p2_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p2_2">
+                                                <input class="form-control" type="file" name="p2_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p2 != null)
@@ -294,13 +294,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p3_1">
+                                                <input class="form-control" type="file" name="p3_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p3_2">
+                                                <input class="form-control" type="file" name="p3_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p3 != null)
@@ -397,13 +397,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p4_1">
+                                                <input class="form-control" type="file" name="p4_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p4_2">
+                                                <input class="form-control" type="file" name="p4_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p4 != null)
@@ -503,13 +503,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p5_1">
+                                                <input class="form-control" type="file" name="p5_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p5_2">
+                                                <input class="form-control" type="file" name="p5_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p5 != null)
@@ -599,13 +599,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p6_1">
+                                                <input class="form-control" type="file" name="p6_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p6_2">
+                                                <input class="form-control" type="file" name="p6_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p6 != null)
@@ -685,13 +685,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p7_1">
+                                                <input class="form-control" type="file" name="p7_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p7_2">
+                                                <input class="form-control" type="file" name="p7_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p7 != null)
@@ -778,13 +778,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p8_1">
+                                                <input class="form-control" type="file" name="p8_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p8_2">
+                                                <input class="form-control" type="file" name="p8_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p8 != null)
@@ -871,13 +871,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p9_1">
+                                                <input class="form-control" type="file" name="p9_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p9_2">
+                                                <input class="form-control" type="file" name="p9_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p9 != null)
@@ -979,13 +979,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p10_1">
+                                                <input class="form-control" type="file" name="p10_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p10_2">
+                                                <input class="form-control" type="file" name="p10_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p10 != null)
@@ -1090,13 +1090,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p11_1">
+                                                <input class="form-control" type="file" name="p11_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p11_2">
+                                                <input class="form-control" type="file" name="p11_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p11 != null)
@@ -1196,13 +1196,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p12_1">
+                                                <input class="form-control" type="file" name="p12_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p12_2">
+                                                <input class="form-control" type="file" name="p12_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p12 != null)
@@ -1290,13 +1290,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p13_1">
+                                                <input class="form-control" type="file" name="p13_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p13_2">
+                                                <input class="form-control" type="file" name="p13_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p13 != null)
@@ -1383,13 +1383,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p14_1">
+                                                <input class="form-control" type="file" name="p14_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p14_2">
+                                                <input class="form-control" type="file" name="p14_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p14 != null)
@@ -1489,13 +1489,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p15_1">
+                                                <input class="form-control" type="file" name="p15_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p15_2">
+                                                <input class="form-control" type="file" name="p15_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p15 != null)
@@ -1592,13 +1592,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p16_1">
+                                                <input class="form-control" type="file" name="p16_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p16_2">
+                                                <input class="form-control" type="file" name="p16_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p16 != null)
@@ -1685,13 +1685,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p17_1">
+                                                <input class="form-control" type="file" name="p17_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p17_2">
+                                                <input class="form-control" type="file" name="p17_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p17 != null)
@@ -1791,13 +1791,13 @@
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal lampiran pdf adalah 3MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p18_1">
+                                                <input class="form-control" type="file" name="p18_1" accept=".pdf">
                                             </div>
                                             <span class="required">Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
-                                                <input class="form-control" type="file" name="p18_2">
+                                                <input class="form-control" type="file" name="p18_2" accept=".jpg, .jpeg, .png, .webp">
                                             </div>
                                             <div class="input-group input-group-sm pb-2 pt-2">
                                                 @if ($tatananThree->p18 != null)
