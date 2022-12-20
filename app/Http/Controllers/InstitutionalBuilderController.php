@@ -40,11 +40,11 @@ class InstitutionalBuilderController extends Controller
     public function create()
     {
         //Check data exist //
-        $dataExist = InstitutionalBuilder::select('id')->with('user')->where('user_id', '=', Auth::user()->id)->first();
-        if ($dataExist != null) {
-            return redirect()->route('institutionalBuilder.index')->with('warning', 'Anda telah memiliki data di Kelembagaan Tim Pembina. 
-            Ubah atau hapus data lama untuk dapat menambahkan data baru');
-        }
+        // $dataExist = InstitutionalBuilder::select('id')->with('user')->where('user_id', '=', Auth::user()->id)->first();
+        // if ($dataExist != null) {
+        //     return redirect()->route('institutionalBuilder.index')->with('warning', 'Anda telah memiliki data di Kelembagaan Tim Pembina. 
+        //     Ubah atau hapus data lama untuk dapat menambahkan data baru');
+        // }
 
         return view('dashboard.institutional.builder.create');
     }

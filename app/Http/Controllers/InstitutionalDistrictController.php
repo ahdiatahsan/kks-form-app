@@ -42,11 +42,11 @@ class InstitutionalDistrictController extends Controller
     public function create()
     {
         //Check data exist //
-        $dataExist = InstitutionalDistrict::select('id')->with('user')->where('user_id', '=', Auth::user()->id)->first();
-        if ($dataExist != null) {
-            return redirect()->route('institutionalDistrict.index')->with('warning', 'Anda telah memiliki data di Kelembagaan Forkom Kecamatan. 
-            Ubah atau hapus data lama untuk dapat menambahkan data baru');
-        }
+        // $dataExist = InstitutionalDistrict::select('id')->with('user')->where('user_id', '=', Auth::user()->id)->first();
+        // if ($dataExist != null) {
+        //     return redirect()->route('institutionalDistrict.index')->with('warning', 'Anda telah memiliki data di Kelembagaan Forkom Kecamatan. 
+        //     Ubah atau hapus data lama untuk dapat menambahkan data baru');
+        // }
 
         return view('dashboard.institutional.district.create');
     }

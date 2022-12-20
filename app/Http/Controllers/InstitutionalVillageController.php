@@ -40,11 +40,11 @@ class InstitutionalVillageController extends Controller
     public function create()
     {
         //Check data exist //
-        $dataExist = InstitutionalVillage::select('id')->with('user')->where('user_id', '=', Auth::user()->id)->first();
-        if ($dataExist != null) {
-            return redirect()->route('institutionalVillage.index')->with('warning', 'Anda telah memiliki data di Kelembagaan Pokja Desa Kelurahan. 
-            Ubah atau hapus data lama untuk dapat menambahkan data baru');
-        }
+        // $dataExist = InstitutionalVillage::select('id')->with('user')->where('user_id', '=', Auth::user()->id)->first();
+        // if ($dataExist != null) {
+        //     return redirect()->route('institutionalVillage.index')->with('warning', 'Anda telah memiliki data di Kelembagaan Pokja Desa Kelurahan. 
+        //     Ubah atau hapus data lama untuk dapat menambahkan data baru');
+        // }
 
         return view('dashboard.institutional.village.create');
     }

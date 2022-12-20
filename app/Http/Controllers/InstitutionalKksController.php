@@ -40,11 +40,11 @@ class InstitutionalKksController extends Controller
     public function create()
     {
         //Check data exist //
-        $dataExist = InstitutionalKks::select('id')->with('user')->where('user_id', '=', Auth::user()->id)->first();
-        if ($dataExist != null) {
-            return redirect()->route('institutionalKks.index')->with('warning', 'Anda telah memiliki data di Kelembagaan Forum Kabupaten. 
-            Ubah atau hapus data lama untuk dapat menambahkan data baru');
-        }
+        // $dataExist = InstitutionalKks::select('id')->with('user')->where('user_id', '=', Auth::user()->id)->first();
+        // if ($dataExist != null) {
+        //     return redirect()->route('institutionalKks.index')->with('warning', 'Anda telah memiliki data di Kelembagaan Forum Kabupaten. 
+        //     Ubah atau hapus data lama untuk dapat menambahkan data baru');
+        // }
 
         return view('dashboard.institutional.kks.create');
     }
