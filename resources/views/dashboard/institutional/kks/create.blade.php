@@ -63,17 +63,17 @@
                                 title="Ukuran maksimal berkas (pdf) adalah 5MB."></i>
                         </label>
                         <div class="input-group input-group-sm">
-                            <input class="form-control" type="file" name="attachment_pdf" required>
+                            <input class="form-control" type="file" name="attachment_pdf" accept=".pdf" required>
                         </div>
                     </div>
                     <div class="mb-8">
                         <label class="form-label">
-                            <span class="fs-7 required">Dokumentasi</span>
+                            <span class="fs-7">Dokumentasi</span>
                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                 title="Ukuran maksimal dokumentasi (jpg, jpeg, png, webp) adalah 2MB."></i>
                         </label>
                         <div class="input-group input-group-sm">
-                            <input class="form-control" type="file" name="attachment_img" required>
+                            <input class="form-control" type="file" name="attachment_img" accept=".jpg, .jpeg, .png, .webp">
                         </div>
                     </div>
                 </div>
