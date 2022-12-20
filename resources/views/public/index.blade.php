@@ -95,7 +95,7 @@
                 <h1>
                     Sistem Informasi <br>
                     Kabupaten/Kota Sehat <br>
-                    Enrekang 2022 <br>
+                    Enrekang {{ date('Y') }} <br>
                 </h1>
 
             </div>
@@ -119,7 +119,7 @@
         <div class="row section-header has-bottom-sep">
             <div class="col-full">
                 <h3 class="subhead">Tentang</h3>
-                <h1 class="display-2">Kabupaten/Kota Sehat Enrekang 2022</h1>
+                <h1 class="display-2">Kabupaten/Kota Sehat Enrekang {{ date('Y') }}</h1>
             </div>
         </div> <!-- end section-header -->
 
