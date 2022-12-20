@@ -64,7 +64,7 @@
                                 title="Ukuran maksimal berkas (pdf) adalah 5MB."></i>
                         </label>
                         <div class="input-group input-group-sm pb-3">
-                            <input class="form-control" type="file" name="attachment_pdf">
+                            <input class="form-control" type="file" name="attachment_pdf" accept=".pdf">
                         </div>
                         @if ($institutionalDistrict->attachment_pdf != null)
                             <div class="input-group input-group-sm pb-2">
@@ -80,7 +80,7 @@
                                 title="Ukuran maksimal dokumentasi (jpg, jpeg, png, webp) adalah 2MB."></i>
                         </label>
                         <div class="input-group input-group-sm pb-3">
-                            <input class="form-control" type="file" name="attachment_img">
+                            <input class="form-control" type="file" name="attachment_img" accept=".jpg, .jpeg, .png, .webp">
                         </div>
                         @if ($institutionalDistrict->attachment_img != null)
                             <div class="input-group input-group-sm pb-2">
