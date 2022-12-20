@@ -21,7 +21,7 @@ class InstitutionalVillageController extends Controller
         $this->middleware(['permission:village-update'])->only(['edit', 'update']);
         $this->middleware(['permission:village-delete'])->only(['destroy']);
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -60,7 +60,7 @@ class InstitutionalVillageController extends Controller
         $this->validate_request($request);
         $request->validate([
             'attachment_pdf' => 'required|file|max:5048|mimes:pdf',
-            'attachment_img' => 'required|file|max:2048|mimes:jpeg,jpg,png,webp'
+            'attachment_img' => 'file|max:2048|mimes:jpeg,jpg,png,webp'
         ], [
             'attachment_pdf.mimes' => 'Berkas harus berupa file pdf.',
             'attachment_pdf.max' => 'Berkas tidak boleh lebih besar dari 5 MB',
@@ -74,9 +74,13 @@ class InstitutionalVillageController extends Controller
         $pdfName = $slug . '.' . $attachPdf->getClientOriginalExtension();
         Storage::putFileAs('public/institutionalVillage', $attachPdf, $pdfName);
 
-        $attachImg = $request->file('attachment_img');
-        $imgName = $slug . '.' . $attachImg->getClientOriginalExtension();
-        Storage::putFileAs('public/institutionalVillage', $attachImg, $imgName);
+        if ($request->hasFile('attachment_img')) {
+            $attachImg = $request->file('attachment_img');
+            $imgName = $slug . '.' . $attachImg->getClientOriginalExtension();
+            Storage::putFileAs('public/institutionalVillage', $attachImg, $imgName);
+        } else {
+            $imgName = null;
+        }
 
         institutionalVillage::create([
             'title' => $request->input('title'),
@@ -202,7 +206,7 @@ class InstitutionalVillageController extends Controller
 
         $institutionalVillage->delete();
     }
-    
+
     /**
      * Yajra datatable
      */

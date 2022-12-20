@@ -60,7 +60,7 @@ class InstitutionalBuilderController extends Controller
         $this->validate_request($request);
         $request->validate([
             'attachment_pdf' => 'required|file|max:5048|mimes:pdf',
-            'attachment_img' => 'required|file|max:2048|mimes:jpeg,jpg,png,webp'
+            'attachment_img' => 'file|max:2048|mimes:jpeg,jpg,png,webp'
         ], [
             'attachment_pdf.mimes' => 'Berkas harus berupa file pdf.',
             'attachment_pdf.max' => 'Berkas tidak boleh lebih besar dari 5 MB',
@@ -73,10 +73,14 @@ class InstitutionalBuilderController extends Controller
         $attachPdf = $request->file('attachment_pdf');
         $pdfName = $slug . '.' . $attachPdf->getClientOriginalExtension();
         Storage::putFileAs('public/institutionalBuilder', $attachPdf, $pdfName);
-
-        $attachImg = $request->file('attachment_img');
-        $imgName = $slug . '.' . $attachImg->getClientOriginalExtension();
-        Storage::putFileAs('public/institutionalBuilder', $attachImg, $imgName);
+        
+        if ($request->hasFile('attachment_img')) {
+            $attachImg = $request->file('attachment_img');
+            $imgName = $slug . '.' . $attachImg->getClientOriginalExtension();
+            Storage::putFileAs('public/institutionalBuilder', $attachImg, $imgName);
+        } else {
+            $imgName = null;
+        }
 
         InstitutionalBuilder::create([
             'title' => $request->input('title'),

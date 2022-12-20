@@ -62,7 +62,7 @@ class InstitutionalDistrictController extends Controller
         $this->validate_request($request);
         $request->validate([
             'attachment_pdf' => 'required|file|max:5048|mimes:pdf',
-            'attachment_img' => 'required|file|max:2048|mimes:jpeg,jpg,png,webp'
+            'attachment_img' => 'file|max:2048|mimes:jpeg,jpg,png,webp'
         ], [
             'attachment_pdf.mimes' => 'Berkas harus berupa file pdf.',
             'attachment_pdf.max' => 'Berkas tidak boleh lebih besar dari 5 MB',
@@ -76,9 +76,13 @@ class InstitutionalDistrictController extends Controller
         $pdfName = $slug . '.' . $attachPdf->getClientOriginalExtension();
         Storage::putFileAs('public/institutionalDistrict', $attachPdf, $pdfName);
 
-        $attachImg = $request->file('attachment_img');
-        $imgName = $slug . '.' . $attachImg->getClientOriginalExtension();
-        Storage::putFileAs('public/institutionalDistrict', $attachImg, $imgName);
+        if ($request->hasFile('attachment_img')) {
+            $attachImg = $request->file('attachment_img');
+            $imgName = $slug . '.' . $attachImg->getClientOriginalExtension();
+            Storage::putFileAs('public/institutionalDistrict', $attachImg, $imgName);
+        } else {
+            $imgName = null;
+        }
 
         InstitutionalDistrict::create([
             'title' => $request->input('title'),
