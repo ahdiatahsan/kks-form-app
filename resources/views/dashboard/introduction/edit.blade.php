@@ -58,7 +58,7 @@
                         </label>
                         <div class="input-group input-group-sm pb-3">
                             <input class="form-control" type="file" name="attachment"
-                                {{ $introduction->attachment == null ? 'required' : '' }}>
+                                {{ $introduction->attachment == null ? 'required' : '' }} accept=".pdf" />
                         </div>
                         @if ($introduction->attachment != null)
                             <div class="input-group input-group-sm pb-2">
