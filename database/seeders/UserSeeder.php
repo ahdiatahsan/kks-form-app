@@ -76,6 +76,11 @@ class UserSeeder extends Seeder
             'user-create',
             'user-update',
             'user-delete',
+
+            'setting-view',
+            'setting-create',
+            'setting-update',
+            'setting-delete',
         ];
 
         foreach ($permissions as $permission) {
