@@ -43,7 +43,7 @@
                                     rx="1" transform="rotate(-90 11.364 20.364)" fill="black" />
                                 <rect x="4.36396" y="11.364" width="16" height="2" rx="1"
                                     fill="black" />
-                            </svg></span> Tambah Pengaturan
+                            </svg></span> Tambah Data
                     </a>
                     @endif
                 </div>
