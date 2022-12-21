@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             IntroductionSeeder::class,
             ConclusionSeeder::class,
+            SettingSeeder::class,
 
             TatananOneSeeder::class,
             TatananTwoSeeder::class,
