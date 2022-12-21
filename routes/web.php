@@ -28,6 +28,7 @@ use App\Http\Controllers\NoteSevenController;
 use App\Http\Controllers\NoteSixController;
 use App\Http\Controllers\NoteThreeController;
 use App\Http\Controllers\NoteTwoController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -93,6 +94,10 @@ Route::group(['middleware' => ['auth','prevent-back-history']], function () {
 
     # Profile
     Route::resource('profile', ProfileController::class);
+
+    # Setting
+    Route::resource('setting', SettingController::class);
+    Route::get('setting-datatable', [SettingController::class, 'datatable'])->name('setting.datatable');
 
     # Special Indicator
     Route::resource('tatananOne', TatananOneController::class);
