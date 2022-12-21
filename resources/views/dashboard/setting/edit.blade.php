@@ -50,7 +50,7 @@
                 <!--begin::Card body-->
                 <div class="card-body">
                     <div class="mb-6">
-                        <label class="form-label fs-7 required">Judul</label>
+                        <label class="form-label fs-7 required">Tahun Periode</label>
                         <div class="input-group input-group-sm">
                             <input class="form-control" type="text" name="period"
                                 value="{{ old('period', $setting->period ?? '') }}" required>
