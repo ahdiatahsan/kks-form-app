@@ -17,7 +17,7 @@ class SettingFactory extends Factory
     public function definition()
     {
         return [
-            'period' => '2020',
+            'period' => '2019-2021',
         ];
     }
 }
