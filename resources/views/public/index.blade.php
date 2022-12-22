@@ -94,8 +94,8 @@
 
                 <h1>
                     Sistem Informasi <br>
-                    Kabupaten/Kota Sehat <br>
-                    Enrekang {{ date('Y') }} <br>
+                    Kabupaten Kota Sehat <br>
+                    Enrekang<br>
                 </h1>
 
             </div>
@@ -119,14 +119,14 @@
         <div class="row section-header has-bottom-sep">
             <div class="col-full">
                 <h3 class="subhead">Tentang</h3>
-                <h1 class="display-2">Kabupaten/Kota Sehat Enrekang {{ date('Y') }}</h1>
+                <h1 class="display-2">Kabupaten Kota Sehat Enrekang</h1>
             </div>
         </div> <!-- end section-header -->
 
         <div class="row about-desc">
             <div class="col-full">
                 <p>
-                    Kabupaten/Kota Sehat adalah suatu kondisi kabupaten/kota yang
+                    Kabupaten Kota Sehat adalah suatu kondisi kabupaten/kota yang
                     bersih, nyaman, aman dan sehat untuk dihuni penduduk, yang dicapai
                     melalui terselenggaranya penerapan beberapa tatanan dan kegiatan
                     yang terintegrasi yang disepakati masyarakat dan pemerintah daerah.
@@ -135,7 +135,7 @@
                     potensi yang ada. 
                 </p>
                 <p>
-                    Pencapaian Kabupaten/Kota Sehat merupakan suatu proses yang berjalan terus menerus
+                    Pencapaian Kabupaten Kota Sehat merupakan suatu proses yang berjalan terus menerus
                     menciptakan dan meningkatan kualitas lingkungan baik fisik, sosial, budaya, mengembangkan ekonomi
                     masyarakat dengan mengembangkan potensi-potensi masyarakat dengan cara memberdayakan mereka agar
                     dapat saling mendukung dalam menerapkan fungsi-fungsi kehidupan dalam membangun potensi maksimal
