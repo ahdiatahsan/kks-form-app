@@ -19,6 +19,7 @@ class IntroductionFactory extends Factory
         return [
             'body' => 'Data Kosong',
             'attachment' => null,
+            'setting_id' => 1
         ];
     }
 }
