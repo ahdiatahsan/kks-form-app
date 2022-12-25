@@ -16,6 +16,12 @@ class Conclusion extends Model
      */
     protected $fillable = [
         'body',
-        'attachment'
+        'attachment',
+        'setting_id'
     ];
+
+    public function setting()
+    {
+        return $this->belongsTo(Setting::class);
+    }
 }

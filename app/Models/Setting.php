@@ -22,4 +22,9 @@ class Setting extends Model
     {
         return $this->hasMany(Introduction::class);
     }
+
+    public function conclusions()
+    {
+        return $this->hasMany(Conclusion::class);
+    }
 }
