@@ -63,6 +63,8 @@ Route::group(['middleware' => ['auth','prevent-back-history']], function () {
 
     # Introduction
     Route::resource('introduction', IntroductionController::class);
+    Route::get('introduction-datatable', [IntroductionController::class, 'datatable'])->name('introduction.datatable');
+    Route::get('introduction-select2-period', [IntroductionController::class, 'select2_period'])->name('introduction.select2-period');
 
     # Conclusion
     Route::resource('conclusion', ConclusionController::class);
