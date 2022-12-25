@@ -10,7 +10,7 @@
 
             <x-slot name="breadcrumb">
                 <li class="breadcrumb-item">
-                    <span class="text-muted">Form Ubah Data</span>
+                    <span class="text-muted">Form Tambah Data</span>
                 </li>
             </x-slot>
 
@@ -34,17 +34,16 @@
     {{-- Start::Post component --}}
     <x-slot name="post">
         <!--begin::form-->
-        <form class="form" action="{{ route('conclusion.update', $conclusion->id) }}" method="POST"
-            autocomplete="off" enctype="multipart/form-data">
+        <form class="form" action="{{ route('conclusion.store') }}" method="POST" autocomplete="off" 
+            enctype="multipart/form-data">
             @csrf
-            @method('PATCH')
             <!--begin::card-->
             <div class="card">
                 <!--begin::Card header-->
                 <div class="card-header">
                     <h3 class="card-title align-items-start flex-column">
                         <span class="card-label fw-bolder text-dark fs-5 my-1">Penutup</span>
-                        <span class="text-muted mt-1 fw-bold fs-7">Form Ubah Data</span>
+                        <span class="text-muted mt-1 fw-bold fs-7">Form Tambah Data</span>
                     </h3>
                 </div>
                 <!--end::Card header-->
@@ -52,35 +51,23 @@
                 <div class="card-body">
                     <div class="mb-6">
                         <label class="form-label fs-7 required">Tahun Periode</label>
-                        <div class="input-group">
-                            <select class="form-select form-select-sm form-select-solid" name="period"
-                                id="select2Period" data-placeholder="Tahun Periode" required>
-                                <option value="{{ $conclusion->setting_id }}">
-                                    {{ $conclusion->setting->period }}
-                                </option>
-                            </select>
-                        </div>
+                        <select class="form-select form-select-sm form-select-solid" name="period" id="select2Period"
+                            data-placeholder="Tahun Periode" data-allow-clear="true" required>
+                        </select>
                     </div>
                     <div class="mb-6">
-                        <label class="form-label fs-7">
+                        <label class="form-label fs-7 required">
                             <span class="">Berkas Penutup</span>
                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                 title="Ukuran maksimal berkas (pdf) adalah 3MB."></i>
                         </label>
                         <div class="input-group input-group-sm pb-3">
-                            <input class="form-control" type="file" name="attachment"
-                                {{ $conclusion->attachment == null ? 'required' : '' }} accept=".pdf" />
+                            <input class="form-control" type="file" name="attachment" required accept=".pdf" />
                         </div>
-                        @if ($conclusion->attachment != null)
-                            <div class="input-group input-group-sm pb-2">
-                                <a href="{{ asset('storage/conclusion/' . $conclusion->attachment) }}"
-                                    target="_blank">Lihat Berkas</a>
-                            </div>
-                        @endif
                     </div>
                     <div>
-                        <label class="form-label fs-7">Isi Penutup</label>
-                        <textarea class="form-control" name="body" id="body" rows="5">{{ $conclusion->body }}</textarea>
+                        <label class="form-label fs-7 required">Isi Penutup</label>
+                        <textarea class="form-control" name="body" id="body" rows="5"></textarea>
                     </div>
                 </div>
                 <!--end::Card body-->
@@ -148,7 +135,7 @@
             });
         </script>
         {{-- End::Select2 --}}
-
+        
         {{-- Start::Tinymce --}}
         <script src="{{ asset('plugins/custom/tinymce/tinymce.bundle.js') }}"></script>
         <script>
