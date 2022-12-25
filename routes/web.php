@@ -68,6 +68,8 @@ Route::group(['middleware' => ['auth','prevent-back-history']], function () {
 
     # Conclusion
     Route::resource('conclusion', ConclusionController::class);
+    Route::get('conclusion-datatable', [ConclusionController::class, 'datatable'])->name('conclusion.datatable');
+    Route::get('conclusion-select2-period', [ConclusionController::class, 'select2_period'])->name('conclusion.select2-period');
 
     # Funding
     Route::resource('funding', FundingController::class);
