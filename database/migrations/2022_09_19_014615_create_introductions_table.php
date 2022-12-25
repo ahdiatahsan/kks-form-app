@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->text('body')->nullable();
             $table->string('attachment')->nullable();
+            $table->foreignId('setting_id')->nullable()->constrained('settings')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }
