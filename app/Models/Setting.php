@@ -17,4 +17,9 @@ class Setting extends Model
     protected $fillable = [
         'period'
     ];
+
+    public function introductions()
+    {
+        return $this->hasMany(Introduction::class);
+    }
 }
