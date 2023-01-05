@@ -1,4 +1,4 @@
-<p align="center"><img width="300px" src="https://user-images.githubusercontent.com/52749784/210675547-b0ff919a-7094-499f-afaf-8c058bedf5b5.png"></p>
+<p align="center"><img width="300px" src="https://github.com/ahdiatahsan/kks-form-app/blob/main/public/media/enrekang.png"></p>
 
 ## Tentang Aplikasi
 
@@ -14,6 +14,7 @@ Kabupaten Kota Sehat adalah suatu kondisi kabupaten/kota yang bersih, nyaman, am
 ## Screenshot
 
 ![landing](https://user-images.githubusercontent.com/52749784/210693780-2f9ca416-b672-4529-8f52-5cb55adf5323.png)
+-
 ![dashboard](https://user-images.githubusercontent.com/52749784/210693773-50f1a4d8-1a2d-4f3f-8624-c42b5e5a57f7.png)
 
 ## License
