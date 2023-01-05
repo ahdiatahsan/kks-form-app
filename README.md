@@ -1,4 +1,4 @@
-<p align="center"><img width="300px" src="https://github.com/ahdiatahsan/kks-form-app/blob/main/public/media/enrekang.png"></p>
+<p align="center"><img width="200px" src="https://github.com/ahdiatahsan/kks-form-app/blob/main/public/media/enrekang.png"></p>
 
 ## Tentang Aplikasi
 
