@@ -57,6 +57,7 @@
                         <tr class="border-gray-200 fw-bold bg-lighten fs-7">
                             <th class="mw-50px">No.</th>
                             <th class="min-w-150px">Judul</th>
+                            <th class="min-w-150px">Tahun Periode</th>
                             <th class="min-w-150px">Diisi Oleh</th>
                             <th>Berkas</th>
                         </tr>
@@ -86,6 +87,9 @@
                         data: 'title',
                         name: 'title'
                     }, {
+                        data: 'setting.period',
+                        name: 'setting.period'
+                    }, {
                         data: 'user.name',
                         name: 'user.name'
                     }, {
@@ -99,7 +103,7 @@
                     }, {
                         className: 'text-center mw-150px',
                         orderable: false,
-                        targets: [3]
+                        targets: [4]
                     }],
                     pagingType: "full_numbers",
                     "language": {
@@ -107,7 +111,7 @@
                         "emptyTable": "Tidak ada data yang tersedia pada tabel ini",
                         "info": "Menampilkan _START_ - _END_ dari _TOTAL_ data",
                         "infoEmpty": "Tidak menampilkan data apapun",
-                        "infoFiltered":   "(difilter dari total _MAX_ data)",
+                        "infoFiltered": "(difilter dari total _MAX_ data)",
                         "loadingRecords": "Memuat...",
                         "processing": "Memproses...",
                         "zeroRecords": "Tidak ada data yang cocok ditemukan",

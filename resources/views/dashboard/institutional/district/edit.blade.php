@@ -51,6 +51,17 @@
                 <!--begin::Card body-->
                 <div class="card-body">
                     <div class="mb-6">
+                        <label class="form-label fs-7 required">Tahun Periode</label>
+                        <div class="input-group">
+                            <select class="form-select form-select-sm form-select-solid" name="period"
+                                id="select2Period" data-placeholder="Tahun Periode" required>
+                                <option value="{{ $institutionalDistrict->setting_id }}">
+                                    {{ $institutionalDistrict->setting->period }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-6">
                         <label class="form-label fs-7 required">Judul</label>
                         <div class="input-group input-group-sm">
                             <input class="form-control" type="text" name="title"
@@ -116,4 +127,45 @@
         <!--end::form-->
     </x-slot>
     {{-- End::Post component --}}
+
+    {{-- Start::Javascript --}}
+    <x-slot name="javascript">
+        {{-- Start::Select2 --}}
+        <script>
+            $('#select2Period').select2({
+                language: {
+                    noResults: function() {
+                        return "Data Tidak ditemukan";
+                    },
+                    inputTooShort: function() {
+                        return 'Masukkan minimal 1 huruf';
+                    },
+                },
+                ajax: {
+                    url: '{{ route('district.select2-period') }}',
+                    dataType: 'json',
+                    delay: 250,
+                    data: function(params) {
+                        return {
+                            q: $.trim(params.term)
+                        };
+                    },
+                    processResults: function(data) {
+                        return {
+                            results: $.map(data, function(item) {
+                                return {
+                                    text: item.period,
+                                    id: item.id
+                                }
+                            })
+                        }
+                    },
+                    cache: true
+                },
+                minimumInputLength: 1
+            });
+        </script>
+        {{-- End::Select2 --}}
+    </x-slot>
+    {{-- End::Javascript --}}
 </x-dashboard.layout>
