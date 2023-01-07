@@ -165,6 +165,7 @@
                 </a>
                 <!--end::user-->
             </div>
+            @if (Auth::user()->hasAnyRole('administrator'))
             <div class="col-xl-4">
                 <!--begin::setting-->
                 <a href="{{ route('setting.index') }}" class="card bg-primary hoverable card-xl-stretch mb-5 mb-xl-8">
@@ -185,6 +186,7 @@
                 </a>
                 <!--end::setting-->
             </div>
+            @endif
         </div>
     </x-slot>
     {{-- End::Post component --}}
