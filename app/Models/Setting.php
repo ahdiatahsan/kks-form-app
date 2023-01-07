@@ -32,4 +32,24 @@ class Setting extends Model
     {
         return $this->hasMany(Funding::class);
     }
+
+    public function institutional_builders()
+    {
+        return $this->hasMany(InstitutionalBuilder::class);
+    }
+
+    public function institutional_kks()
+    {
+        return $this->hasMany(InstitutionalKks::class);
+    }
+
+    public function institutional_districts()
+    {
+        return $this->hasMany(InstitutionalDistrict::class);
+    }
+
+    public function institutional_villages()
+    {
+        return $this->hasMany(InstitutionalVillage::class);
+    }
 }

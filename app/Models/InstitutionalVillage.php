@@ -18,11 +18,17 @@ class InstitutionalVillage extends Model
         'title',
         'attachment_pdf',
         'attachment_img',
-        'user_id'
+        'user_id',
+        'setting_id'
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function setting()
+    {
+        return $this->belongsTo(Setting::class);
     }
 }
