@@ -79,18 +79,22 @@ Route::group(['middleware' => ['auth','prevent-back-history']], function () {
     # Institutional Builder
     Route::resource('institutionalBuilder', InstitutionalBuilderController::class);
     Route::get('institutionalBuilder-datatable', [InstitutionalBuilderController::class, 'datatable'])->name('builder.datatable');
+    Route::get('institutionalBuilder-select2-period', [InstitutionalBuilderController::class, 'select2_period'])->name('builder.select2-period');
 
     # Institutional Kks
     Route::resource('institutionalKks', InstitutionalKksController::class)->parameters(['institutionalKks' => 'institutionalKks']);
     Route::get('institutionalKks-datatable', [InstitutionalKksController::class, 'datatable'])->name('kks.datatable');
+    Route::get('institutionalKks-select2-period', [InstitutionalKksController::class, 'select2_period'])->name('kks.select2-period');
 
     # Institutional District
     Route::resource('institutionalDistrict', InstitutionalDistrictController::class);
     Route::get('institutionalDistrict-datatable', [InstitutionalDistrictController::class, 'datatable'])->name('district.datatable');
+    Route::get('institutionalDistrict-select2-period', [InstitutionalDistrictController::class, 'select2_period'])->name('district.select2-period');
 
     # Institutional Village
     Route::resource('institutionalVillage', InstitutionalVillageController::class);
     Route::get('institutionalVillage-datatable', [InstitutionalVillageController::class, 'datatable'])->name('village.datatable');
+    Route::get('institutionalVillage-select2-period', [InstitutionalVillageController::class, 'select2_period'])->name('village.select2-period');
 
     # User
     Route::resource('user', UserController::class);
