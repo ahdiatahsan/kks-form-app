@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\InstitutionalKks;
+use App\Models\Setting;
 // use App\Http\Requests\StoreInstitutionalKksRequest;
 // use App\Http\Requests\UpdateInstitutionalKksRequest;
 use Illuminate\Http\Request;
@@ -86,7 +87,8 @@ class InstitutionalKksController extends Controller
             'title' => $request->input('title'),
             'attachment_pdf' => $pdfName,
             'attachment_img' => $imgName,
-            'user_id' => Auth::user()->id
+            'user_id' => Auth::user()->id,
+            'setting_id' => $request->input('period')
         ]);
 
         return redirect()->route('institutionalKks.index')->with('success', 'Data Kelembagaan Forum Kabupaten berhasil ditambahkan.');
@@ -168,13 +170,18 @@ class InstitutionalKksController extends Controller
 
             $institutionalKks->attachment_img = $imgName;
         } else {
-            $extension = Str::substr($institutionalKks->attachment_img, strpos($institutionalKks->attachment_img, ".") + 1, 4);
-            $imgName = $slug . '.' . $extension;
-            Storage::move('public/institutionalKks/' . $institutionalKks->attachment_img, 'public/institutionalKks/' . $imgName);
-            $institutionalKks->attachment_img = $imgName;
+            if ($institutionalKks->attachment_img == NULL) {
+                $institutionalKks->attachment_img = NULL;
+            } else {
+                $extension = Str::substr($institutionalKks->attachment_img, strpos($institutionalKks->attachment_img, ".") + 1, 4);
+                $imgName = $slug . '.' . $extension;
+                Storage::move('public/institutionalKks/' . $institutionalKks->attachment_img, 'public/institutionalKks/' . $imgName);
+                $institutionalKks->attachment_img = $imgName;
+            }
         }
 
         $institutionalKks->title = $request->input('title');
+        $institutionalKks->setting_id = $request->input('period');
         $institutionalKks->save();
 
         return redirect()->route('institutionalKks.edit', $institutionalKks->id)->with('success', 'Data Kelembagaan Forum Kabupaten telah diubah.');
@@ -207,7 +214,7 @@ class InstitutionalKksController extends Controller
     public function datatable(Request $request)
     {
         if ($request->ajax()) {
-            $institutionalKks = InstitutionalKks::with('user')->get();
+            $institutionalKks = InstitutionalKks::with('user', 'setting')->get();
 
             return DataTables::of($institutionalKks)
                 ->addColumn('attachment', function ($institutionalKks) {
@@ -223,13 +230,30 @@ class InstitutionalKksController extends Controller
     }
 
     /**
+     * Select2
+     */
+    public function select2_period(Request $request)
+    {
+        if ($request->ajax()) {
+            $q = $request->input('q');
+
+            $assets = Setting::select('id', 'period')
+                ->where('period', 'LIKE', '%' . $q . '%')
+                ->get();
+
+            return response()->json($assets, 200);
+        }
+    }
+
+    /**
      * Validate request
      */
     public function validate_request($request)
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'user_id' => 'numeric'
+            'user_id' => 'numeric',
+            'period' => 'required|numeric'
         ]);
     }
 }
