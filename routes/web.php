@@ -74,6 +74,7 @@ Route::group(['middleware' => ['auth','prevent-back-history']], function () {
     # Funding
     Route::resource('funding', FundingController::class);
     Route::get('funding-datatable', [FundingController::class, 'datatable'])->name('funding.datatable');
+    Route::get('funding-select2-period', [FundingController::class, 'select2_period'])->name('funding.select2-period');
 
     # Institutional Builder
     Route::resource('institutionalBuilder', InstitutionalBuilderController::class);
