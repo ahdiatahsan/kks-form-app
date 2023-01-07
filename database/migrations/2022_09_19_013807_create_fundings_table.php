@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->date('date_activity');
             $table->foreignId('user_id')->nullable()->constrained('users')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('setting_id')->nullable()->constrained('settings')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }
