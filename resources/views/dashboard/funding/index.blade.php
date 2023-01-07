@@ -35,28 +35,29 @@
                     <span class="text-muted mt-1 fw-bold fs-7">Beranda</span>
                 </h3>
                 <div class="card-toolbar">
-                    @if (Auth::user()->hasAnyRole('administrator|office'))
-                    <a href="{{ route('funding.create') }}" class="btn btn-sm btn-light-primary">
-                        <span class="svg-icon svg-icon-muted svg-icon-3"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <rect opacity="0.5" x="11.364" y="20.364" width="16" height="2"
-                                    rx="1" transform="rotate(-90 11.364 20.364)" fill="black" />
-                                <rect x="4.36396" y="11.364" width="16" height="2" rx="1"
-                                    fill="black" />
-                            </svg></span> Tambah Pendanaan
-                    </a>
-                    @endif
+                        @if (Auth::user()->hasAnyRole('administrator|office'))
+                            <a href="{{ route('funding.create') }}" class="btn btn-sm btn-light-primary">
+                                <span class="svg-icon svg-icon-muted svg-icon-3"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <rect opacity="0.5" x="11.364" y="20.364" width="16" height="2"
+                                            rx="1" transform="rotate(-90 11.364 20.364)" fill="black" />
+                                        <rect x="4.36396" y="11.364" width="16" height="2" rx="1"
+                                            fill="black" />
+                                    </svg></span> Tambah Pendanaan
+                            </a>
+                        @endif
                 </div>
             </div>
             <!--end::Card header-->
             <!--begin::Card body-->
             <div class="card-body">
                 <table id="datatable"
-                    class="table table-sm table-row-bordered gy-5 gs-4 border rounded no-footer nowrap dataTable">
+                    class="table table-sm table-row-bordered gy-5 gx-4 gs-4 border rounded no-footer nowrap dataTable">
                     <thead>
                         <tr class="border-gray-200 fw-bold bg-lighten fs-7">
                             <th class="mw-50px">No.</th>
                             <th class="min-w-150px">Judul</th>
+                            <th class="min-w-150px">Tahun Periode</th>
                             <th class="min-w-150px">Tanggal Kegiatan</th>
                             <th class="min-w-150px">Keterangan</th>
                             <th class="min-w-150px">OPD</th>
@@ -134,6 +135,9 @@
                         data: 'title',
                         name: 'title'
                     }, {
+                        data: 'setting.period',
+                        name: 'setting.period'
+                    }, {
                         data: 'date_activity',
                         name: 'date_activity'
                     }, {
@@ -156,7 +160,7 @@
                     }, {
                         className: 'text-center mw-100px',
                         orderable: false,
-                        targets: [5,6]
+                        targets: [6, 7]
                     }],
                     pagingType: "full_numbers",
                     "language": {
@@ -164,7 +168,7 @@
                         "emptyTable": "Tidak ada data yang tersedia pada tabel ini",
                         "info": "Menampilkan _START_ - _END_ dari _TOTAL_ data",
                         "infoEmpty": "Tidak menampilkan data apapun",
-                        "infoFiltered":   "(difilter dari total _MAX_ data)",
+                        "infoFiltered": "(difilter dari total _MAX_ data)",
                         "loadingRecords": "Memuat...",
                         "processing": "Memproses...",
                         "zeroRecords": "Tidak ada data yang cocok ditemukan",
