@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\InstitutionalVillage;
+use App\Models\Setting;
 // use App\Http\Requests\StoreInstitutionalVillageRequest;
 // use App\Http\Requests\UpdateInstitutionalVillageRequest;
 use Illuminate\Http\Request;
@@ -86,7 +87,8 @@ class InstitutionalVillageController extends Controller
             'title' => $request->input('title'),
             'attachment_pdf' => $pdfName,
             'attachment_img' => $imgName,
-            'user_id' => Auth::user()->id
+            'user_id' => Auth::user()->id,
+            'setting_id' => $request->input('period')
         ]);
 
         return redirect()->route('institutionalVillage.index')->with('success', 'Data Kelembagaan Pokja Desa Kelurahan berhasil ditambahkan.');
@@ -174,13 +176,18 @@ class InstitutionalVillageController extends Controller
 
             $institutionalVillage->attachment_img = $imgName;
         } else {
-            $extension = Str::substr($institutionalVillage->attachment_img, strpos($institutionalVillage->attachment_img, ".") + 1, 4);
-            $imgName = $slug . '.' . $extension;
-            Storage::move('public/institutionalVillage/' . $institutionalVillage->attachment_img, 'public/institutionalVillage/' . $imgName);
-            $institutionalVillage->attachment_img = $imgName;
+            if ($institutionalVillage->attachment_img == NULL) {
+                $institutionalVillage->attachment_img = NULL;
+            } else {
+                $extension = Str::substr($institutionalVillage->attachment_img, strpos($institutionalVillage->attachment_img, ".") + 1, 4);
+                $imgName = $slug . '.' . $extension;
+                Storage::move('public/institutionalVillage/' . $institutionalVillage->attachment_img, 'public/institutionalVillage/' . $imgName);
+                $institutionalVillage->attachment_img = $imgName;
+            }
         }
 
         $institutionalVillage->title = $request->input('title');
+        $institutionalVillage->setting_id = $request->input('period');
         $institutionalVillage->save();
 
         return redirect()->route('institutionalVillage.edit', $institutionalVillage->id)->with('success', 'Data Kelembagaan Pokja Desa Kelurahan telah diubah.');
@@ -213,7 +220,7 @@ class InstitutionalVillageController extends Controller
     public function datatable(Request $request)
     {
         if ($request->ajax()) {
-            $institutionalVillages = institutionalVillage::with('user')->get();
+            $institutionalVillages = institutionalVillage::with('user', 'setting')->get();
 
             return DataTables::of($institutionalVillages)
                 ->addColumn('attachment', function ($institutionalVillage) {
@@ -229,13 +236,30 @@ class InstitutionalVillageController extends Controller
     }
 
     /**
+     * Select2
+     */
+    public function select2_period(Request $request)
+    {
+        if ($request->ajax()) {
+            $q = $request->input('q');
+
+            $assets = Setting::select('id', 'period')
+                ->where('period', 'LIKE', '%' . $q . '%')
+                ->get();
+
+            return response()->json($assets, 200);
+        }
+    }
+
+    /**
      * Validate request
      */
     public function validate_request($request)
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'user_id' => 'numeric'
+            'user_id' => 'numeric',
+            'period' => 'required|numeric'
         ]);
     }
 }
