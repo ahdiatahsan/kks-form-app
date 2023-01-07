@@ -122,7 +122,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p1_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
@@ -236,7 +236,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p2_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
@@ -369,7 +369,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p3_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
@@ -481,7 +481,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p4_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
@@ -597,7 +597,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p5_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
@@ -713,7 +713,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p6_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
@@ -806,7 +806,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p7_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
@@ -899,7 +899,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p8_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
@@ -1021,7 +1021,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p9_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
@@ -1121,7 +1121,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p10_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
@@ -1235,7 +1235,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p11_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
@@ -1352,7 +1352,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p12_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
@@ -1470,7 +1470,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p13_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
@@ -1589,7 +1589,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p14_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
@@ -1691,7 +1691,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p15_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
@@ -1799,7 +1799,7 @@
                                             <div class="input-group input-group-sm pb-4 pt-2">
                                                 <input class="form-control" type="file" name="p16_1" accept=".pdf">
                                             </div>
-                                            <span class="required">Dokumentasi (Gambar)</span>
+                                            <span>Dokumentasi (Gambar)</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Ukuran maksimal dokumentasi gambar adalah 2MB."></i></label>
                                             <div class="input-group input-group-sm pb-4 pt-2">
