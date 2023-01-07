@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\InstitutionalDistrict;
 use App\Models\InstitutionalVillage;
 use App\Models\User;
+use App\Models\Setting;
 // use App\Http\Requests\StoreInstitutionalDistrictRequest;
 // use App\Http\Requests\UpdateInstitutionalDistrictRequest;
 use Illuminate\Http\Request;
@@ -88,7 +89,8 @@ class InstitutionalDistrictController extends Controller
             'title' => $request->input('title'),
             'attachment_pdf' => $pdfName,
             'attachment_img' => $imgName,
-            'user_id' => Auth::user()->id
+            'user_id' => Auth::user()->id,
+            'setting_id' => $request->input('period')
         ]);
 
         return redirect()->route('institutionalDistrict.index')->with('success', 'Data Kelembagaan Forkom Kecamatan berhasil ditambahkan.');
@@ -111,7 +113,7 @@ class InstitutionalDistrictController extends Controller
 
         if ($request->ajax()) {
             $villageIds = User::where('district_id', '=', $institutionalDistrict->user_id)->get('id');
-            $institutionalVillages = InstitutionalVillage::with('user')->whereIn('user_id', $villageIds)->get();
+            $institutionalVillages = InstitutionalVillage::with('user', 'setting')->whereIn('user_id', $villageIds)->get();
 
             return DataTables::of($institutionalVillages)
                 ->addColumn('attachment', function ($institutionalVillage) {
@@ -196,13 +198,18 @@ class InstitutionalDistrictController extends Controller
 
             $institutionalDistrict->attachment_img = $imgName;
         } else {
-            $extension = Str::substr($institutionalDistrict->attachment_img, strpos($institutionalDistrict->attachment_img, ".") + 1, 4);
-            $imgName = $slug . '.' . $extension;
-            Storage::move('public/institutionalDistrict/' . $institutionalDistrict->attachment_img, 'public/institutionalDistrict/' . $imgName);
-            $institutionalDistrict->attachment_img = $imgName;
+            if ($institutionalDistrict->attachment_img == NULL) {
+                $institutionalDistrict->attachment_img = NULL;
+            } else {
+                $extension = Str::substr($institutionalDistrict->attachment_img, strpos($institutionalDistrict->attachment_img, ".") + 1, 4);
+                $imgName = $slug . '.' . $extension;
+                Storage::move('public/institutionalDistrict/' . $institutionalDistrict->attachment_img, 'public/institutionalDistrict/' . $imgName);
+                $institutionalDistrict->attachment_img = $imgName;
+            }
         }
 
         $institutionalDistrict->title = $request->input('title');
+        $institutionalDistrict->setting_id = $request->input('period');
         $institutionalDistrict->save();
 
         return redirect()->route('institutionalDistrict.edit', $institutionalDistrict->id)->with('success', 'Data Kelembagaan Forkom Kecamatan telah diubah.');
@@ -235,7 +242,7 @@ class InstitutionalDistrictController extends Controller
     public function datatable(Request $request)
     {
         if ($request->ajax()) {
-            $institutionalDistricts = institutionalDistrict::with('user')->get();
+            $institutionalDistricts = institutionalDistrict::with('user', 'setting')->get();
 
             return DataTables::of($institutionalDistricts)
                 ->addColumn('attachment', function ($institutionalDistrict) {
@@ -251,13 +258,30 @@ class InstitutionalDistrictController extends Controller
     }
 
     /**
+     * Select2
+     */
+    public function select2_period(Request $request)
+    {
+        if ($request->ajax()) {
+            $q = $request->input('q');
+
+            $assets = Setting::select('id', 'period')
+                ->where('period', 'LIKE', '%' . $q . '%')
+                ->get();
+
+            return response()->json($assets, 200);
+        }
+    }
+
+    /**
      * Validate request
      */
     public function validate_request($request)
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'user_id' => 'numeric'
+            'user_id' => 'numeric',
+            'period' => 'required|numeric'
         ]);
     }
 }
