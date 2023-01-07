@@ -63,11 +63,12 @@
             <!--begin::Card body-->
             <div class="card-body">
                 <table id="datatable"
-                    class="table table-sm table-row-bordered gy-5 gs-4 border rounded no-footer nowrap dataTable">
+                    class="table table-sm table-row-bordered gy-5 gx-4 gs-4 border rounded no-footer nowrap dataTable">
                     <thead>
                         <tr class="border-gray-200 fw-bold bg-lighten fs-7">
                             <th class="mw-50px">No.</th>
                             <th class="min-w-150px">Judul</th>
+                            <th class="min-w-150px">Tahun Periode</th>
                             <th>Berkas</th>
                             <th>Opsi</th>
                         </tr>
@@ -142,6 +143,9 @@
                         data: 'title',
                         name: 'title'
                     }, {
+                        data: 'setting.period',
+                        name: 'setting.period'
+                    }, {
                         data: 'attachment',
                         name: 'attachment'
                     }, {
@@ -155,7 +159,7 @@
                     }, {
                         className: 'text-center mw-100px',
                         orderable: false,
-                        targets: [2,3]
+                        targets: [3,4]
                     }],
                     pagingType: "full_numbers",
                     "language": {
@@ -163,7 +167,7 @@
                         "emptyTable": "Tidak ada data yang tersedia pada tabel ini",
                         "info": "Menampilkan _START_ - _END_ dari _TOTAL_ data",
                         "infoEmpty": "Tidak menampilkan data apapun",
-                        "infoFiltered":   "(difilter dari total _MAX_ data)",
+                        "infoFiltered": "(difilter dari total _MAX_ data)",
                         "loadingRecords": "Memuat...",
                         "processing": "Memproses...",
                         "zeroRecords": "Tidak ada data yang cocok ditemukan",
