@@ -27,4 +27,9 @@ class Setting extends Model
     {
         return $this->hasMany(Conclusion::class);
     }
+
+    public function fundings()
+    {
+        return $this->hasMany(Funding::class);
+    }
 }

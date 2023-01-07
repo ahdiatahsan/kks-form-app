@@ -20,11 +20,17 @@ class Funding extends Model
         'attachment_img',
         'description',
         'date_activity',
-        'user_id'
+        'user_id',
+        'setting_id'
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function setting()
+    {
+        return $this->belongsTo(Setting::class);
     }
 }
