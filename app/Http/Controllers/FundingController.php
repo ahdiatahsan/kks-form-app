@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Funding;
+use App\Models\Setting;
 // use App\Http\Requests\StoreFundingRequest;
 // use App\Http\Requests\UpdateFundingRequest;
 use Illuminate\Http\Request;
@@ -82,10 +83,11 @@ class FundingController extends Controller
             'description' => $request->input('description'),
             'attachment_pdf' => $pdfName,
             'attachment_img' => $imgName,
-            'user_id' => Auth::user()->id
+            'user_id' => Auth::user()->id,
+            'setting_id' => $request->input('period')
         ]);
 
-        return redirect()->route('funding.create')->with('success', 'Data pendanaan berhasil ditambahkan.');
+        return redirect()->route('funding.create')->with('success', 'Data Pendanaan berhasil ditambahkan.');
     }
 
     /**
@@ -170,18 +172,23 @@ class FundingController extends Controller
 
             $funding->attachment_img = $imgName;
         } else {
-            $extension = Str::substr($funding->attachment_img, strpos($funding->attachment_img, ".") + 1, 4);
-            $imgName = $slug . '.' . $extension;
-            Storage::move('public/funding/' . $funding->attachment_img, 'public/funding/' . $imgName);
-            $funding->attachment_img = $imgName;
+            if ($funding->attachment_img == NULL) {
+                $funding->attachment_img = NULL;
+            } else {
+                $extension = Str::substr($funding->attachment_img, strpos($funding->attachment_img, ".") + 1, 4);
+                $imgName = $slug . '.' . $extension;
+                Storage::move('public/funding/' . $funding->attachment_img, 'public/funding/' . $imgName);
+                $funding->attachment_img = $imgName;
+            }
         }
 
         $funding->title = $request->input('title');
         $funding->date_activity = $request->input('date_activity');
         $funding->description = $request->input('description');
+        $funding->setting_id = $request->input('period');
         $funding->save();
 
-        return redirect()->route('funding.edit', $funding->id)->with('success', 'Data pendanaan telah diubah.');
+        return redirect()->route('funding.edit', $funding->id)->with('success', 'Data Pendanaan telah diubah.');
     }
 
     /**
@@ -211,7 +218,7 @@ class FundingController extends Controller
     public function datatable(Request $request)
     {
         if ($request->ajax()) {
-            $fundings = Funding::with('user')->get();
+            $fundings = Funding::with('user', 'setting')->get();
 
             return DataTables::of($fundings)
                 ->editColumn('date_activity', function ($funding) {
@@ -231,6 +238,22 @@ class FundingController extends Controller
         }
     }
 
+        /**
+     * Select2
+     */
+    public function select2_period(Request $request)
+    {
+        if ($request->ajax()) {
+            $q = $request->input('q');
+
+            $assets = Setting::select('id', 'period')
+                ->where('period', 'LIKE', '%' . $q . '%')
+                ->get();
+
+            return response()->json($assets, 200);
+        }
+    }
+
     /**
      * Validate request
      */
@@ -240,7 +263,8 @@ class FundingController extends Controller
             'title' => 'required|string|max:255',
             'date_activity' => 'required|date',
             'description' => 'required|string',
-            'user_id' => 'numeric'
+            'user_id' => 'numeric',
+            'period' => 'required|numeric'
         ]);
     }
 }
