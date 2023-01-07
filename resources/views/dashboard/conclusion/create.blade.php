@@ -67,7 +67,7 @@
                     </div>
                     <div>
                         <label class="form-label fs-7 required">Isi Penutup</label>
-                        <textarea class="form-control" name="body" id="body" rows="5"></textarea>
+                        <textarea class="form-control" name="body" id="body" rows="5">{{ old('body') }}</textarea>
                     </div>
                 </div>
                 <!--end::Card body-->
