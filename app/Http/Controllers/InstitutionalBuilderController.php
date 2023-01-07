@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\InstitutionalBuilder;
+use App\Models\Setting;
 // use App\Http\Requests\StoreInstitutionalBuilderRequest;
 // use App\Http\Requests\UpdateInstitutionalBuilderRequest;
 use Illuminate\Http\Request;
@@ -86,7 +87,8 @@ class InstitutionalBuilderController extends Controller
             'title' => $request->input('title'),
             'attachment_pdf' => $pdfName,
             'attachment_img' => $imgName,
-            'user_id' => Auth::user()->id
+            'user_id' => Auth::user()->id,
+            'setting_id' => $request->input('period')
         ]);
 
         return redirect()->route('institutionalBuilder.index')->with('success', 'Data Kelembagaan Tim Pembina berhasil ditambahkan.');
@@ -168,13 +170,18 @@ class InstitutionalBuilderController extends Controller
 
             $institutionalBuilder->attachment_img = $imgName;
         } else {
-            $extension = Str::substr($institutionalBuilder->attachment_img, strpos($institutionalBuilder->attachment_img, ".") + 1, 4);
-            $imgName = $slug . '.' . $extension;
-            Storage::move('public/institutionalBuilder/' . $institutionalBuilder->attachment_img, 'public/institutionalBuilder/' . $imgName);
-            $institutionalBuilder->attachment_img = $imgName;
+            if ($institutionalBuilder->attachment_img == NULL) {
+                $institutionalBuilder->attachment_img = NULL;
+            } else {
+                $extension = Str::substr($institutionalBuilder->attachment_img, strpos($institutionalBuilder->attachment_img, ".") + 1, 4);
+                $imgName = $slug . '.' . $extension;
+                Storage::move('public/institutionalBuilder/' . $institutionalBuilder->attachment_img, 'public/institutionalBuilder/' . $imgName);
+                $institutionalBuilder->attachment_img = $imgName;
+            }
         }
 
         $institutionalBuilder->title = $request->input('title');
+        $institutionalBuilder->setting_id = $request->input('period');
         $institutionalBuilder->save();
 
         return redirect()->route('institutionalBuilder.edit', $institutionalBuilder->id)->with('success', 'Data Kelembagaan Tim Pembina telah diubah.');
@@ -207,7 +214,7 @@ class InstitutionalBuilderController extends Controller
     public function datatable(Request $request)
     {
         if ($request->ajax()) {
-            $institutionalBuilders = InstitutionalBuilder::with('user')->get();
+            $institutionalBuilders = InstitutionalBuilder::with('user', 'setting')->get();
 
             return DataTables::of($institutionalBuilders)
                 ->addColumn('attachment', function ($institutionalBuilder) {
@@ -223,13 +230,30 @@ class InstitutionalBuilderController extends Controller
     }
 
     /**
+     * Select2
+     */
+    public function select2_period(Request $request)
+    {
+        if ($request->ajax()) {
+            $q = $request->input('q');
+
+            $assets = Setting::select('id', 'period')
+                ->where('period', 'LIKE', '%' . $q . '%')
+                ->get();
+
+            return response()->json($assets, 200);
+        }
+    }
+
+    /**
      * Validate request
      */
     public function validate_request($request)
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'user_id' => 'numeric'
+            'user_id' => 'numeric',
+            'period' => 'required|numeric'
         ]);
     }
 }
