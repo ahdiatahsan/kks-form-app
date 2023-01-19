@@ -57,4 +57,9 @@ class TatananEight extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function setting()
+    {
+        return $this->belongsTo(Setting::class);
+    }
 }
