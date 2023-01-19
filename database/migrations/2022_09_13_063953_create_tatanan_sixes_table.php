@@ -59,6 +59,7 @@ return new class extends Migration
             $table->string('p42', 5)->nullable();
             $table->string('p43', 5)->nullable();
             $table->foreignId('user_id')->nullable()->constrained('users')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('setting_id')->nullable()->constrained('settings')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }
