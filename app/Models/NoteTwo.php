@@ -22,7 +22,8 @@ class NoteTwo extends Model
         'attachment_pdf',
         'attachment_img',
         'note',
-        'user_id'
+        'user_id',
+        'setting_id'
     ];
 
     public function user()
