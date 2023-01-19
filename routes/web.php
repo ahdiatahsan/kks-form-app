@@ -64,42 +64,42 @@ Route::group(['middleware' => ['auth','prevent-back-history']], function () {
     # Introduction
     Route::resource('introduction', IntroductionController::class);
     Route::get('introduction-datatable', [IntroductionController::class, 'datatable'])->name('introduction.datatable');
-    // Route::get('introduction-select2-period', [IntroductionController::class, 'select2_period'])->name('introduction.select2-period');
+    Route::get('introduction-select2-period', [IntroductionController::class, 'select2_period'])->name('introduction.select2-period');
 
     # Conclusion
     Route::resource('conclusion', ConclusionController::class);
     Route::get('conclusion-datatable', [ConclusionController::class, 'datatable'])->name('conclusion.datatable');
-    // Route::get('conclusion-select2-period', [ConclusionController::class, 'select2_period'])->name('conclusion.select2-period');
+    Route::get('conclusion-select2-period', [ConclusionController::class, 'select2_period'])->name('conclusion.select2-period');
 
     # Funding
     Route::resource('funding', FundingController::class);
     Route::get('funding-datatable', [FundingController::class, 'datatable'])->name('funding.datatable');
-    // Route::get('funding-select2-period', [FundingController::class, 'select2_period'])->name('funding.select2-period');
+    Route::get('funding-select2-period', [FundingController::class, 'select2_period'])->name('funding.select2-period');
 
     # Institutional Builder
     Route::resource('institutionalBuilder', InstitutionalBuilderController::class);
     Route::get('institutionalBuilder-datatable', [InstitutionalBuilderController::class, 'datatable'])->name('builder.datatable');
-    // Route::get('institutionalBuilder-select2-period', [InstitutionalBuilderController::class, 'select2_period'])->name('builder.select2-period');
+    Route::get('institutionalBuilder-select2-period', [InstitutionalBuilderController::class, 'select2_period'])->name('builder.select2-period');
 
     # Institutional Kks
     Route::resource('institutionalKks', InstitutionalKksController::class)->parameters(['institutionalKks' => 'institutionalKks']);
     Route::get('institutionalKks-datatable', [InstitutionalKksController::class, 'datatable'])->name('kks.datatable');
-    // Route::get('institutionalKks-select2-period', [InstitutionalKksController::class, 'select2_period'])->name('kks.select2-period');
+    Route::get('institutionalKks-select2-period', [InstitutionalKksController::class, 'select2_period'])->name('kks.select2-period');
 
     # Institutional District
     Route::resource('institutionalDistrict', InstitutionalDistrictController::class);
     Route::get('institutionalDistrict-datatable', [InstitutionalDistrictController::class, 'datatable'])->name('district.datatable');
-    // Route::get('institutionalDistrict-select2-period', [InstitutionalDistrictController::class, 'select2_period'])->name('district.select2-period');
+    Route::get('institutionalDistrict-select2-period', [InstitutionalDistrictController::class, 'select2_period'])->name('district.select2-period');
 
     # Institutional Village
     Route::resource('institutionalVillage', InstitutionalVillageController::class);
     Route::get('institutionalVillage-datatable', [InstitutionalVillageController::class, 'datatable'])->name('village.datatable');
-    // Route::get('institutionalVillage-select2-period', [InstitutionalVillageController::class, 'select2_period'])->name('village.select2-period');
+    Route::get('institutionalVillage-select2-period', [InstitutionalVillageController::class, 'select2_period'])->name('village.select2-period');
 
     # User
     Route::resource('user', UserController::class);
     Route::get('user-datatable', [UserController::class, 'datatable'])->name('user.datatable');
-    // Route::get('user-select2-district', [UserController::class, 'select2_district'])->name('user.select2-district');
+    Route::get('user-select2-district', [UserController::class, 'select2_district'])->name('user.select2-district');
 
     # Profile
     Route::resource('profile', ProfileController::class);
