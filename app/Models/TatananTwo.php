@@ -114,7 +114,8 @@ class TatananTwo extends Model
         'p97',
         'p98',
         'p99',
-        'user_id'
+        'user_id',
+        'setting_id'
     ];
 
     public function user()

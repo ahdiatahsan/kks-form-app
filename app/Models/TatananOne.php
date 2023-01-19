@@ -83,7 +83,8 @@ class TatananOne extends Model
         'p66',
         'p67',
         'p68',
-        'user_id'
+        'user_id',
+        'setting_id'
     ];
 
     public function user()
