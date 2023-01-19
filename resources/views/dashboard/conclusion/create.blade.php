@@ -106,9 +106,9 @@
                     noResults: function() {
                         return "Data Tidak ditemukan";
                     },
-                    inputTooShort: function() {
-                        return 'Masukkan minimal 1 huruf';
-                    },
+                    searching: function() {
+                        return "...";
+                    }
                 },
                 ajax: {
                     url: '{{ route('conclusion.select2-period') }}',
@@ -130,8 +130,7 @@
                         }
                     },
                     cache: true
-                },
-                minimumInputLength: 1
+                }
             });
         </script>
         {{-- End::Select2 --}}
