@@ -58,7 +58,8 @@ class AttachmentSix extends Model
         'p41',
         'p42',
         'p43',
-        'user_id'
+        'user_id',
+        'setting_id'
     ];
 
     public function user()

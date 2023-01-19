@@ -38,7 +38,8 @@ class AttachmentNine extends Model
         'p21',
         'p22',
         'p23',
-        'user_id'
+        'user_id',
+        'setting_id'
     ];
 
     public function user()

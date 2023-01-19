@@ -36,7 +36,8 @@ class AttachmentSeven extends Model
         'p19',
         'p20',
         'p21',
-        'user_id'
+        'user_id',
+        'setting_id'
     ];
 
     public function user()

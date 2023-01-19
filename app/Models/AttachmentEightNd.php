@@ -49,7 +49,8 @@ class AttachmentEightNd extends Model
         'p32',
         'p33',
         'p34',
-        'user_id'
+        'user_id',
+        'setting_id'
     ];
 
     public function user()

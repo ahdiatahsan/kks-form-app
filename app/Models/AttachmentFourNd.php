@@ -31,7 +31,8 @@ class AttachmentFourNd extends Model
         'p14',
         'p15',
         'p16',
-        'user_id'
+        'user_id',
+        'setting_id'
     ];
 
     public function user()

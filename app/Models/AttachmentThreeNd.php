@@ -33,7 +33,8 @@ class AttachmentThreeNd extends Model
         'p16',
         'p17',
         'p18',
-        'user_id'
+        'user_id',
+        'setting_id'
     ];
 
     public function user()
