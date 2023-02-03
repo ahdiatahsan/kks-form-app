@@ -18,6 +18,7 @@
         </a>
     </div>
 
+    @if ($setting->id != 1)
     <div class="ms-2">
         <a class="btn btn-sm btn-icon btn-light-danger btn-active-light-dark delete" data-bs-toggle="tooltip"
             title="Hapus" id="{{ $setting->id }}">
@@ -35,4 +36,5 @@
             </span>
         </a>
     </div>
+    @endif
 </div>
