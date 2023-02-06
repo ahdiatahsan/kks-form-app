@@ -8,6 +8,7 @@ use App\Models\AttachmentEightNd;
 use App\Models\NoteEight;
 use App\Http\Requests\StoreTatananEightRequest;
 use App\Http\Requests\UpdateTatananEightRequest;
+use App\Models\Setting;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -30,10 +31,68 @@ class TatananEightController extends Controller
      */
     public function index()
     {
-        $tatananEight = TatananEight::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        $attachEight = AttachmentEight::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        $attachEightNd = AttachmentEightNd::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        return view('dashboard.indicator.tatanan8.index', compact('tatananEight','attachEight','attachEightNd'));
+        $settings = Setting::all();
+        $period = Setting::where('id', '=', 1)->first();
+
+        session(['period' => 1]);
+
+        $tatananEight = TatananEight::with('user')
+            ->where('user_id', '=', Auth::user()->id)
+            ->where('setting_id', '=', 1)
+            ->first();
+        $attachEight = AttachmentEight::with('user')
+            ->where('user_id', '=', Auth::user()->id)
+            ->where('setting_id', '=', 1)
+            ->first();
+        $attachEightNd = AttachmentEightNd::with('user')
+            ->where('user_id', '=', Auth::user()->id)
+            ->where('setting_id', '=', 1)
+            ->first();
+
+        return view('dashboard.indicator.tatanan8.index', compact('settings', 'tatananEight', 'attachEight', 'attachEightNd', 'period'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function tatanan_filter(Request $request)
+    {
+        $settings = Setting::all();
+        $period = Setting::where('id', '=', $request->filter_period)->first();
+
+        session(['period' => $period->id]);
+
+        if (!empty($request->filter_period)) {
+            $tatananEight = TatananEight::with('user')
+                ->where('user_id', '=', Auth::user()->id)
+                ->where('setting_id', '=', $request->filter_period)
+                ->first();
+            $attachEight = AttachmentEight::with('user')
+                ->where('user_id', '=', Auth::user()->id)
+                ->where('setting_id', '=', $request->filter_period)
+                ->first();
+            $attachEightNd = AttachmentEightNd::with('user')
+                ->where('user_id', '=', Auth::user()->id)
+                ->where('setting_id', '=', $request->filter_period)
+                ->first();
+        } else {
+            $tatananEight = TatananEight::with('user')
+                ->where('user_id', '=', Auth::user()->id)
+                ->where('setting_id', '=', 1)
+                ->first();
+            $attachEight = AttachmentEight::with('user')
+                ->where('user_id', '=', Auth::user()->id)
+                ->where('setting_id', '=', 1)
+                ->first();
+            $attachEightNd = AttachmentEightNd::with('user')
+                ->where('user_id', '=', Auth::user()->id)
+                ->where('setting_id', '=', 1)
+                ->first();
+        }
+
+        return view('dashboard.indicator.tatanan8.index', compact('settings', 'tatananEight', 'attachEight', 'attachEightNd', 'period'));
     }
 
     /**
@@ -88,8 +147,17 @@ class TatananEightController extends Controller
      */
     public function update(Request $request, TatananEight $tatananEight)
     {
-        $attachEight = AttachmentEight::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        $attachEightNd = AttachmentEightNd::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        $period = $request->session()->get('period', 1);
+        $year = Setting::where('id', '=', $period)->first();
+
+        $attachEight = AttachmentEight::with('user')
+            ->where('user_id', '=', Auth::user()->id)
+            ->where('setting_id', '=', $period)
+            ->first();
+        $attachEightNd = AttachmentEightNd::with('user')
+            ->where('user_id', '=', Auth::user()->id)
+            ->where('setting_id', '=', $period)
+            ->first();
 
         $num = 34;
         for ($i = 1; $i <= $num; ++$i) {
@@ -103,8 +171,8 @@ class TatananEightController extends Controller
                 $request->validate([
                     $field2 => 'required|file|max:3048|mimes:pdf'
                 ], [
-                    $field2.'.mimes' => 'Lampiran harus berupa berkas berjenis: pdf.',
-                    $field2.'.max' => 'Lampiran tidak boleh lebih besar dari 3 MB'
+                    $field2 . '.mimes' => 'Lampiran harus berupa berkas berjenis: pdf.',
+                    $field2 . '.max' => 'Lampiran tidak boleh lebih besar dari 3 MB'
                 ]);
 
                 $converted = Str::remove('_1', $field2);
@@ -115,14 +183,16 @@ class TatananEightController extends Controller
 
                 $attachFile = $request->file($field2);
                 $extension = $attachFile->extension();
-                $attachName = 'Tatanan Delapan - ' . $field2 . '.' . $extension;
+                $attachName = 'Tatanan Delapan (' . $year->period . ') - ' . $field2 . '.' . $extension;
                 Storage::putFileAs('public/attachmentEight', $attachFile, $attachName);
 
                 $attachEight->update([
                     $converted => $attachName,
                 ]);
 
-                $noteEightPdf = NoteEight::where('code', '=', $converted)->first();
+                $noteEightPdf = NoteEight::where('code', '=', $converted)
+                    ->where('setting_id', '=', $period)
+                    ->first();
                 $noteEightPdf->update([
                     'attachment_pdf' => $attachName,
                 ]);
@@ -134,8 +204,8 @@ class TatananEightController extends Controller
                 $request->validate([
                     $field3 => 'required|file|max:2048|mimes:jpeg,jpg,png,webp'
                 ], [
-                    $field3.'.mimes' => 'Dokumentasi harus berupa berkas berjenis: jpeg, jpg, png, webp.',
-                    $field3.'.max' => 'Dokumentasi tidak boleh lebih besar dari 2 MB'
+                    $field3 . '.mimes' => 'Dokumentasi harus berupa berkas berjenis: jpeg, jpg, png, webp.',
+                    $field3 . '.max' => 'Dokumentasi tidak boleh lebih besar dari 2 MB'
                 ]);
 
                 $converted = Str::remove('_2', $field3);
@@ -146,14 +216,16 @@ class TatananEightController extends Controller
 
                 $attachFile = $request->file($field3);
                 $extension = $attachFile->extension();
-                $attachName = 'Tatanan Delapan - ' . $field3 . '.' . $extension;
+                $attachName = 'Tatanan Delapan (' . $year->period . ') - ' . $field3 . '.' . $extension;
                 Storage::putFileAs('public/attachmentEight', $attachFile, $attachName);
 
                 $attachEightNd->update([
                     $converted => $attachName,
                 ]);
 
-                $noteEightImg = NoteEight::where('code', '=', $converted)->first();
+                $noteEightImg = NoteEight::where('code', '=', $converted)
+                    ->where('setting_id', '=', $period)
+                    ->first();
                 $noteEightImg->update([
                     'attachment_img' => $attachName,
                 ]);
@@ -166,7 +238,9 @@ class TatananEightController extends Controller
                     $field1 => $request->input($field1),
                 ]);
 
-                $noteEightQa = NoteEight::where('code', '=', $field1)->first();
+                $noteEightQa = NoteEight::where('code', '=', $field1)
+                    ->where('setting_id', '=', $period)
+                    ->first();
                 $userId = Auth::user()->id;
                 $answer = substr($request->input($field1), 0, 1);
                 $score = substr($request->input($field1), 2, 4);
@@ -179,7 +253,7 @@ class TatananEightController extends Controller
             }
         }
 
-        return redirect()->route('tatananEight.index')->with('success', 'Jawaban Anda Di Tatanan 8 Berhasil Disimpan.');
+        return redirect()->back()->with('success', 'Jawaban Anda Di Tatanan 8 Berhasil Disimpan.');
     }
 
     /**
