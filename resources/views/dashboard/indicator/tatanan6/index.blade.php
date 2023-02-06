@@ -33,8 +33,53 @@
 
     {{-- Start::Post component --}}
     <x-slot name="post">
-        <!--begin::Card-->
+
+        <!--begin::Filter-->
+        <form class="form" action="{{ route('tatananSix.filter') }}" method="GET" autocomplete="off">
+            <!--begin::Card1-->
+            <div class="card mb-10">
+            <!--begin::Card body-->
+            <div class="card-body">
+                <!--begin::Form-->
+                <div class="mb-4">
+                    <label class="form-label fs-7 required">Tahun Periode</label>
+                    <div class="input-group">
+                        <select class="form-select form-select-sm form-select-solid" name="filter_period"
+                            id="filter_period" data-placeholder="Tahun Periode" required>
+                            <option value="" selected hidden>Pilih Tahun Periode</option>
+                            @foreach ($settings as $setting)
+                                <option value="{{ $setting->id }}">
+                                    {{ $setting->period }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <!--end::Form-->
+            </div>
+            <!--end::Card body-->
+            <!--begin::Card footer-->
+            <div class="card-footer d-flex justify-content-end py-4">
+                <button type="submit" class="btn btn-sm btn-primary">
+                    <span class="svg-icon svg-icon-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="black"/>
+                        </svg>
+                    </span>Filter</button>
+            </div>
+            <!--end::Card footer-->
+            </div>
+            <!--end::Card1-->
+        </form>
+        <!--end::Filter-->
+        
+        <!--begin::Card2-->
         <div class="card">
+            <!--begin::Card header-->
+            <div class="card-header">
+                <h5 class="fw-bold d-flex align-items-center text-dark">Data Tahun Periode {{$period->period}}</h5>
+            </div>
+            <!--end::Card header-->
             <!--begin::Card body-->
             <div class="card-body">
                 <!--begin::Form-->
