@@ -110,14 +110,31 @@ Route::group(['middleware' => ['auth','prevent-back-history']], function () {
 
     # Special Indicator
     Route::resource('tatananOne', TatananOneController::class);
+    Route::get('tatananOne-filter', [TatananOneController::class, 'tatanan_filter'])->name('tatananOne.filter');
+
     Route::resource('tatananTwo', TatananTwoController::class);
+    Route::get('tatananTwo-filter', [TatananTwoController::class, 'tatanan_filter'])->name('tatananTwo.filter');
+
     Route::resource('tatananThree', TatananThreeController::class);
+    Route::get('tatananThree-filter', [TatananThreeController::class, 'tatanan_filter'])->name('tatananThree.filter');
+
     Route::resource('tatananFour', TatananFourController::class);
+    Route::get('tatananFour-filter', [TatananFourController::class, 'tatanan_filter'])->name('tatananFour.filter');
+
     Route::resource('tatananFive', TatananFiveController::class);
+    Route::get('tatananFive-filter', [TatananFiveController::class, 'tatanan_filter'])->name('tatananFive.filter');
+
     Route::resource('tatananSix', TatananSixController::class);
+    Route::get('tatananSix-filter', [TatananSixController::class, 'tatanan_filter'])->name('tatananSix.filter');
+
     Route::resource('tatananSeven', TatananSevenController::class);
+    Route::get('tatananSeven-filter', [TatananSevenController::class, 'tatanan_filter'])->name('tatananSeven.filter');
+
     Route::resource('tatananEight', TatananEightController::class);
+    Route::get('tatananEight-filter', [TatananEightController::class, 'tatanan_filter'])->name('tatananEight.filter');
+
     Route::resource('tatananNine', TatananNineController::class);
+    Route::get('tatananNine-filter', [TatananNineController::class, 'tatanan_filter'])->name('tatananNine.filter');
 
     # Special Indicator Note
     Route::resource('noteOne', NoteOneController::class);
