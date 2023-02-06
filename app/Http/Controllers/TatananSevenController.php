@@ -8,6 +8,7 @@ use App\Models\AttachmentSevenNd;
 use App\Models\NoteSeven;
 use App\Http\Requests\StoreTatananSevenRequest;
 use App\Http\Requests\UpdateTatananSevenRequest;
+use App\Models\Setting;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -30,10 +31,68 @@ class TatananSevenController extends Controller
      */
     public function index()
     {
-        $tatananSeven = TatananSeven::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        $attachSeven = AttachmentSeven::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        $attachSevenNd = AttachmentSevenNd::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        return view('dashboard.indicator.tatanan7.index', compact('tatananSeven','attachSeven','attachSevenNd'));
+        $settings = Setting::all();
+        $period = Setting::where('id', '=', 1)->first();
+
+        session(['period' => 1]);
+
+        $tatananSeven = TatananSeven::with('user')
+            ->where('user_id', '=', Auth::user()->id)
+            ->where('setting_id', '=', 1)
+            ->first();
+        $attachSeven = AttachmentSeven::with('user')
+            ->where('user_id', '=', Auth::user()->id)
+            ->where('setting_id', '=', 1)
+            ->first();
+        $attachSevenNd = AttachmentSevenNd::with('user')
+            ->where('user_id', '=', Auth::user()->id)
+            ->where('setting_id', '=', 1)
+            ->first();
+
+        return view('dashboard.indicator.tatanan7.index', compact('settings', 'tatananSeven', 'attachSeven', 'attachSevenNd', 'period'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function tatanan_filter(Request $request)
+    {
+        $settings = Setting::all();
+        $period = Setting::where('id', '=', $request->filter_period)->first();
+
+        session(['period' => $period->id]);
+
+        if (!empty($request->filter_period)) {
+            $tatananSeven = TatananSeven::with('user')
+                ->where('user_id', '=', Auth::user()->id)
+                ->where('setting_id', '=', $request->filter_period)
+                ->first();
+            $attachSeven = AttachmentSeven::with('user')
+                ->where('user_id', '=', Auth::user()->id)
+                ->where('setting_id', '=', $request->filter_period)
+                ->first();
+            $attachSevenNd = AttachmentSevenNd::with('user')
+                ->where('user_id', '=', Auth::user()->id)
+                ->where('setting_id', '=', $request->filter_period)
+                ->first();
+        } else {
+            $tatananSeven = TatananSeven::with('user')
+                ->where('user_id', '=', Auth::user()->id)
+                ->where('setting_id', '=', 1)
+                ->first();
+            $attachSeven = AttachmentSeven::with('user')
+                ->where('user_id', '=', Auth::user()->id)
+                ->where('setting_id', '=', 1)
+                ->first();
+            $attachSevenNd = AttachmentSevenNd::with('user')
+                ->where('user_id', '=', Auth::user()->id)
+                ->where('setting_id', '=', 1)
+                ->first();
+        }
+
+        return view('dashboard.indicator.tatanan7.index', compact('settings', 'tatananSeven', 'attachSeven', 'attachSevenNd', 'period'));
     }
 
     /**
@@ -88,8 +147,17 @@ class TatananSevenController extends Controller
      */
     public function update(Request $request, TatananSeven $tatananSeven)
     {
-        $attachSeven = AttachmentSeven::with('user')->where('user_id', '=', Auth::user()->id)->first();
-        $attachSevenNd = AttachmentSevenNd::with('user')->where('user_id', '=', Auth::user()->id)->first();
+        $period = $request->session()->get('period', 1);
+        $year = Setting::where('id', '=', $period)->first();
+
+        $attachSeven = AttachmentSeven::with('user')
+            ->where('user_id', '=', Auth::user()->id)
+            ->where('setting_id', '=', $period)
+            ->first();
+        $attachSevenNd = AttachmentSevenNd::with('user')
+            ->where('user_id', '=', Auth::user()->id)
+            ->where('setting_id', '=', $period)
+            ->first();
 
         $num = 21;
         for ($i = 1; $i <= $num; ++$i) {
@@ -103,8 +171,8 @@ class TatananSevenController extends Controller
                 $request->validate([
                     $field2 => 'required|file|max:3048|mimes:pdf'
                 ], [
-                    $field2.'.mimes' => 'Lampiran harus berupa berkas berjenis: pdf.',
-                    $field2.'.max' => 'Lampiran tidak boleh lebih besar dari 3 MB'
+                    $field2 . '.mimes' => 'Lampiran harus berupa berkas berjenis: pdf.',
+                    $field2 . '.max' => 'Lampiran tidak boleh lebih besar dari 3 MB'
                 ]);
 
                 $converted = Str::remove('_1', $field2);
@@ -115,14 +183,16 @@ class TatananSevenController extends Controller
 
                 $attachFile = $request->file($field2);
                 $extension = $attachFile->extension();
-                $attachName = 'Tatanan Tujuh - ' . $field2 . '.' . $extension;
+                $attachName = 'Tatanan Tujuh (' . $year->period . ') - ' . $field2 . '.' . $extension;
                 Storage::putFileAs('public/attachmentSeven', $attachFile, $attachName);
 
                 $attachSeven->update([
                     $converted => $attachName,
                 ]);
 
-                $noteSevenPdf = NoteSeven::where('code', '=', $converted)->first();
+                $noteSevenPdf = NoteSeven::where('code', '=', $converted)
+                    ->where('setting_id', '=', $period)
+                    ->first();
                 $noteSevenPdf->update([
                     'attachment_pdf' => $attachName,
                 ]);
@@ -134,8 +204,8 @@ class TatananSevenController extends Controller
                 $request->validate([
                     $field3 => 'required|file|max:2048|mimes:jpeg,jpg,png,webp'
                 ], [
-                    $field3.'.mimes' => 'Dokumentasi harus berupa berkas berjenis: jpeg, jpg, png, webp.',
-                    $field3.'.max' => 'Dokumentasi tidak boleh lebih besar dari 2 MB'
+                    $field3 . '.mimes' => 'Dokumentasi harus berupa berkas berjenis: jpeg, jpg, png, webp.',
+                    $field3 . '.max' => 'Dokumentasi tidak boleh lebih besar dari 2 MB'
                 ]);
 
                 $converted = Str::remove('_2', $field3);
@@ -146,14 +216,16 @@ class TatananSevenController extends Controller
 
                 $attachFile = $request->file($field3);
                 $extension = $attachFile->extension();
-                $attachName = 'Tatanan Tujuh - ' . $field3 . '.' . $extension;
+                $attachName = 'Tatanan Tujuh (' . $year->period . ') - ' . $field3 . '.' . $extension;
                 Storage::putFileAs('public/attachmentSeven', $attachFile, $attachName);
 
                 $attachSevenNd->update([
                     $converted => $attachName,
                 ]);
 
-                $noteSevenImg = NoteSeven::where('code', '=', $converted)->first();
+                $noteSevenImg = NoteSeven::where('code', '=', $converted)
+                    ->where('setting_id', '=', $period)
+                    ->first();
                 $noteSevenImg->update([
                     'attachment_img' => $attachName,
                 ]);
@@ -166,7 +238,9 @@ class TatananSevenController extends Controller
                     $field1 => $request->input($field1),
                 ]);
 
-                $noteSevenQa = NoteSeven::where('code', '=', $field1)->first();
+                $noteSevenQa = NoteSeven::where('code', '=', $field1)
+                    ->where('setting_id', '=', $period)
+                    ->first();
                 $userId = Auth::user()->id;
                 $answer = substr($request->input($field1), 0, 1);
                 $score = substr($request->input($field1), 2, 4);
@@ -179,7 +253,7 @@ class TatananSevenController extends Controller
             }
         }
 
-        return redirect()->route('tatananSeven.index')->with('success', 'Jawaban Anda Di Tatanan 7 Berhasil Disimpan.');
+        return redirect()->back()->with('success', 'Jawaban Anda Di Tatanan 7 Berhasil Disimpan.');
     }
 
     /**
