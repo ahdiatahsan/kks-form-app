@@ -49,7 +49,7 @@ class TatananTwoController extends Controller
             ->where('setting_id', '=', 1)
             ->first();
 
-        return view('dashboard.indicator.tatanan8.index', compact('settings', 'tatananTwo', 'attachTwo', 'attachTwoNd', 'period'));
+        return view('dashboard.indicator.tatanan2.index', compact('settings', 'tatananTwo', 'attachTwo', 'attachTwoNd', 'period'));
     }
 
     /**
@@ -92,7 +92,7 @@ class TatananTwoController extends Controller
                 ->first();
         }
 
-        return view('dashboard.indicator.tatanan8.index', compact('settings', 'tatananTwo', 'attachTwo', 'attachTwoNd', 'period'));
+        return view('dashboard.indicator.tatanan2.index', compact('settings', 'tatananTwo', 'attachTwo', 'attachTwoNd', 'period'));
     }
 
     /**
