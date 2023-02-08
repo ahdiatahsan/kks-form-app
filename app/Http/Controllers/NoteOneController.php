@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\NoteOne;
+use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Yajra\DataTables\DataTables;
 
 class NoteOneController extends Controller
@@ -21,9 +23,23 @@ class NoteOneController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('dashboard.note.tatanan1.index');
+        $settings = Setting::all();
+        session(['periodNote' => 1]);
+
+        if (!empty($request->filter_period)) {
+            $period = $request->session()->put('periodNote', $request->filter_period);
+            $noteOnes = NoteOne::with('user')
+                ->where('setting_id', '=', $request->filter_period)
+                ->get();
+        } else {
+            $noteOnes = NoteOne::with('user')
+                ->where('setting_id', '=', 1)
+                ->get();
+        }
+
+        return view('dashboard.note.tatanan1.index', compact('settings'));
     }
 
     /**
@@ -78,6 +94,10 @@ class NoteOneController extends Controller
      */
     public function update(Request $request, NoteOne $noteOne)
     {
+        $period = $request->session()->get('periodNote', 1);
+        $year = Setting::where('id', '=', $period)->first();
+        $no = Str::remove('p', $noteOne->code);
+
         $request->validate([
             'note' => 'string'
         ]);
@@ -85,7 +105,8 @@ class NoteOneController extends Controller
         $noteOne->note = $request->input('note');
         $noteOne->save();
 
-        return redirect()->route('noteOne.index')->with('success', 'Catatan untuk pertanyaan nomor '. $noteOne->id .' berhasil disimpan.');
+        return redirect()->route('noteOne.index')
+            ->with('success', 'Catatan pertanyaan No. ' . $no . ' tahun periode ' . $year->period . ' berhasil disimpan.');
     }
 
     /**
@@ -98,14 +119,23 @@ class NoteOneController extends Controller
     {
         //
     }
-    
+
     /**
      * Yajra datatable
      */
     public function datatable(Request $request)
     {
         if ($request->ajax()) {
-            $noteOnes = NoteOne::with('user')->get();
+            if (!empty($request->filter_period)) {
+                $period = $request->session()->put('periodNote', $request->filter_period);
+                $noteOnes = NoteOne::with('user')
+                    ->where('setting_id', '=', $request->filter_period)
+                    ->get();
+            } else {
+                $noteOnes = NoteOne::with('user')
+                    ->where('setting_id', '=', 1)
+                    ->get();
+            }
 
             return DataTables::of($noteOnes)
                 ->addColumn('attachment', function ($noteOne) {
