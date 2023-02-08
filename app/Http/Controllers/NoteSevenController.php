@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\NoteSeven;
+use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Yajra\DataTables\DataTables;
 
 class NoteSevenController extends Controller
@@ -21,9 +23,23 @@ class NoteSevenController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('dashboard.note.tatanan7.index');
+        $settings = Setting::all();
+        session(['periodNote' => 1]);
+
+        if (!empty($request->filter_period)) {
+            $period = $request->session()->put('periodNote', $request->filter_period);
+            $noteSevens = NoteSeven::with('user')
+                ->where('setting_id', '=', $request->filter_period)
+                ->get();
+        } else {
+            $noteSevens = NoteSeven::with('user')
+                ->where('setting_id', '=', 1)
+                ->get();
+        }
+
+        return view('dashboard.note.tatanan7.index', compact('settings'));
     }
 
     /**
@@ -78,6 +94,10 @@ class NoteSevenController extends Controller
      */
     public function update(Request $request, NoteSeven $noteSeven)
     {
+        $period = $request->session()->get('periodNote', 1);
+        $year = Setting::where('id', '=', $period)->first();
+        $no = Str::remove('p', $noteSeven->code);
+
         $request->validate([
             'note' => 'string'
         ]);
@@ -85,7 +105,8 @@ class NoteSevenController extends Controller
         $noteSeven->note = $request->input('note');
         $noteSeven->save();
 
-        return redirect()->route('noteSeven.index')->with('success', 'Catatan untuk pertanyaan nomor '. $noteSeven->id .' berhasil disimpan.');
+        return redirect()->route('noteSeven.index')
+            ->with('success', 'Catatan pertanyaan No. ' . $no . ' tahun periode ' . $year->period . ' berhasil disimpan.');
     }
 
     /**
@@ -105,7 +126,16 @@ class NoteSevenController extends Controller
     public function datatable(Request $request)
     {
         if ($request->ajax()) {
-            $noteSevens = noteSeven::with('user')->get();
+            if (!empty($request->filter_period)) {
+                $period = $request->session()->put('periodNote', $request->filter_period);
+                $noteSevens = noteSeven::with('user')
+                    ->where('setting_id', '=', $request->filter_period)
+                    ->get();
+            } else {
+                $noteSevens = noteSeven::with('user')
+                    ->where('setting_id', '=', 1)
+                    ->get();
+            }
 
             return DataTables::of($noteSevens)
                 ->addColumn('attachment', function ($noteSeven) {
