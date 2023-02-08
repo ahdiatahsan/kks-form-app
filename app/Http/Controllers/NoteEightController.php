@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\NoteEight;
+use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Yajra\DataTables\DataTables;
 
 class NoteEightController extends Controller
@@ -21,9 +23,23 @@ class NoteEightController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('dashboard.note.tatanan8.index');
+        $settings = Setting::all();
+        session(['periodNote' => 1]);
+
+        if (!empty($request->filter_period)) {
+            $period = $request->session()->put('periodNote', $request->filter_period);
+            $noteEights = NoteEight::with('user')
+                ->where('setting_id', '=', $request->filter_period)
+                ->get();
+        } else {
+            $noteEights = NoteEight::with('user')
+                ->where('setting_id', '=', 1)
+                ->get();
+        }
+
+        return view('dashboard.note.tatanan8.index', compact('settings'));
     }
 
     /**
@@ -78,6 +94,10 @@ class NoteEightController extends Controller
      */
     public function update(Request $request, NoteEight $noteEight)
     {
+        $period = $request->session()->get('periodNote', 1);
+        $year = Setting::where('id', '=', $period)->first();
+        $no = Str::remove('p', $noteEight->code);
+
         $request->validate([
             'note' => 'string'
         ]);
@@ -85,7 +105,8 @@ class NoteEightController extends Controller
         $noteEight->note = $request->input('note');
         $noteEight->save();
 
-        return redirect()->route('noteEight.index')->with('success', 'Catatan untuk pertanyaan nomor '. $noteEight->id .' berhasil disimpan.');
+        return redirect()->route('noteEight.index')
+            ->with('success', 'Catatan pertanyaan No. ' . $no . ' tahun periode ' . $year->period . ' berhasil disimpan.');
     }
 
     /**
@@ -98,14 +119,23 @@ class NoteEightController extends Controller
     {
         //
     }
-    
+
     /**
      * Yajra datatable
      */
     public function datatable(Request $request)
     {
         if ($request->ajax()) {
-            $noteEights = NoteEight::with('user')->get();
+            if (!empty($request->filter_period)) {
+                $period = $request->session()->put('periodNote', $request->filter_period);
+                $noteEights = noteEight::with('user')
+                    ->where('setting_id', '=', $request->filter_period)
+                    ->get();
+            } else {
+                $noteEights = noteEight::with('user')
+                    ->where('setting_id', '=', 1)
+                    ->get();
+            }
 
             return DataTables::of($noteEights)
                 ->addColumn('attachment', function ($noteEight) {
