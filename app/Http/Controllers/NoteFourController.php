@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\NoteFour;
+use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Yajra\DataTables\DataTables;
 
 class NoteFourController extends Controller
@@ -21,9 +23,23 @@ class NoteFourController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('dashboard.note.tatanan4.index');
+        $settings = Setting::all();
+        session(['periodNote' => 1]);
+
+        if (!empty($request->filter_period)) {
+            $period = $request->session()->put('periodNote', $request->filter_period);
+            $noteFours = NoteFour::with('user')
+                ->where('setting_id', '=', $request->filter_period)
+                ->get();
+        } else {
+            $noteFours = NoteFour::with('user')
+                ->where('setting_id', '=', 1)
+                ->get();
+        }
+
+        return view('dashboard.note.tatanan4.index', compact('settings'));
     }
 
     /**
@@ -78,6 +94,10 @@ class NoteFourController extends Controller
      */
     public function update(Request $request, NoteFour $noteFour)
     {
+        $period = $request->session()->get('periodNote', 1);
+        $year = Setting::where('id', '=', $period)->first();
+        $no = Str::remove('p', $noteFour->code);
+
         $request->validate([
             'note' => 'string'
         ]);
@@ -85,7 +105,8 @@ class NoteFourController extends Controller
         $noteFour->note = $request->input('note');
         $noteFour->save();
 
-        return redirect()->route('noteFour.index')->with('success', 'Catatan untuk pertanyaan nomor '. $noteFour->id .' berhasil disimpan.');
+        return redirect()->route('noteFour.index')
+            ->with('success', 'Catatan pertanyaan No. ' . $no . ' tahun periode ' . $year->period . ' berhasil disimpan.');
     }
 
     /**
@@ -105,7 +126,16 @@ class NoteFourController extends Controller
     public function datatable(Request $request)
     {
         if ($request->ajax()) {
-            $noteFours = NoteFour::with('user')->get();
+            if (!empty($request->filter_period)) {
+                $period = $request->session()->put('periodNote', $request->filter_period);
+                $noteFours = noteFour::with('user')
+                    ->where('setting_id', '=', $request->filter_period)
+                    ->get();
+            } else {
+                $noteFours = noteFour::with('user')
+                    ->where('setting_id', '=', 1)
+                    ->get();
+            }
 
             return DataTables::of($noteFours)
                 ->addColumn('attachment', function ($noteFour) {
