@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\NoteFive;
+use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Yajra\DataTables\DataTables;
 
 class NoteFiveController extends Controller
@@ -21,9 +23,23 @@ class NoteFiveController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('dashboard.note.tatanan5.index');
+        $settings = Setting::all();
+        session(['periodNote' => 1]);
+
+        if (!empty($request->filter_period)) {
+            $period = $request->session()->put('periodNote', $request->filter_period);
+            $noteFives = NoteFive::with('user')
+                ->where('setting_id', '=', $request->filter_period)
+                ->get();
+        } else {
+            $noteFives = NoteFive::with('user')
+                ->where('setting_id', '=', 1)
+                ->get();
+        }
+
+        return view('dashboard.note.tatanan5.index', compact('settings'));
     }
 
     /**
@@ -78,6 +94,10 @@ class NoteFiveController extends Controller
      */
     public function update(Request $request, NoteFive $noteFive)
     {
+        $period = $request->session()->get('periodNote', 1);
+        $year = Setting::where('id', '=', $period)->first();
+        $no = Str::remove('p', $noteFive->code);
+
         $request->validate([
             'note' => 'string'
         ]);
@@ -85,7 +105,8 @@ class NoteFiveController extends Controller
         $noteFive->note = $request->input('note');
         $noteFive->save();
 
-        return redirect()->route('noteFive.index')->with('success', 'Catatan untuk pertanyaan nomor '. $noteFive->id .' berhasil disimpan.');
+        return redirect()->route('noteFive.index')
+            ->with('success', 'Catatan pertanyaan No. ' . $no . ' tahun periode ' . $year->period . ' berhasil disimpan.');
     }
 
     /**
@@ -98,14 +119,23 @@ class NoteFiveController extends Controller
     {
         //
     }
-    
+
     /**
      * Yajra datatable
      */
     public function datatable(Request $request)
     {
         if ($request->ajax()) {
-            $noteFives = NoteFive::with('user')->get();
+            if (!empty($request->filter_period)) {
+                $period = $request->session()->put('periodNote', $request->filter_period);
+                $noteFives = noteFive::with('user')
+                    ->where('setting_id', '=', $request->filter_period)
+                    ->get();
+            } else {
+                $noteFives = noteFive::with('user')
+                    ->where('setting_id', '=', 1)
+                    ->get();
+            }
 
             return DataTables::of($noteFives)
                 ->addColumn('attachment', function ($noteFive) {
