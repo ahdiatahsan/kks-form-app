@@ -10,6 +10,7 @@ Kabupaten Kota Sehat adalah suatu kondisi kabupaten/kota yang bersih, nyaman, am
 
 - Laravel 9
 - PHP 8
+- MySQL
 
 ## Screenshot
 
